@@ -1,0 +1,9 @@
+# 여러 개의 숫자 중 최대 값 찾기
+
+```java
+Math.max(12.123, 12.456)
+```
+
+## 참고 자료
+
+[https://www.tutorialspoint.com/java/number_max.htm](https://www.tutorialspoint.com/java/number_max.htm)

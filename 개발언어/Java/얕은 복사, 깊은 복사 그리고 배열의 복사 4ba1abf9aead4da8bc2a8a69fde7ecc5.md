@@ -1,0 +1,24 @@
+# 얕은 복사, 깊은 복사 그리고 배열의 복사
+
+문제 풀이 중 배열의 복사 과정이 빈번히 일어나는 경우가 있었다. 매번 반복문을 이용해서 복사하는 과정을 간략하게 작성할 수 있는 방법이 있을 것 같아서 정보를 찾게 되었다.
+
+## 얕은 복사? 깊은 복사?
+
+복사에 대해서 이해하기 위해서는 얕은 복사와 깊은 복사를 이해할 필요가 있다.
+
+- 얕은 복사: 복사본에 원본 데이터의 포인터를 가리키도록 하는 방법이다. 상대적으로 복사가 빠르지만, 원본 데이터의 값을 수정하면 함께 값이 변하므로 유의해야 된다.
+- 깊은 복사: 복사본에 원본 데이터의 값들을 직접 복사하는 방법이다. 포인터를 공유하지 않지만, 복사 속도가 상대적으로 느리다는 문제점이 있다.
+
+## 배열의 복사 방법
+
+- `System` 클래스에서 제공해주는 `arraycopy()` 메서드와 `Arrays` 클래스에서 제공해주는 `copyOf()` 메서드가 있다.
+- 하지만 이 메서드의 경우에는 배열 요소의 타입에 따라 결과가 다르게 나오기 때문에 유의해야된다.
+    - 배열의 요소가 primitive type이면 깊은 복사가 발생한다.
+    - 배열의 요소가 non-primitive type이거나 2중 배열이면 얕은 복사가 발생한다.
+- 만약 non-primitive type의 깊은 복사가 필요하다면, 반복문 또는 stream과 생성자 호출을 통해 인스턴스를 새로 만들어야된다.
+
+## 참고 자료
+
+[https://www.geeksforgeeks.org/difference-between-shallow-and-deep-copy-of-a-class/](https://www.geeksforgeeks.org/difference-between-shallow-and-deep-copy-of-a-class/)
+
+[https://www.baeldung.com/java-array-copy](https://www.baeldung.com/java-array-copy)
