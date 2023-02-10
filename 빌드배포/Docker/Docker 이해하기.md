@@ -16,13 +16,13 @@
 
 이에 반해 컨테이너는 리눅스 자체 기능인 chroot, 네임스페이스, cgroup을 사용함으로써 프로세스 단위의 격리 환경을 만들기 때문에 성능 손실이 거의 없다. 컨테이너에 필요한 커널은 호스트의 커널을 공유해 사용하고, 컨테이너 안에는 애플리케이션을 구동하는 데 필요한 라이브러리 및 실행 파일만 존재하기 때문에 컨테이너의 이미지 용량 또한 가상 머신에비해 가볍다.
 
-![Untitled](assets/Untitled 1-4545239.png)
+![Untitled](assets/Untitled%201-4545239.png)
 
 ## 이미지
 
 도커를 처음 접하게 되면, 이미지와 컨테이너를 헷갈려하는 경우가 많다. 도커 이미지는 컨테이너를 생성할 때 필요한 소스 코드, 라이브러리, 의존성 등을 포함하는 바이너리 파일이다. 이미지 내부에는 여러 레이어로 되어 있고, 컨테이너를 생성하고 실행할 때는 읽기 전용으로 사용된다. 컨테이너는 이미지를 읽기 전용으로 사용하고, 이미지에서 변경된 사항만 컨테이너 계층에 저장하므로 컨테이너에서 무엇을 하든지 이미지 파일에는 영향을 주지 않는다.
 
-![Untitled](assets/Untitled 2-4545245.png)
+![Untitled](assets/Untitled%202-4545245.png)
 
 도커는 기본적으로 도커 허브(Docker Hub)라는 중앙 이미지 저장소에서 이미지를 내려받는다. 도커 허브는 도커가 공식적으로 제공하는 이미지 저장소로, 도커 게정을 가지고 있으면 누구나 이미지를 올리겨 내려받을 수 있다. 
 
@@ -30,7 +30,7 @@
 
 `docker search` 명령어를 통해 도커 허브의 이미지를 검색할 수도 있다. 아래 사진은 내가 테스트로 올려놓은 mariadb 이미지다.
 
-![Untitled](assets/Untitled 3-4545248.png)
+![Untitled](assets/Untitled%203-4545248.png)
 
 `docker push`, `docker pull` 명령어를 통해 이미지를 도커 허브로부터 올리고, 내려 받을 수 있다.
 
@@ -38,11 +38,11 @@
 
 컨테이너 안에 작업한 내용으로 이미지를 만들 수 있다. `docker commit` 명령어를 통해 컨테이너의 변경 사항을 이미지로 만들 수 있다.
 
-![Untitled](assets/Untitled 4-4545253.png)
+![Untitled](assets/Untitled%204-4545253.png)
 
 commit을 하게 되면 어떤 구조로 저장될까? 아래 그림처럼 기존의 이미지 레이어들 위에 변경 사항을 새로운 레이어로 추가하게 된다.
 
-![Untitled](assets/Untitled 5.png)
+![Untitled](assets/Untitled%205.png)
 
 ## 도커의 기능
 
@@ -58,21 +58,19 @@ sudo docker run -d -v /home/ubuntu/was/was-logs:/was-logs -p 8080:8080 --name wa
 
 도커 컨테이너를 생성하면 가상 IP 주소를 할당받는다. 기본적으로 도커는 컨테이너에 172.17.0.X의 IP를 순차적으로 할당한다. 또한 호스트에 veth로 시작하는 가상 네트워크 인터페이스를 생성한다. 아래는 내가 진행중인 프로젝트에 `ifconfig` 를 입력했을 때의 결과다. 여러 개의 veth 인터페이스가 있다는 것을 확인할 수 있다.
 
-![Untitled](Docker%20%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A2%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20e232b51dab69474aa4399ab2b9f76f1c/Untitled%206.png)
-
 위 사진에서 eth0는 공인 IP와 내부 IP가 할당되어 실제로 외부와 통신할 수 있는 호스트의 네트워크 인터페이스다. 또한 각 컨테이너는 자기 자신이 독립적인 하나의 환경이기 때문에 eth0를 따로 가지고 있다. veth와 컨테이너의 eth0가 연결 되어있다. 위 사진에서 docker0라는 브리지가 있는 것을 확인할 수 있다. docker0 브리지는 각 veth 인터페이스와 바인딩돼 호스트의 eth0 인터페이스와 이어주는 역할을 한다. 아래의 그림을 보면 이해가 쉬울 것이다.
 
-![Untitled](assets/Untitled 7.png)
+![Untitled](assets/Untitled%207.png)
 
 ### 컨테이너 로깅
 
 디버깅이나 운영적인 목적으로 컨테이너 내부에 어떤 일이 일어나는지 알아야 되는 경우가 있다. 애플리케이션 레벨에서 로그가 기록되도록 별도의 로깅을 남길 수도 있지만, 도커는 컨테이너의 표준 출력과 에러 로그를 별도의 메타데이터 파일로 저장하며 이를 확인하는 명령어를 제공한다. 아래 사진과 같이 `docker logs {컨테이너 ID 또는 이름}`을 입력하면 컨테이너의 표준 출력을 확인할 수 있다.
 
-![Untitled](assets/Untitled 8.png)
+![Untitled](assets/Untitled%208.png)
 
 `/var/lib/docker/containers/${CONTAINER_ID}/${CONTAINER_ID}-json.log`경로에 컨테이너 로그가 JSON 형태로 저장되어 있는 것을 확인할 수 있다.
 
-![Untitled](assets/Untitled 9.png)
+![Untitled](assets/Untitled%209.png)
 
 ## 컨테이너 자원 할당 제한
 
@@ -132,7 +130,7 @@ docker-compose.yml 파일은 `docker-compose up -d` 명령어로 실행할 수 �
 
 여기서 서버로서의 도커를 도커 데몬이라고 부른다. 도커 데몬은 API 입력을 받아 도커 엔진의 기능을 수행한다. 이 API를 사용할 수 있도록 CLI를 제공하는 것이 도커 클라이언트다. 사용자가 docker로 시작하는 명령어를 입력하면 도커 클라이언트를 사용하느 것이며, 도커 클라이언트는 입력된 명령어를 도커 데몬에게 API로서 전달한다.
 
-![Untitled](assets/Untitled 10.png)
+![Untitled](assets/Untitled%2010.png)
 
 도커 데몬의 API를 사용할 수 있는 방법을 추가할 수 있다. 일반적으로 도커 데몬은 CLI를 통해 사용할 수 있기 때문에 아래의 명령어가 실행된 것과 같다.
 
@@ -146,7 +144,7 @@ dockered -H unix:///var/run/docker.sock
 dockered -H unix:///var/run/docker.soick -H tcp://0.0.0.0:2375
 ```
 
-![Untitled](assets/Untitled 11.png)
+![Untitled](assets/Untitled%2011.png)
 
 또한 도커 데몬에 보안 적용도 가능하다고 한다.
 
@@ -154,7 +152,7 @@ dockered -H unix:///var/run/docker.soick -H tcp://0.0.0.0:2375
 
 도커 스웜모드는 여러 대의 서버를 하나의 자원 풀로 만드는 작업을 쉽게 해준다. 여러 대의 도커 서버를 하나의 클러스터로 만들어 컨테이너를 생성하는 여러 기능을 제공한다. 도커 스웜모드는 매니저 노드와 워커 노드로 구성되어 있다. 매니저 노드는 워커 노드를 관리하기위한 도커 서버이고, 매니저 노드는 기본적으로 워커 노트의 역할을 포함하고 있다. 매니저 노드는 1개 이상 포함되어야 된다. 만약 매니저 노드는 데이터 일관성을 위한 투표 등의 이유로 홀수 개로 구성하는 것을 권장한다.
 
-![Untitled](assets/Untitled 12.png)
+![Untitled](assets/Untitled%2012.png)
 
 간단하게 컨테이너를 3개의 서버에 배포하는 예시를 들어본다. 아래와 같은 서버들의 IP와 호스트 이름이 있다고 가정한다.
 
@@ -205,7 +203,7 @@ nginx
 
 태스크를 생성할 때는 두 가지 모드가 있다. 위에서 본 것 같이 지정한 개수의 태스크를 생성하는 레플리카 모드와 모든 각 노드에 태스크를 하나씩 할당하는 글로벌 모드가 있다. 만약 태스크 중 하나가 장애가 발생해서 작동을 멈추면 레플리카 수를 충족하지 못한 것으로 판단하여 스웜 매니저는 다른 노드에 새로운 태스크를 생성한다. 하나의 노드에 여러 개의 태스크를 생성하는 것도 가능하다. 또한 태스크의 개수를 노드의 수보다 많게 설정도 가능하다.
 
-![Untitled](assets/Untitled 13.png)
+![Untitled](assets/Untitled%2013.png)
 
 ## 참고 자료
 

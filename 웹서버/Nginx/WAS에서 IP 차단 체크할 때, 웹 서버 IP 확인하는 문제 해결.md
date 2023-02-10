@@ -2,9 +2,9 @@
 
 HTTP 요청을 보낸 사람의 IP를 확인해서 DB에 등록되어 있는 사용자만 허가되도록 구현했다. 하지만 WAS가 HTTP를 받았을 때 항상 IP가 웹 서버(NGINX)의 IP로 인식되는 문제가 있었다.
 
-![Untitled](WAS%E1%84%8B%E1%85%A6%E1%84%89%E1%85%A5%20IP%20%E1%84%8E%E1%85%A1%E1%84%83%E1%85%A1%E1%86%AB%20%E1%84%8E%E1%85%A6%E1%84%8F%E1%85%B3%E1%84%92%E1%85%A1%E1%86%AF%20%E1%84%84%E1%85%A2,%20%E1%84%8B%E1%85%B0%E1%86%B8%20%E1%84%89%E1%85%A5%E1%84%87%E1%85%A5%20IP%20%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A1%E1%84%82%208fe68ad14051424a8dac40392b2bdb38/Untitled.png)
+![Untitled](assets/Untitled.png)
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201.png)
 
 ## 문제 해결
 
@@ -53,7 +53,7 @@ private String getClientIpFrom(final HttpServletRequest request) {
 
 ## 재확인
 
-![Untitled](assets/Untitled 2.png)
+![Untitled](assets/Untitled%202.png)
 
 ## 참고 자료
 

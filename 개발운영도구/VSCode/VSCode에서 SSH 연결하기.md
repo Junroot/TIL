@@ -20,7 +20,7 @@ Windows 기준 아래의 경로에 파일이 존재한다.
 
 ## 결과
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201.png)
 
 ## 참고 자료
 

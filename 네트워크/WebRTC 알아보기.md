@@ -38,7 +38,7 @@
 - NAT을 사용하는 일부 라우터는 P2P 연결이 차단되어 있을 수 있다. 이를 대비해서 기존에 웹에서 주로 사용하던 Client-Server 구조로 통신하는 서버를 TURN 서버라고 부른다.
 - 여기서 부르는 TURN도 프로토콜의 이름이다.
 
-![Untitled](assets/Untitled 1-4550665.png)
+![Untitled](assets/Untitled%201-4550665.png)
 
 > NAT 이란?
 라우터에서 사용되는 기술. IP를 절약하기 위해서 라우터에 속해있는 기기들에 private IP를 할당하고, 포트에 매핑을 시켜준다.

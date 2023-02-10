@@ -57,7 +57,7 @@ public class ImageBodyPreprocessor implements OperationPreprocessor {
 
 위 코드와 같이 file이라는 part의 내용을 수정해야됐다.
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201.png)
 
 위 결과와 같이 바이트 데이터대신 '<<binary data>>'라는 문자가 보이도록 수정했다.
 

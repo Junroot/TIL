@@ -16,7 +16,7 @@ implementation 'org.springframework.cloud:spring-cloud-aws-context:2.2.6.RELEASE
 
 AWS 자원들에 접근 권한을 얻기 위해서는 아래의 과정을 순서대로 거쳐서 만족하면 된다. 5번의 경우가 내가 사용하려고 하는 접근 권한 얻는 방법이다. 따라서 다음과 같이 accees key를 설정하지 않도 다음과 같은 방법으로 객체를 만들어 줄 수 있다.
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201.png)
 
 ## S3에 있는 파일 리스트 가져오기
 

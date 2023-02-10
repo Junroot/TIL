@@ -23,13 +23,13 @@ Sticky Session이란 클라이언트가 첫 요청을 보낸 시점에 로드 �
 
 여러 대의 서버가 세션을 공유할 수 있도록 하는 것이 세션 클러스터링이다. 이렇게 처리하면 서버 한 대가 다운되더라도 세션이 유실되지도 않고, 어떤 서버에서든지 요청을 처리할 수 있어 한 서버에서만 트래픽 과부하가 발생하지도 않을 것이다. 
 
-![Untitled](assets/Untitled 1-4550699.png)
+![Untitled](assets/Untitled%201-4550699.png)
 
 ## 처리 방법 #3: Redis Pub/Sub
 
 우리 같은 경우는 SockJS와 STOMP를 사용하고 있어서 세션 클러스터링만으로는 한계가 있었다. 어떤 클라이언트가 어떤 채널에 STOMP 구독을 했는지도 기억하고 있어야 했기 때문이다. 그래서 우리는 Redis의 pub/sub 기능을 활용하기로 했다. 
 
-![Untitled](assets/Untitled 2-4550703.png)
+![Untitled](assets/Untitled%202-4550703.png)
 
 ## 참고 자료
 

@@ -10,21 +10,21 @@
 
 이렇게 결합하면 어떤 이점이 있을까? 기존의 TCP + TLS의 경우에는 클라이언트와 서버가 연결을 시작할 때 TCP의 3-Way Handshake와 TLS 자체의 Handshake가 따로 필요했었다.
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201.png)
 
 QUIC은 이 두 가지 Handshake를 하나로 결합해서 한 번의 왕복(RTT)으로 암호화를 제공하는 연결이 가능해진다.
 
-![Untitled](assets/Untitled 2.png)
+![Untitled](assets/Untitled%202.png)
 
 ## HoL 블록킹 대응
 
 HTTP/2는 HTTP/1.1에서 파이프라이닝 기능에서 발생할 수 있는 HoL 블록킹 문제를 요청을 병렬적으로 처리할 수 있게하여 애플리케이션 레이어의 HoL문제를 해결했었다. 하지만 TCP 레이어에서의 HoL 문제를 해결하지 못했다. HTTP/2는 한 개의 TCP 연결에서 요청들이 발생하는데, TCP의 혼잡 제어 등으로 인해 TCP 스트림에서 하나의 패킷 손실이 있다면 해당 패킷을 계속해서 재전송하기 때문에 TCP 레이어에서도 HoL문제가 발생한다.
 
-![Untitled](assets/Untitled 3.png)
+![Untitled](assets/Untitled%203.png)
 
 QUIC은 패킷 손실이 발생하게 되면 발생한 스트림만 재전송을 기다리고 나머지 스트림은 게속해서 전송을 진행하기 때문에 HoL 블록킹이 발생하지 않는다. 아래 그림에서 FEC 패킷이 손실을 복구하기 위한 패킷을 의미한다.
 
-![Untitled](assets/Untitled 4.png)
+![Untitled](assets/Untitled%204.png)
 
 ## 참고 자료
 

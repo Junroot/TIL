@@ -32,4 +32,5 @@ signaling.postMessage({type: 'hello'});
 
 ## 참고 자료
 
-[https://developer.mozilla.org/ko/docs/Web/API/BroadcastChannel](https://developer.mozilla.org/ko/docs/Web/API/BroadcastChannel)[https://webrtc.github.io/samples/src/content/peerconnection/channel/](https://webrtc.github.io/samples/src/content/peerconnection/channel/)[https://developer-alle.tistory.com/m/433](https://developer-alle.tistory.com/m/433)
+[https://developer.mozilla.org/ko/docs/Web/API/BroadcastChannel](https://developer.mozilla.org/ko/docs/Web/API/BroadcastChannel)
+[https://webrtc.github.io/samples/src/content/peerconnection/channel/](https://webrtc.github.io/samples/src/content/peerconnection/channel/)[https://developer-alle.tistory.com/m/433](https://developer-alle.tistory.com/m/433)

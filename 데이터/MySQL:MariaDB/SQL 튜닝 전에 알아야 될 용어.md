@@ -21,7 +21,7 @@ InnoDB, MyISAM, Memory 등과 같은 스토리지 엔진은 사용자가 요청�
 
 앞에서 말한 Parser, Optimizer도 MySQL 엔진에 포함된다. 사용자가 요청한 SQL 문을 넘겨받은 뒤 SQL 문법 검사와 적절한 오브젝트 활용 검사를 하고, SQL 문을 최소 단위로 분리하여 원하는 데이터를 빠르게 찾는 경로를 탐색하는 역할을 한다.
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201.png)
 
 ### 쿼리 캐시
 
@@ -67,17 +67,17 @@ MySQL 엔진과 스토리지 엔진 영역 모두에 모두 걸치는 오브젝�
 
 NL 조인의 성능을 개선하기 위해 만들어졌다. 드라이빙 테이블의 행들을 조인 버퍼에 넣을 수 있는 만큼 저장 해둔 후 드리븐 테이블을 스캔하면서 탐색한다. 한 번에 여러 개 행들과 비교할 수 있기 때문에 성능 개선이 된다.
 
-![Untitled](assets/Untitled 2.png)
+![Untitled](assets/Untitled%202.png)
 
 ### 배치 키 액세스 조인(BKA 조인)
 
 NL 조인의 경우 드라이빙 테이블에서 조회된 데이터로 드리븐 테이블에 접근하게 되어 비고유 인덱스에 의해 무조건 랜덤 액세스가 발생한다. 
 
-![Untitled](assets/Untitled 3.png)
+![Untitled](assets/Untitled%203.png)
 
 이를 개선하기 위해 다중 범위 읽기(multi range read, MRR) 기능을 도입했다. MRR은 드리븐 테이블의 데이터를 예측하고 정렬된 상태로 버퍼에 적재하는 기능이다. 미리 예측된 데이터를 가져와 정렬된 상태에서 랜덤 버퍼에 담기 때문에, 드리븐 테이블에 대해 랜덤 액세스가 아닌 시퀀셜 액세스를 할 수 있게된다.
 
-![Untitled](assets/Untitled 4.png)
+![Untitled](assets/Untitled%204.png)
 
 ### 해시 조인
 
@@ -91,41 +91,41 @@ NL 조인의 경우 드라이빙 테이블에서 조회된 데이터로 드리�
 
 인덱스가 존재 하지 않거나, 전체 데이터 대비 대량의 데이터가 필요할 경우 발생한다. 테이블오 직행해서 처음부터 끝까지 데이터를 스캔하기 때문에 성능적으로 느리다. 인덱스 없이 사용하는 유일한 방식이다.
 
-![Untitled](assets/Untitled 5.png)
+![Untitled](assets/Untitled%205.png)
 
 ### 인덱스 범위 스캔
 
 SQL 문에서 BETWEEN ~ AND 구문이나, <, >, LIKE 구문 등 비교 연산에 인덱스가 포함될 경우 발생한다. 인덱스를 범위 기준으로 스캔한 뒤 결과를 토대로 테이블의 데이터를 찾아간다. 좁은 범위를 스캔할 때는 성능적으로 효율적이지만, 넓은 범위를 스캔할 때는 비효율적이다.
 
-![Untitled](assets/Untitled 6.png)
+![Untitled](assets/Untitled%206.png)
 
 ### 인덱스 풀 스캔
 
 인덱스로 구성된 열 정보만 요구하는 SQL 문에서 인덱스 풀 스캔이 발생한다. 인덱스를 처음부터 끝까지 스캔하는 방식이다. 인덱스 풀 스캔은 테이블 풀 스캔보다는 데이터 양이 적으므로 성능상 유리하지만, 전 영역을 모두 검색하는 방식인 만큼 검색 범위를 줄이는 방향으로 SQL 튜닝을 해야된다.
 
-![Untitled](assets/Untitled 7.png)
+![Untitled](assets/Untitled%207.png)
 
 ### 인덱스 고유 스캔
 
 WHERE 절에 = 조건으로 작성하며, 해당 조인 열이 기본 키 또는 고유 인덱스의 선두 열로 설정되었을 떄 발생한다. 기본 키나 고유 인덱스로 테이블에 접근하는 방식으로, 인덱스를 사용하는 스캔 방식 중에 가장 효율적인 스캔 방법이다.
 
-![Untitled](assets/Untitled 8.png)
+![Untitled](assets/Untitled%208.png)
 
 ### 인덱스 루스 스캔
 
 보통 GROUP BY나 MAX(), MIN() 같은 함수고 실행되면 발생한다. 인덱스의 필요한 부분들만 골라 스캔하는 방식이다.
 
-![Untitled](assets/Untitled 9.png)
+![Untitled](assets/Untitled%209.png)
 
 ### 인덱스 병합 스캔
 
 WHERE 문 조건절의 열들이 서로 다른 인덱스로 존재하면 옵티마이저가 해당 인덱스를 가져와서 모두 활용하는 방식이다. 통합하는 방법으로는 결합(union)과 교차(intersection)방식이 있으며 이들 방식은 모두 실행 계획으로 출력된다. 인덱스 병합 스캔은 물리적으로 존재하는 개별 인덱스를 각각 스캔하므로 인덱스 접근하는 시간이 몇 배로 걸린다. 따라서 별개로 생성된 인덱스들을 보통 하나의 인덱스로 통합하여 SQL 튜닝을 수행하거나, SQL 문 자체를 독립된 하나의 인덱스만 수행하도록 변경할 수 있다.
 
-![Untitled](assets/Untitled 10.png)
+![Untitled](assets/Untitled%2010.png)
 
 ## 디스크 접근 방식
 
-![Untitled](assets/Untitled 11.png)
+![Untitled](assets/Untitled%2011.png)
 
 ### 시퀀셜 액세스
 

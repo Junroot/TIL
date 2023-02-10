@@ -1,6 +1,6 @@
 # Optional.orElse() vs Optional.orElseGet()
 
-`Optional<T>` 기준으로 Optional.orElse()는 인자로 T 객체를 받고 orElseGet은 Supplier<? extends T> 를 받는다. orElse에 메소드를 넣어두면 null이든 아니든 항상 실행되고 orElseGet은 null일 경우에만 실행된다. 함수를 호출해야 되는 경우에는 가능하면 orElseGet을 사용하는게 좋아보인다.
+`Optional<T>` 기준으로 Optional.orElse()는 인자로 T 객체를 받고 orElseGet은 `Supplier<? extends T>` 를 받는다. orElse에 메소드를 넣어두면 null이든 아니든 항상 실행되고 orElseGet은 null일 경우에만 실행된다. 함수를 호출해야 되는 경우에는 가능하면 orElseGet을 사용하는게 좋아보인다.
 
 ```java
 // Always get heavy resource

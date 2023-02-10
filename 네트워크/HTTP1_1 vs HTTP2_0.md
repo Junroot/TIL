@@ -29,7 +29,7 @@ Google에서 개발한 SPDY라는 프로토콜을 기반으로 시작되었다. 
 
 파이프라이닝은 이런 영속적인 커넥션을 통해서, 응답을 기다리지 않고 요청을 연적으로 보내는 기능이다. 하지만 파이프라이닝은 HOL 문제를 가지고 있다. 서버는 요청이 들어온 순서대로 처리를 한다. 만약, 앞에 들어온 요청에 지연이 발생하면 나머지 요청들도 전부 지연이 발생하는 문제가 발생하는데 이를 HOL 블락 문제라고 한다. 이를 완화하기 위해서 병렬 TCP 연결을 추가하여 구현할 수는 있지만 클라이언트와 서버간에 동시에 연결 가능한 TCP 연결 개수는 제한이 있다.
 
-![Untitled](assets/Untitled 1-4550573.png)
+![Untitled](assets/Untitled%201-4550573.png)
 
 ### HTTP/2
 
@@ -67,7 +67,7 @@ HTTP/2에서는 바이너리 프레이밍 레이어에서 바이너리로 인코
 
 HTTP/1.1의 경우에는 TCP 연결을 기반으로 흐름 제어를 한다. 클라이언트와 서버는 TCP 연결이 만들어지면 시스템 기본값으로 설정된 사이즈만큼 버퍼를 생성한다. 수신자가 버퍼에 데이터를 담고있으면 발신자에게 남은 버퍼 용량을 나타내는 receive window를 보낸다. 이 receive window는 ACK 패킷으로 신호를 보낸다. ACK 패킷은 데이터를 제대로 수신했다는 것을 확인하기 위해 보내는 패킷이다. 만약 recevie window의 크기가 0이 되면 발신자는 내부 버퍼를 지운 다음 데이터 데이터 전송 재개를 요청할 때까지 발신자는 더 이상 데이터를 보내지 않는다.
 
-![Untitled](assets/Untitled 2-4550588.png)
+![Untitled](assets/Untitled%202-4550588.png)
 
 **HTTP/2**
 
@@ -86,7 +86,7 @@ HTTP/2는 connection 레벨(TCP)과 스트림 레벨 2가지로 흐름 제어를
 
 일반적인 웹 애플리케이션에서는 하나의 HTML 페이지에 CSS, JavaScript, 이미지 등의 다른 리소스들을 많이 가지고 있다. 클라이언트 입자에서는 추가적인 리소스를 HTML 파일을 받고 나서 알 수 있기 때문에, 병렬적인 로딩이 불가능하다. 
 
-![Untitled](assets/Untitled 3-4550593.png)
+![Untitled](assets/Untitled%203-4550593.png)
 
 **HTTP/1.1**
 
@@ -102,9 +102,9 @@ HTTP/1.1에서는 이 문제를 해결하기 위해서 HTML에 있는 리소스 
 
 HTTP/2가 나오면서 이 문제를 궁극적으로 해결할 수 있게되었다. HTTP/2에는 서버 푸쉬라는 기능이 있다. 서버는 클라이언트에게 HTML 파일을 보내기 전에 다른 리소스가 어떤게 필요한지 미리 알고 있기 때문에 사용할 수 있는 기능이다. 
 
-![Untitled](assets/Untitled 4-4550597.png)
+![Untitled](assets/Untitled%204-4550597.png)
 
-![Untitled](assets/Untitled 5.png)
+![Untitled](assets/Untitled%205.png)
 
 `PUSH_PROMISE` 프레임에 의해서 푸쉬 스트림들이 만들어진다. 클라이언트는 `PUSH_PROMISE` 프레임을 수신하면 캐싱되어 있는 리소스를 확인 후 `RST_STREAM` 프레임으로 해당 스트림을 거부할 수 있다. 또한 클라이언트는 아래의 항목들을 `SETTINGS` 프레임을 통해 언제든지 제어할 수 있다.
 
@@ -124,7 +124,7 @@ gzip을 이용해서 여러 가지 파일을 압축하는데 사용했다. 하�
 
 HTTP/2에서는 HPACK 압축 프로그램을 통해서 압축을 한다. HPACK은 헤더 프레임을 압축할 수 있다는 장점이 있다. 또한 HPACK은 헤더 필드 목록을 추적하여 이 후에 전송하는 요청 헤더 프레임에는 변경된 헤더 필드만 보낼 수 있다.
 
-![Untitled](assets/Untitled 6.png)
+![Untitled](assets/Untitled%206.png)
 
 ## 참고 자료
 

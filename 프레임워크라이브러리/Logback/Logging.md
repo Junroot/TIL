@@ -37,7 +37,7 @@ Spring Boot는 여러 가지 프레임워크를 사용할 수 있지만 기본�
 
 현재 Logback은 logback-core, logback-classic, logback-access 3가지 모듈로 나뉜다.  core는 classic과 access 모듈의 기초가 된는 범용 모듈이다. classic 모듈은 SLF4J API의 구현에 집중되어있다. access 모듈은 HTTP 액세스 로그 기능을 제공하기 위해 서블릿 컨테이너와 통합된다. 또한 Logger 클래스는 classic 모듈의 일부이고 Appender와 Layout 인터페이스는 core 모듈의 일부이다.
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201.png)
 
 ### Logback 구성
 
@@ -76,7 +76,7 @@ Logback의 Logger는 5가지의 로그 레벨을 가질 수 있다.
 
 - `OutputStreamAppender`: 이벤트를 `java.io.OutputStream`에 추가한다. 다른 Appender의 기초가되는 서비스를 제공한다. `OutputStream`에 문자열을 쉽게 매핑할 수 없기 때문에 일반적으로 직접 사용하지는 않는다.
   
-    ![Untitled](assets/Untitled 2.png)
+    ![Untitled](assets/Untitled%202.png)
     
 - `ConsoleAppender`: 콘솔에 이벤트를 추가한다. 아래와 같이 class에 `ch.qos.logback.core.ConsoleAppender`로 xml 파일에 추가할 수 있다.
   
