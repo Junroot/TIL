@@ -7,13 +7,17 @@
 ## 호출된 횟수 검증
 
 ```kotlin
-List<String> mockedList = mock(MyList.class); mockedList.size(); verify(mockedList, times(1)).size();
+List<String> mockedList = mock(MyList.class); 
+mockedList.size(); 
+verify(mockedList, times(1)).size();
 ```
 
 ## 호출되지 않음을 검증
 
 ```kotlin
-List<String> mockedList = mock(MyList.class); mockedList.size(); verify(mockedList, never()).clear();
+List<String> mockedList = mock(MyList.class); 
+mockedList.size(); 
+verify(mockedList, never()).clear();
 ```
 
 ## 호출되는 인자 매칭 커스터마이징
