@@ -8,7 +8,7 @@
 ## kotlin-maven-allopen
 
 - 이를 해결해주기 위해 kotlin에서는 `kotlin-maven-allopen`이라는 플러그인을 제공해준다.
-- `@Configuration`이나 `@Transactional`, `Component` 등 스프링 관련 어노테이션이 붙어있는 클래스나 메서드는 자동으로 open 시켜서 CGLIB에 사용할 수 있게 해준다.
+- `@Configuration`이나 `@Transactional`, `@Component` 등 스프링 관련 어노테이션이 붙어있는 클래스나 메서드는 자동으로 open 시켜서 CGLIB에 사용할 수 있게 해준다.
 
 ```maven
 <plugin> 
@@ -26,6 +26,7 @@
 			</dependency> 
 		</dependencies>
 	</configuration>
+</plugin>
 ```
 
 ## 참고 자료
