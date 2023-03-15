@@ -13,7 +13,7 @@
 	- 조건부 테스트 실행( `ExecutionCondition`): 조건에 따라 테스트 실행 여부를 설정할 수 있다.
 	- 라이프사이클 콜백: 테스트 라이프사이클에 행동을 추가할 수 있다.
 		- `BeforeAllCallback`, `AfterAllCallback`: 모든 테스트 메소드를 실행하기 전과 후에 실행
-		- `BeforeEachCallBack`, `AfterEachCallbacl`: 각 테스트 메소드를 실행하기 전과 후에 실행
+		- `BeforeEachCallBack`, `AfterEachCallback`: 각 테스트 메소드를 실행하기 전과 후에 실행
 		- `BeforeTestExecutionCallback`, `AfterTestExecutionCallback`: 테스트 메소드를 실행하기 직전과 직후에 실행
 		- 아래 사진에 실행 순서가 있다.
 	- 매개변수 확인(`ParameterResolver`): 테스트 코드 생성자와 메소드에서 파라미터를 받을 때 사용한다.
