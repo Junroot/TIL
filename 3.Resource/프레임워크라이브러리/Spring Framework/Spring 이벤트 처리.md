@@ -90,6 +90,5 @@ public class AnnotationDrivenEventListener {
 
 ## 참고 자료
 
-[https://www.baeldung.com/spring-events](https://www.baeldung.com/spring-events)
-
-[https://www.baeldung.com/spring-data-ddd](https://www.baeldung.com/spring-data-ddd)
+- [https://www.baeldung.com/spring-events](https://www.baeldung.com/spring-events)
+- [https://www.baeldung.com/spring-data-ddd](https://www.baeldung.com/spring-data-ddd)
