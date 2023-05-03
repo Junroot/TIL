@@ -62,21 +62,26 @@
 ```
 
 - CSRF 토큰이 요청 URL에 유출되지 않는지 유의해야된다.
-	- 쿠키의 경우 다른 사이트의 요청에도 항상 보내기 때문에, CSRF 토큰는 쿠키를 사용하여 전송하지 않는다.
+- 쿠키의 경우 다른 사이트의 요청에도 항상 보내기 때문에, CSRF 토큰은 쿠키를 사용하여 전송하지 않는다.
 
-### 이중 제출 쿠키
+### 이중 제출 쿠키(stateless API 의 경우)
 
+- 웹 브라우저의 동일 출처 정책(SOP)으로 인해 자바스크립트에서 타 도메인의 쿠키를 확인/수정하지 못한다는 점을 이용한다.
+	- SOP는 타 도메인의 리소스(쿠키 등)를 읽고, 쓰는 것을 막는다.
+	- CSRF 공격은 쿠키를 읽지 않아도 자동적으로 함께 보내기 때문에 SOP만으로는 CSRF는 막지 못한다.
+- 클라이언트는 서버로부터 임의의 난수값을 받아서, 쿠키와 요청 파라미터로 해당 값을 보낸다.
+- 서버는 요청을 받을 때, 쿠키와 요청 파라미터로 받은 값이 같은지 확인한다.
+	- 공격자는 SOP로 타 도메인의 쿠키를 확인할 수 없어서 보내지 못한다.
+- 보안을 강화하기 위해 토큰과 비밀키로 HMAC 한 결과를 쿠키에 저장하고, 쿠키 값이 유효한지 확인한다. 
 
+### 부가적인 기법
 
-### SameSite 쿠키
-
-- 다른 사이트로 전송하는 요청의 경우 쿠키 전송에 제한을 두도록 하는 설정이다.
-- 이를 지원하는 브라우저에서만 보호가 되기 때문에, CSRF 토큰과 함께 사용하는 것이 좋다.
-
-### 표준 헤더를 통한 검증
-
-- `Origin`, `Referer` 헤더를 통해서 현재 요청을 보낸 페이지가 같은 페이지인지 검증한다.
-- 페이지 내에 XSS 취약점이 있다면 CSRF 공격이 가능하기 때문에, CSRF 토큰과 함께 사용하는 것이 좋다.
+- SameSite 쿠키
+	- 다른 사이트로 전송하는 요청의 경우 쿠키 전송에 제한을 두도록 하는 설정이다.
+	- 이를 지원하는 브라우저에서만 보호가 되기 때문에, CSRF 토큰과 함께 사용하는 것이 좋다.
+- 표준 헤더를 통한 검증
+	- `Origin`, `Referer` 헤더를 통해서 현재 요청을 보낸 페이지가 같은 페이지인지 검증한다.
+	- 페이지 내에 XSS 취약점이 있다면 CSRF 공격이 가능하기 때문에, CSRF 토큰과 함께 사용하는 것이 좋다.
 
 ## CSRF 토큰과 JWT와의 차이점?
 
@@ -93,3 +98,5 @@
 - https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
 - https://www.baeldung.com/csrf-stateless-rest-api
 - https://mygumi.tistory.com/375
+- https://velog.io/@jeong3320/CSRF-%EA%B3%B5%EA%B2%A9
+- https://security.stackexchange.com/questions/226007/doesnt-samesite-cookie-and-sameorigin-policy-effectively-does-the-same-job
