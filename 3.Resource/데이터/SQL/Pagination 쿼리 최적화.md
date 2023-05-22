@@ -52,6 +52,7 @@ select n.*
 from news as n  
          join (select id  
                from news  
+               where (date, id) < (prev_date, prev_id)
                order by date desc, id desc  
                    limit 50) as cover  
               on n.id = cover.id
