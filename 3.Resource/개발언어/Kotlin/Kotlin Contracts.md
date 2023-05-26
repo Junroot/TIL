@@ -18,7 +18,7 @@
 - `contract()` 메서드를 호출되는 함수에 선언하고, 내부에 함수의 동작을 명시한다.
 - `returns()`: 함수가 정상적으로 리턴되는 경우를 의미한다.
 - `implies()`: 파라미터로 받은 `booleanExpression`이 항상 참임을 보장한다.
-- 실험정인 단계의 contract API를 사용하는 함수에는 `@OptIn(ExperimentalContracts:class)`를붙여주거나 컴파일 인자로 `-opt-in=kotlin.contracts.ExperimentalContracts`를 사용해야 된다.
+- 실험적인 단계의 contract API를 사용하는 함수에는 `@OptIn(ExperimentalContracts:class)`를붙여주거나 컴파일 인자로 `-opt-in=kotlin.contracts.ExperimentalContracts`를 사용해야 된다.
 
 ![](assets/Pasted%20image%2020230427115336.png)
 
