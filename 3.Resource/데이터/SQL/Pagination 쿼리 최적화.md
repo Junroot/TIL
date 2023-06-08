@@ -14,9 +14,9 @@
 ```sql
 select *
 from news
-offset 4950
 order by date desc, id desc
-limit 50;
+limit 50
+offset 4950;
 
 create index .. on news(date, id);
 ```
@@ -53,9 +53,8 @@ select n.*
 from news as n  
          join (select id  
                from news  
-               where (date, id) < (prev_date, prev_id)
                order by date desc, id desc  
-                   limit 50) as cover  
+                   limit 50 offset 4950) as cover  
               on n.id = cover.id
 
 create index .. on news(date, id);
