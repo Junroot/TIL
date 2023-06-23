@@ -30,7 +30,7 @@ cron [-f] [-l] [-L loglevel]
 
 - 일, 주, 월 빈도로 작업을 실행할 수 있는 명령어
 - cron 보다 좋은 점: cron은 예약된 시간에 컴퓨터가 꺼져있으면 실행하지 않지만, anacron은 마지막 작업 시각을 확인해서 마지막 실행 시각을 비교해서 시간이 지났으면 실행한다.
-- anacon에서 지정한 디렉토리에 작업을 추가하면 된다.
+- anacron에서 지정한 디렉토리에 작업을 추가하면 된다.
 	- 아래의 예에선 `/etc/cron.daily`, `/etc/cron.weekly`, `/etc/ron/monthly`
 	- ![](assets/Pasted%20image%2020230622201625.png)
 
