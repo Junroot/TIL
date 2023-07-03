@@ -116,7 +116,7 @@ class Taco(
 - `WebMvcLinkBuilder`를 통해서 링크를 하드코딩하지 않고, 링크를 추가할 수 있다.
 	- `linkTo()`: 컨트롤러 클래스인지 검사하고 컨르롤러에 매핑된 url을 얻는다.
 	- `methodOn()`: 컨트롤러에서 대상 메서드에 매핑된 url을 얻는다.
-	- `withSelfRel`: `self` 링크에 추가한다.
+	- `withSelfRel()`: `self` 링크에 추가한다.
 
 ```kotlin
 @GetMapping("/recent")  
@@ -127,5 +127,70 @@ fun recentTacos(): CollectionModel<Taco> {
    val link =  
       linkTo<CollectionModel<Taco>> { methodOn(DesignTacoController::class.java).recentTacos() }.withSelfRel()  
    return CollectionModel.of(tacos, link)  
+}
+```
+
+#### 3. Representation model assmbler
+
+- 각 엔티티에 대한 매핑을 자동으로 처리해주는 클래스를 선언할 수 있다.
+- 엔티티에서 모델 클래스로 변환은 2가지 과정을 거친다.
+	1. 모델 클래스 인스턴스화
+	2. 렌더링 된 리소스의 링크 추가
+- 과정
+	1. Model 생성
+		- ![](assets/Pasted%20image%2020230703231757.png)
+	2. RepresentationModelAssemblerSupport 선언
+		- `RepresentationModelAssemblerSupport<엔티티 클래스, 모델 클래스>(url 매핑할 클래스, 매핑할 모델 클래스)`
+		- `toModel()`: 엔티티로 모델을 생성하는 과정을 작성한다.
+		- `instantiateModel()`: 모델 객체를 인스턴스화 할 때 사용한다. `createModelWithId()` 내에서 이를 호출한다.
+		- ![](assets/Pasted%20image%2020230703231825.png)
+	3. `IngredientModelAssembler.toCollectionModel()`를 통해서 리스트에 url 자동으로 매핑하기
+		- ![](assets/Pasted%20image%2020230703232307.png)
+		- ![](assets/Pasted%20image%2020230703232516.png)
+- 결과: 각 ingredient 별로 url이 생성된것을 확인할 수 있다.
+```json
+{
+    "_embedded": {
+        "tacoModelList": [
+            {
+                "name": "tacoName",
+                "createdAt": "2023-07-03T14:24:33.324+00:00",
+                "ingredients": {
+                    "_embedded": {
+                        "ingredientModelList": [
+                            {
+                                "name": "Flour Tortilla",
+                                "type": "WRAP",
+                                "_links": {
+                                    "self": {
+                                        "href": "http://localhost:8080/ingredients/FLTO"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "Corn Tortilla",
+                                "type": "WRAP",
+                                "_links": {
+                                    "self": {
+                                        "href": "http://localhost:8080/ingredients/COTO"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/design/1"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "recents": {
+            "href": "http://localhost:8080/design/recent"
+        }
+    }
 }
 ```
