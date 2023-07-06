@@ -63,6 +63,9 @@ fun postTaco(@RequestBody taco: Taco): Taco {
 
 ## 하이퍼미디어 사용하기
 
+- 참고 자료
+	- https://www.baeldung.com/spring-data-rest-intro
+	- https://docs.spring.io/spring-data/rest/docs/current/reference/html/
 - HATEOAS(Hypermedia As The Engine of Application State): REST API를 구현하는 방법 중 하나로, API로부터 반환되는 리소스에 해당 리소스와 관련된 하이퍼링크들이 포함된다.
 	- REST 서비스의 클라이언트가 서버와의 결합도를 낮추기 위해서 사용한다.
 	- HATEOAS 사용 전에는 각 API의 url을 하드 코딩으로 가지고 있고, 호출하는 구조였다.
@@ -148,10 +151,11 @@ fun recentTacos(): CollectionModel<Taco> {
 		- ![](assets/Pasted%20image%2020230703232307.png)
 		- ![](assets/Pasted%20image%2020230703232516.png)
 - 결과: 각 ingredient 별로 url이 생성된것을 확인할 수 있다.
+	- `_embedded`아래의 `tacoModelList`는 `TacoModel` 클래스명을 따라간.
 ```json
 {
     "_embedded": {
-        "tacoModelList": [
+        "스List": [
             {
                 "name": "tacoName",
                 "createdAt": "2023-07-03T14:24:33.324+00:00",
@@ -192,5 +196,124 @@ fun recentTacos(): CollectionModel<Taco> {
             "href": "http://localhost:8080/design/recent"
         }
     }
+}
+```
+
+### embedded 관계 이름 짓기
+
+- `@Relation`를 사용하면 스프링 HATEOAS가 JSON의 필드 일므을 짓는 방법을 지정할 수 있다.
+	- `value`: `TacoModel`이 객체로 매핑될 때 이름
+	- `collectionRelation`: `CollectionModel`에서 사용할 때 이름
+
+```kotlin
+@Relation(value = "taco", collectionRelation = "tacos")  
+class TacoModel private constructor(  
+   val name: String,  
+   val createdAt: Date,  
+   val ingredients: CollectionModel<IngredientModel>  
+): RepresentationModel<TacoModel>() {  
+  
+   constructor(taco: Taco): this(taco.name, taco.createdAt, IngredientModelAssembler.toCollectionModel(taco.ingredients))  
+}
+```
+
+## 데이터 기반 서비스 활성화하기
+
+- 참고 자료
+	- https://docs.spring.io/spring-data/rest/docs/current/reference/html/
+- 스프링 데이터 REST: 스프링 데이터가 생성하는 레포지토리의 REST API를 자동 생성한다.
+- 의존성 추가
+```xml
+<dependency>  
+   <groupId>org.springframework.boot</groupId>  
+   <artifactId>spring-boot-starter-data-rest</artifactId>  
+</dependency>
+```
+- 기존에 있던 레포지토리
+```kotlin
+interface IngredientRepository : CrudRepository<Ingredient, String>
+```
+- 자동으로 REST API가 만들어진 것을 확인할 수 있다.
+	- HATEOAS도 적용된 모습을 볼 수 있다.
+	- ![](assets/Pasted%20image%2020230705233859.png)
+- 이 엔드포인트를 사용하려면 기존에 있던 컨트롤러와 겹치면 안된다.
+- GET 뿐만아니라 POST, PUT, DELETE 메서드도 지원한다.
+- Spring data rest가 생성한 API의 기본 경로를 설정할 수도 있다.
+	- 위 사진은 경로가 `http://localhost:8080/api/ingredients`로 변경될 것이다.
+```properties
+spring.data.rest.basePath=/api
+```
+- 홈 경로로 GET 요청을 하면, 스프링 데이터 REST를 통해 노출한 모든 엔드포인트를 확인할 수 있다.
+	- ![](assets/Pasted%20image%2020230705235132.png)
+
+### 리소스 경로와 관계 이름 조정하기
+
+- 엔티티에 `@RestResource` 애노테이션을 지정하면, 관계 이름과 경로를 커스텀 할 수 있다.
+```kotlin
+@RestResource(rel="tacos", path="tacos")  
+@Entity  
+class Taco(
+// ...
+```
+- 결과
+	- ![](assets/Pasted%20image%2020230705235256.png)
+### 페이징과 정렬
+
+- `PagingAndSortingRepository<T, ID>` 클래스를 상속하면 자동으로 REST API에서 페이지네이션을 지원한다.
+	- HATEOAS를 통해 처음(first), 마지막(last), 다음(next), 이전(prev) 페이지의 링크를 제공한다.
+	- ![](assets/Pasted%20image%2020230706000153.png)
+- sort 매개변수를 지정해서 정렬을 할 수도 있다.
+	- 내림차순 정렬도 가능하다
+	- `localhost:8080/api/tacos?sort=createdAt,desc&page=0&page=12`
+
+### 커스텀 엔드포인트 추가하기
+
+- 컨트롤러에 직접 정의한 REST API를 Spring data rest의 엔드포인트에 추가하고 싶은 경우가 있다.
+- `@RepositoryRestController` 애노테이션을 붙인 컨트롤러의 모든 경로 매핑은 Spring data rest의 base 경로가 앞에 붙는다.
+- `@RepositoryRestController`는 `@RestController`와 다르게 반환값을 자동으로 응답 body에 수록하지 않는다.
+	- `@ResponseBody` 애노테이션을 지정하거나 `ResponseEntity`를 반환해야 된다.
+
+```kotlin
+@RepositoryRestController  
+class RecentTacosController(  
+   private val tacoRepository: TacoRepository  
+) {  
+  
+   @GetMapping("/tacos/recent", produces = ["application/hal+json"])  
+   fun recentTacos(): ResponseEntity<CollectionModel<TacoModel>> {  
+      val pageRequest = PageRequest.of(0, 12, Sort.by("createdAt").descending())  
+      val tacos = tacoRepository.findAll(pageRequest)  
+         .content  
+      val tacoModels = TacoModelAssembler.toCollectionModel(tacos)  
+  
+      val link =  
+         linkTo(methodOn(RecentTacosController::class.javaObjectType).recentTacos()).withRel("recents")  
+      tacoModels.add(link)  
+      return ResponseEntity(tacoModels, HttpStatus.OK)  
+   }
+}
+```
+
+### 커스텀 하이퍼링크를 스프링 데이터 엔드포인트에 추가하기
+
+- `@RepresentationModelProcessor<T>`를 빈으로 등록하면 자동으로 Spring Data REST의 엔드포인트로 추가된다.
+- T에는 엔드포인트를 추가하려고 하는 타입을 설정하면 된다.
+	- 아래 예시에서는 페이지네이션 적용된 타코 응답에 'recents'를 추가하는 것이다.
+	- ![](assets/Pasted%20image%2020230706214817.png)
+
+```kotlin
+@Component  
+class TacoModelProcessor(  
+   private val links: EntityLinks  
+) : RepresentationModelProcessor<PagedModel<EntityModel<Taco>>> {  
+  
+   override fun process(model: PagedModel<EntityModel<Taco>>): PagedModel<EntityModel<Taco>> {  
+      model.add(  
+         links.linkFor(Taco::class.java)  
+            .slash("recent")  
+            .withRel("recents")  
+      )  
+      return model  
+   }  
 }
 ```
