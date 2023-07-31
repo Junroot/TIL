@@ -1,3 +1,4 @@
+티
 # Spring Validation과 lombok 예외 처리
 
 spring validation의 `@NotNull`과 lombok의 `@NonNull`의 차이를 알아본다.
