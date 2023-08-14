@@ -114,14 +114,14 @@ class SquaredCalculatorTest {
 - 아래의 예는 메모리에 10개의 데이터만 저장하고, 디스크에 저장하기 위해 10MB를 할당한다.
 
 ```kotlin
-squareNumberCache = cacheManager.createCache(  
-   "squaredNumber",  
-   CacheConfigurationBuilder.newCacheConfigurationBuilder(  
-      Int::class.javaObjectType,  
-      Int::class.javaObjectType,  
-      ResourcePoolsBuilder.heap(10)  
-         .disk(10, MemoryUnit.MB, true)  
-   )  
+squareNumberCache = cacheManager.createCache(
+   "squaredNumber",
+   CacheConfigurationBuilder.newCacheConfigurationBuilder(
+      Int::class.javaObjectType,
+      Int::class.javaObjectType,
+      ResourcePoolsBuilder.heap(10)
+         .disk(10, MemoryUnit.MB, true)
+   )
 )
 ```
 

@@ -6,7 +6,7 @@ url에 유동적으로 바뀌는 부분이 있다면 파라미터를 사용하�
 RestAssured.given()
     .when()
         .get("http://restcountries.eu/rest/v1/name/{country}", cty)
-    .then()
+.then()
         .body("capital", containsString("Helsinki"));
 ```
 
