@@ -394,3 +394,10 @@ PUT <인덱스명>/_mapping
   }
 }
 ```
+
+- works_domain_de0_v3
+- works_domain_jp1_v3
+- works_domain_jp2_v3
+- works_domain_kr0_v3
+- works_domain_kr1_v3
+- works_domain_kr9_v3
