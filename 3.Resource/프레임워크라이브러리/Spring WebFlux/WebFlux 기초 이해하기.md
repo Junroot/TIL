@@ -43,6 +43,41 @@
 - 리액티브 스트림의 구현체로 RxJava, Reactor 등이 존재한다.
 	- Reactor의 `Flux`, `Mono`가 `Publisher` 인터페이스의 구현체다.
 
+## Spring Webflux
+
+### 사용법
+
+- Spring Webflux는 2가지 방식으로 API를 제공하고 있다.
+	- 어노테이션 기반 컨트롤러: Spring MVC에서 제공하는 어노테이션을 사용을 지원.
+		- ![](assets/Pasted%20image%2020231020192227.png)
+	- 람다 기반: 함수형 프로그래밍 지원.
+		- ![](assets/Pasted%20image%2020231020192447.png)
+
+### 내부 동작
+
+#### HttpHandler
+
+- `HttpHandler`: HTTP 요청을 논블록킹, 리액티브 스트림 백프레셔로 처리해주는 낮은 레벨의 인터페이스
+	- ![](assets/Pasted%20image%2020231020193820.png)
+- Reator Netty, Undertow, Tomcat, Jetty 등 리액티브 스트림 웹 서버를 지원하기 위한 어댑터 클래스도 지원해주고 있다.
+	- ![](assets/Pasted%20image%2020231020194108.png)
+#### WebHandler
+
+- `WebHandler`: 어노테이션 기반 컨트롤러, 람다 기반 요청 처리를 지원하기 위한 높은 레벨의 핸들러
+	- ![](assets/Pasted%20image%2020231020194453.png)
+- Spring WebFlux에서는 Spring MVC와 비슷하게 프론트 컨트롤러 패턴으로 설계되어, `WebHandler`의 구현체인 `DispatcherHandler`를 제공한다.
+- `DispatcherHandler`는 `DispatcherServlet`과 비슷하게 동작한다.
+	- 요청이 들어오면 `HandlerMapping`이 적절한 핸들러를 찾는다.
+	- 핸들러가 발견되면 적잘한 `HandlerAdapter`를 통해 실행하고, 반환 값은 `HandlerResult`로 노출된다.
+	- `HandlerResult`는 응답에 직접 쓰거나 렌더링할 뷰를 사용하여 처리하기 위해 적절한 `HandlerReseulthandler`에 제공된다.
+- `DispatcherHandler`는 `DispatcherServlet`과 다르게 정체 과정이 리액티브 스트림으로 처리된다.
+	- ![](assets/Pasted%20image%2020231020195124.png)
+
+## 스레드 동작 방식
+
+- WebFlux 서버는 기본적으로 서버를 실행하기 위한 하나의 스레드와 요청 처리를 위한 여러 개의 다른 스레드(일반적으로 CPU 코어 수 만큼)로 동작한다.
+- 만약, 외부 서버 호출이나 DB 조회같은 오래동안 블로킹되는 API를 호출해야되는 경우 `publishOn`을 사용해서 다른 스레드풀에서 실행되도록 할 수 있다.
+
 ## 참고 자료
 
 - https://www.baeldung.com/cs/reactive-programming
