@@ -131,7 +131,7 @@
     - base commit 을 기준으로 커밋을 새롭게 만들기 때문에 상당한 conflict 상황이 발생 가능
     - 작업 history 가 유지 되지 않게 되므로 작업 이력이 중요한 경우에는 적절하지 않음
     
-    ![Untitled](assets/Untitled 2.png)
+    ![Untitled](assets/Untitled%202.png)
     
 
 ## **Github 실습**

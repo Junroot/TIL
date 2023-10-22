@@ -59,15 +59,15 @@
 		- Trino가 SQL 쿼리 처리속도가 더 빠르다
 		- Trino는 YARN overhead가 없다.
 
-![](Pasted%20image%2020230227140755.png)
-![](Pasted%20image%2020230227140914.png)
+![](assets/Pasted%20image%2020230227140755.png)
+![](assets/Pasted%20image%2020230227140914.png)
 
 - Features
 	- 커널, 디스크/네트워크 버퍼 등 20%
 	- Thread stacks, GC, off heap 메모리등 30%
 	- 쿼리 실제 처리 가용 메모리는 서버의 56%
 
-![](Pasted%20image%2020230227141138.png)
+![](assets/Pasted%20image%2020230227141138.png)
 
 - Iceberg: 대규모 데이터 분석을 위해 Netflix에서 개발한 테이블 형식. 
 
@@ -78,7 +78,7 @@
 	- 쓴 순서대로 저장, 저장된 순서대로 읽는다.
 	- topic, pub/sub
 
-![](Pasted%20image%2020230227151242.png)
+![](assets/Pasted%20image%2020230227151242.png)
 
 - Kafka Consumer
 	- Topic: 1개 이상의 Partition으로 분할, 1개 이상의 Replica로 복제된 log 자료 구조
@@ -96,7 +96,7 @@
 - Consumer Coordination 동작 원리
 	- Broker를 재시작할 필요 없이 더 유연하고 확장 가능한 파티션 할당을 지원하기 위해 아래와 같은 복잡한 구조를 가진다.
 
-![](Pasted%20image%2020230227152228.png)
+![](assets/Pasted%20image%2020230227152228.png)
 
 - consumer coordination 관련 설정
 	- max.poll.interval.ms: 가져간 메시지들을 처리하는데 사용할 수 있는 최대 시간. 이 시간을 초과하면 해당 coordinator 가 죽었다고 판단한다.
@@ -105,7 +105,7 @@
 		1. consumer group에 참여한 모든 consumer에 공통으로 설정된 assignor 중에서
 		2. 우성순위가 가장 높은 것이 파티션 할당 전략으로 선택 (앞에 있는 것이 우선순위가 더 높음)
 
-![](Pasted%20image%2020230227152847.png)
+![](assets/Pasted%20image%2020230227152847.png)
 
 - cloud 환경에서의 consumer group coordination
 	- 물리적 장비의 자원을 여러 pod가 나눠서 씀
@@ -150,11 +150,11 @@
 	- 출처가 다른 데이터들의 통합 타입 시스템
 - Field Argument
 
-![](Pasted%20image%2020230227160725.png)
+![](assets/Pasted%20image%2020230227160725.png)
 
 - Enum - 지원하느 이미지 사이즈를 타입으로
 
-![](Pasted%20image%2020230227160827.png)
+![](assets/Pasted%20image%2020230227160827.png)
 
 - 암시적이 API Parameter
 - Error Handling
@@ -165,7 +165,7 @@
 - Custom Scalar
 	- graphql-scala라는 라이브러리 제공
 
-![](Pasted%20image%2020230227161741.png)
+![](assets/Pasted%20image%2020230227161741.png)
 
 - field resolver == getter function
 	- field resolver는 rest와 다르게 필요할 때만 계산한다.
@@ -176,7 +176,7 @@
 
 ### 클라우드 환경 기반 실시간 데이터 처리의 유실 없는 Geo-Replication 구축 
 
-![](Pasted%20image%2020230227170753.png)
+![](assets/Pasted%20image%2020230227170753.png)
 
 - IDC 장애의 심각성 그리고 Geo Replication
 	- Disaster Recovery, Compliance, Data Migration, Data Distribution, Data co-location
@@ -197,7 +197,7 @@
 	- Pulsar GEO replication
 	- pulsar vs kafka
 
-![](Pasted%20image%2020230227171636.png)
+![](assets/Pasted%20image%2020230227171636.png)
 
 - Realtime Data Processing in Geo Replication
 - Cloud Friendliness in Geo Replication
@@ -225,7 +225,7 @@
 		- 웹엔진(content): XWhale
 		- 브라우저(chrome): Whale
 
-![](Pasted%20image%2020230228111202.png)
+![](assets/Pasted%20image%2020230228111202.png)
 
 - 리베이스의 무게를 견뎌라
 	- 리베이스: 사용중인 오픈소스의 버전을 최신 버전으로 가져오는 작업
@@ -246,7 +246,7 @@
 		- DEV 채널 도입
 	- 예층 가능한 품질 확보를 위한 개발 인프라: 안정성, 성능, 메모리
 
-![](Pasted%20image%2020230228113552.png)
+![](assets/Pasted%20image%2020230228113552.png)
 
 - 생존을 넘어서 기여하기
 	- 글로버 브라우저 벤더사들은 글로벌 이슈에 관심이 많지 국내 이슈는 상대적으로 관심이 낮음.
@@ -284,9 +284,9 @@
 		- 병렬화를 통해 개선: 총 검색 시간이 C
 		- 네이버메일은 평균 볼륨 크기가 작아서 Full scan 방식을 적용하기 좋은 서비스
 
-![](Pasted%20image%2020230228121202.png)
+![](assets/Pasted%20image%2020230228121202.png)
 
-![](Pasted%20image%2020230228121234.png)
+![](assets/Pasted%20image%2020230228121234.png)
 
 - Noir(No Information Retrieval)
 	- full scan 검색
@@ -353,7 +353,7 @@
 	- Java agent 방식으로 손쉽게 사용 가능
 - Scanverger 데모
 
-![](Pasted%20image%2020230228150928.png)
+![](assets/Pasted%20image%2020230228150928.png)
 
 - Scanvenger 성능 오버헤드가 높지 않음
 	- Java agent 실행 시 초기 1회 전체 메서드를 스캔하는데 8.7s
@@ -362,24 +362,24 @@
 	- Maven central에서 다운로드 가능
 - Scavenger 아키텍처
 
-![](Pasted%20image%2020230228151930.png)
+![](assets/Pasted%20image%2020230228151930.png)
 
 - 수집하는 데이터
 	- Codebase: 추적할 메서드 목록과 관련 정보, 메서드 이름, parameter/return 타입 등
 	- invaocation data: 호출된 메서드 목록과 호출 시각
 - `class` 파일의 바이너리 데이터를 이용해서 codebase 수집
 
-![](Pasted%20image%2020230228152609.png)
+![](assets/Pasted%20image%2020230228152609.png)
 
 - 정적으로 파싱하는 이유: 동적으로 분석하는 경우 피분석 프로그램의 행위를 분석할 수 있기 떄문
 - 메서드 호출 추적 방법: 클래스가 로드될 때 사용하는 바이트코드를 수정
 
-![](Pasted%20image%2020230228152509.png)
+![](assets/Pasted%20image%2020230228152509.png)
 
 - Java Agent: 자바에서 프로그램에 붙어서 본 프로그램이 실행되기 전에 특정 작업을 할 수 있게 하는 자바 에이전트라는 것이 제공
 	- Instrumentation.addTransformer() 를 통해 transformer를 붙일 수 있다.
 
-![](Pasted%20image%2020230228152927.png)
+![](assets/Pasted%20image%2020230228152927.png)
 
 - 데이터의 전송, 기록, 열람
 	- Agent에서는 처음 실행될 떄 codebase 정보를 1회 스캔하여 전송
@@ -402,19 +402,19 @@
 	5. 장애 해결
 - 기존 모니터링 시스템 구조
 
-![](Pasted%20image%2020230228160320.png)
+![](assets/Pasted%20image%2020230228160320.png)
 
 - 기존 모니터링 시스템의 코드 구조
 	- Single Point Of Failure 문제
 
-![](Pasted%20image%2020230228160359.png)
+![](assets/Pasted%20image%2020230228160359.png)
 
 - 신규 모니터링 시스템 구조
 	- 지표 수집기: 지표 라벨링 작업
 	- 경보 파이프라인: 더 빠른 경보 발송
 	- 시각화 컴포넌트: 시각화 실시간성 증가
 
-![](Pasted%20image%2020230228160616.png)
+![](assets/Pasted%20image%2020230228160616.png)
 
 - 신규 모니터링 시스템을 통한 문제 해결
 	- 경보 파이프라인 개선으로 경보 시간 단축
@@ -422,19 +422,19 @@
 - 기존 경보 파이프라인
 	- 이상 징후 탐지 시간이 늦어짐
 
-![](Pasted%20image%2020230228160915.png)
+![](assets/Pasted%20image%2020230228160915.png)
 
 - 신규 경보 시스템의 구조
 	- 경보 발송까지 걸리는 시간 3분 -> 1분
 
-![](Pasted%20image%2020230228161033.png)
+![](assets/Pasted%20image%2020230228161033.png)
 
-![](Pasted%20image%2020230228161156.png)
+![](assets/Pasted%20image%2020230228161156.png)
 
 - 모니터링 시스템의 시각화 범위
 	- 저수준의 지표의 합산하여 고수준 지표 시각화 중
 - 구 시스템에서의 지표 준비 과정
 	- TSDB를 도입했는데 이전일아 큰 차이가 없었음
 
-![](Pasted%20image%2020230228161449.png)
+![](assets/Pasted%20image%2020230228161449.png)
 

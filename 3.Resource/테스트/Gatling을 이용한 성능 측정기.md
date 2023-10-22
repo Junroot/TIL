@@ -190,7 +190,7 @@ VUser = (목표 rps * T) / R
 setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 ```
 
-![Untitled](assets/Untitled 2.png)
+![Untitled](assets/Untitled%202.png)
 
 보이는 결과와 같이 get games와 get tags의 latency가 엄청나게 큰것을 확인할 수 있다. 이전에 game과 tag의 검색 로직을 프론트엔드에서 작업하기 위해서 이렇게 구현했는데, 백엔드에서 검색이 가능하도록 수정해야 될 것으로 보인다.
 
