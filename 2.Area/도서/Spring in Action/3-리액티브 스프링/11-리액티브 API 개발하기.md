@@ -190,7 +190,7 @@ fun shouldSaveATaco() {
 
 ### 실행 중인 서버로 테스트하기
 
-- `@RunWith`와 `@SpringBOotTest` 애노테이션을 테스트 클래스에 지정하면 `WebTestClient`를 자동 연결할 수 있다.
+- `@RunWith`와 `@SpringBootTest` 애노테이션을 테스트 클래스에 지정하면 `WebTestClient`를 자동 연결할 수 있다.
 	- ![](assets/Pasted%20image%2020230910164524.png)
 
 ## REST API를 리액티브하게 사용하기
@@ -207,7 +207,7 @@ fun shouldSaveATaco() {
 ### 리소스 얻기(GET)
 
 - ![](assets/Pasted%20image%2020230910165832.png)
-- 결과 `Flux`를 구독하지 않으면 이 요청은 결고 전송되지 않을 것이므로 `subscribe()` 메서드를 호출하는 코드가 제일 끝에 추가된다.
+- 결과 `Flux`를 구독하지 않으면 이 요청은 결코 전송되지 않을 것이므로 `subscribe()` 메서드를 호출하는 코드가 제일 끝에 추가된다.
 - `WebClient.create()` 메서드로 빈을 생성해두면 기본 URI을 지정해둘 수 있다.
 	- ![](assets/Pasted%20image%2020230910170016.png)
 	- ![](assets/Pasted%20image%2020230910170026.png)
