@@ -26,6 +26,8 @@
 	- 서브 도메인에도 적용한다.
 - `Strict-Transport-Security: max-age=[적용 주기]; preload`
 	- 브라우저의 Preload List에 해당 도메인을 추가할 것은 알려준다.
+	- 대표적으로 Google HSTS preloading 서비스가 있다.
+	- 지침을 따르고 도메인을 성공적으로 제출하면 브라우저가 보안 연결을 통해서만 도메인에 연결되도록 할 수 있다.
 	- Preload List에 추가하면 이후에 해당 브라우저에서는 항상 HTTPS로 요청을 보내게 된다.
 
 ## 참고 자료
