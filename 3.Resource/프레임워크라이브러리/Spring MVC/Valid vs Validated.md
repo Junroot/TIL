@@ -7,12 +7,12 @@
 
 ## 공통점
 
-- 컴트롤러 파라미터에 `@Valid`, `@Validated` 를 붙이면, 글로벌 `Validator`로 검증이 된다.
+- 컨트롤러 파라미터에 `@Valid`, `@Validated` 를 붙이면, 글로벌 `Validator`로 검증이 된다.
 - Spring Boot는 JSR-380의 기본 구현인 Hibernate Validator를 글로벌 `Validator`로 사용한다.
 
 ## 컨트롤러에서 @Valid vs @Validated
 
-- `@Valid`는JSR-303의 어노테이션으로 메서드 수준의 유효성 검사게 사용한다.
+- `@Valid`는JSR-303의 어노테이션으로 메서드 수준의 유효성 검사에 사용한다.
 - `@Validated`는 Spring에서 `@Valid`를 확장하기 위해 만든 어노테이션이다.
 - `@Validated`는 validation group이라는 기능을 제공한다.
 - 컨트롤러에서는 validation group 기능 유무 차이가 존재한다.
@@ -101,7 +101,7 @@ public String saveBasicInfoStep1(
 ## @Validated의 Method Validation
 
 - `@Validated` 어노테이션은 Spring의 Method Validation 기능을 사용할 때도 사용된다.
-- 클래스 레벨에 `@Validated`를 붙이고, 메서드 파라미터에 `@Min` 등의 유혀성 검사 어노테이션을 붙이거나, `@Valid`를 붙이면 검증이 메서드 파라미터에서 유효성 검사가 된다.
+- 클래스 레벨에 `@Validated`를 붙이고, 메서드 파라미터에 `@Min` 등의 유효성 검사 어노테이션을 붙이거나, `@Valid`를 붙이면 검증이 메서드 파라미터에서 유효성 검사가 된다.
 - 이 때 유효성 검사를 실패하면 `ConstraintViolationException`이 발생한다.
 - Spring의 Method Validation은 AOP 기반으로 메소드 요청을 인터셉트하여 처리된다.
 
