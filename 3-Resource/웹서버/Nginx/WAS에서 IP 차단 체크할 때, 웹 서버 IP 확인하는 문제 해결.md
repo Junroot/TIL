@@ -2,13 +2,13 @@
 
 HTTP 요청을 보낸 사람의 IP를 확인해서 DB에 등록되어 있는 사용자만 허가되도록 구현했다. 하지만 WAS가 HTTP를 받았을 때 항상 IP가 웹 서버(NGINX)의 IP로 인식되는 문제가 있었다.
 
-![Untitled](assets/Untitled.png)
+![Untitled](<assets/Untitled (1).png>)
 
-![Untitled](assets/Untitled%201.png)
+![Untitled](<assets/Untitled 1.png>)
 
 ## 문제 해결
 
-WAS는 중간에 있는 리버스 프록시의 IP를 인식하는 문제가 있었다. 보통 요청을 보낸 Client의 IP 를 확인하기 위해서 X-Forwarded-For 헤더를 사용한다고 한다. 
+WAS는 중간에 있는 리버스 프록시의 IP를 인식하는 문제가 있었다. 보통 요청을 보낸 Client의 IP 를 확인하기 위해서 X-Forwarded-For 헤더를 사용한다고 한다.
 
 이를 구현하기 위해서는 크게 2가지 작업이 필요했다.
 
@@ -53,7 +53,7 @@ private String getClientIpFrom(final HttpServletRequest request) {
 
 ## 재확인
 
-![Untitled](assets/Untitled%202.png)
+![Untitled](<assets/Untitled 2.png>)
 
 ## 참고 자료
 
@@ -61,7 +61,7 @@ private String getClientIpFrom(final HttpServletRequest request) {
 
 [https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/X-Forwarded-For](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/X-Forwarded-For)
 
-[https://nginx.org/en/docs/http/ngx_http_proxy_module.html#var_proxy_add_x_forwarded_for](https://nginx.org/en/docs/http/ngx_http_proxy_module.html#var_proxy_add_x_forwarded_for)
+[https://nginx.org/en/docs/http/ngx\_http\_proxy\_module.html#var\_proxy\_add\_x\_forwarded\_for](https://nginx.org/en/docs/http/ngx\_http\_proxy\_module.html#var\_proxy\_add\_x\_forwarded\_for)
 
 [https://www.nginx.com/resources/wiki/start/topics/examples/forwarded/](https://www.nginx.com/resources/wiki/start/topics/examples/forwarded/)
 
