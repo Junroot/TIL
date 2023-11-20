@@ -4,7 +4,7 @@
 
 ## 구성
 
-![무제.drawio.png](assets/무제.drawio.png)
+![무제.drawio.png](assets/무제.drawio.png)
 
 - hy-notice-core: 두 애플리케이션에서 공통적으로 사용되는 엔티티들을 담고있는 모듈
 - hy-notice-client: 크롤링에 필요한 로직을 구현 해놓은 모듈
