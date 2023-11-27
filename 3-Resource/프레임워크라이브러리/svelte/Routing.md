@@ -11,6 +11,8 @@
 	- `src/routes`: root 경로
 	- `src/routes/`: `/about` 경로의 라우팅
 	- `src/routes/blog/[slug]`: `slug`라는 파라미터를 받으면서, `/blogs/[slug]` 경로의 라우팅
+		- 파라미터를 받으려면 동적 라우팅이 필요한데, prerender=true 에서는 사용할 수 없다.
+		- SvelteKit이 아닌 https://github.com/jorgegorka/svelte-router 같은 별도의 라우터를 사용해야된다.
 - 모든 route 디렉토리에는 하나 이상의 route 파일이 필요하다. 이는 `+` prefix로 구분한다.
 	- +page, +error, +layout 등
 
