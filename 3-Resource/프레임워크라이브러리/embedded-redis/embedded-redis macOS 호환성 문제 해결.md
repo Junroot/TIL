@@ -30,7 +30,7 @@ java.lang.RuntimeException: Can't start redis server. Check logs for details.
 
 ```kotlin
 @TestConfiguration  
-class TestEmbededRedisConfiguration{
+class TestEmbeddedRedisConfiguration{
 
 	@PostConstruct  
 	fun postConstruct() {  
