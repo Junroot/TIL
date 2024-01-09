@@ -42,7 +42,7 @@ a = BigInteger.TEN;
 BigInteger C = A.add(B);
 ```
 
-- prmitive 타입으로 변환
+- primitive 타입으로 변환
 
 ```java
 int x   =  A.intValue();   // value should be in limit of int x
