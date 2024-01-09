@@ -2,7 +2,7 @@
 
 ## 목표
 
-- `BigIneger`가 무엇인지 이해한다.
+- `BigInteger`가 무엇인지 이해한다.
 - `BigInteger`의 사용 방법을 이해한다.
 - `BigInteger`의 내부 구조를 이해한다.
 
