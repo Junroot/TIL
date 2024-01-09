@@ -15,16 +15,14 @@
 
 ## 사용법
 
-### 생성
-
-- int, long 타입의 경우는 `valueOf()`
+- int, long 타입의 경우에서 변환은 `valueOf()`
 
 ```java
 BigInteger a  = BigInteger.valueOf(54);
 BigInteger b  = BigInteger.valueOf(37);
 ```
 
-- 큰 정수 등을 표현할 때는 string으로
+- 큰 정수 등을 표현할 때는 string으로 생성자 주입
 
 ```java
 b  = new BigInteger(“123456789123456789”);
