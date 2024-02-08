@@ -2,7 +2,6 @@
 
 HTTP 요청을 보낸 사람의 IP를 확인해서 DB에 등록되어 있는 사용자만 허가되도록 구현했다. 하지만 WAS가 HTTP를 받았을 때 항상 IP가 웹 서버(NGINX)의 IP로 인식되는 문제가 있었다.
 
-![Untitled](<assets/Untitled (1).png>)
 
 ![Untitled](<assets/Untitled 1.png>)
 
