@@ -9,6 +9,8 @@
 - `KafkaTemplate.doSend()` 메서드 호출시 `KafkaProducer.send()` 메서드를 내부에서 호출하고 있다.
 - `send()` 메서드 호출 시 파라미터로 전송할 `ProducerRecord`와 `Callback` 파라미터를 넘겨준다.
 
+![](assets/Pasted%20image%2020240220213225.png)
+
 ## KafkaProducer의 기본 구성 요소
 
 - `KafkaProducer`: 사용자가 직접 사용하는 클래스. `send()` 메서드를 호출하면 `Record`를 전송한다.
