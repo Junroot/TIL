@@ -9,7 +9,7 @@
 
 - Open Authorization
 - 웹 사이트나 애플리케이션이 다른 웹앱에 호스팅하는 리소스에 접근할 수 있도록 설계된 표준이다.
-- 현재 온라인 인즈엥 대한 사실상 업계 표준으로 자리 잡고 있다.
+- 현재 온라인 인증에 대한 사실상 업계 표준으로 자리 잡고 있다.
 
 ## OAuth2.0 의 구성요소
 
@@ -32,12 +32,12 @@
 - 등록이 되면 service는 다음 값을 부여한다.
 	- client id
 	- client secret: client가 service에 사용자 계정을 요청할 때 사용하는 인증용 키
-## OAthuth2.0 의 동작 방식
+## OAuth2.0 의 동작 방식
 
 ![](assets/Pasted%20image%2020240320235806.png)
 
 1. 애플리케이션이 사용자에게 서비스 리소스에 접근할 수 있는 권한을 요청한다. (Service의 로그인 팝업으로 이동 등)
-2. 사용자가 요청을 승인한 경우 애플리케이션은 권한 부여는 받는다.
+2. 사용자가 요청을 승인한 경우 애플리케이션은 권한을 부여 받는다.
 	1. 승인하면 리다이렉트 URL로 다시 이동한다.
 	2. 승인은 Authorization Code, Client Credentials, Device Code 3가지 방식이 있는데 Authorization Code가 가장 널리 사용되는 방법이다. Authorization Code의 경우 access token을 받을 수 있는 일시적으로 사용가능한 code를 받는다.
 3. client는 authorization server에 Authorization Code와 자신의 client id, client secret을 보내면서 access token을 요청한다.
