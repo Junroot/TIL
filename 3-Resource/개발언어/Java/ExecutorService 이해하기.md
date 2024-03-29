@@ -44,11 +44,65 @@ class DirectExecutor implements Executor {
 
 - `Executor` 를 확장한 인터페이스다.
 - 비동기 작업의 종료를 관리하는 메서드를 제공한다.
-- 비동기 작업의 진행 상태를 추적할 수 있는 `Future`를 생성해주는 메서드를 제공한다.
-- `ExecutorService`는 shut down 되면, 새로운 작업을 받지 않는다.
-	- `shutdown()` 메서드를 호출하면 종료하기 전에 제출된 작업들이 실행되도록 허용한다.
-	- `shutdownNow()` 메서드는 대기 중인 작업이 시작되지 않도록 하고, 현재 실행 중인 작업을 중지하려고 시도한다.
-- `submit()` 메서드를 통해 `Executor.execute()`로 실행되는 작업을 취소하고 기다릴 수 있는 `Future` 를 생성한다.
+
+### 인스턴스화 방법 
+
+1. `Executors` 클래스의 팩토리 메서드 사용방법
+	- 예시: `ExecutorService executor = Executors.newFixedThreadPool(10)`
+	- 위 예시는 고정된 개수의 스레드 풀을 만들어서 사용한다.
+	- 모든 스레드가 사용되고 있으면, 사용 가능한 스레드가 있을 때까지 큐에 넣고 대기한다.
+2. 다른 구현체로 생성하는 방법
+	- 대표적으로 `ThreadPoolExecutor` 가 있다.
+
+### 태스크 실행
+
+- `ExecutorService`는 `Runnable`과 `Callable`을 실행할 수 있다.
+- 아래와 같은 코드가 있다고 가정한다.
+
+```java
+Runnable runnableTask = () -> {
+    try {
+        TimeUnit.MILLISECONDS.sleep(300);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+};
+
+Callable<String> callableTask = () -> {
+    TimeUnit.MILLISECONDS.sleep(300);
+    return "Task's execution";
+};
+
+List<Callable<String>> callableTasks = new ArrayList<>();
+callableTasks.add(callableTask);
+callableTasks.add(callableTask);
+callableTasks.add(callableTask);
+```
+
+- `execute()` 메서드는 `void` 리턴을 가진다.
+	- `executorService.execute(runnableTask)`
+- `submit()` 메서드는 `Future` 리턴을 가진다.
+	- `Future<String> future = executorService.submit(callableTask)`
+- `invokeAny()` 메서드는 태스크의 컬렉션을 실행시키고, 성공한 태스크 중 하나의 결과를 리턴한다.
+	- `String result = executorService.invokeAny(callableTasks)`
+- `invokeAll()` 메서드는 태스크의 컬렉션을 실행시키고, 모든 태스크에 대한 `Future` 컬렉션을 리턴한다.
+	- `List<Future<String>> futures = executorService.invokeAll(callableTasks)`
+
+### shutdown
+
+- `ExecutorService`는 shutdown 하기 전까지 계속 JVM에서 실행되고 있다.
+- `shutdown()` 메서드를 호출하면 종료하기 전에 제출된 작업들이 실행되도록 허용한다.
+- `shutdownNow()` 메서드는 대기 중인 작업이 시작되지 않도록 하고, 현재 실행 중인 작업을 중지하려고 시도한다.
+
+## ScheduledExecutorService
+
+- 태스크를 고정된 지연이나 주기 이후에 실행하는 인터페이스
+- `Executors`의 팩토리 메서드로 인스턴스화 가능하다.
+	- `ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor()`
+- 고정된 지연후에 실행하려면 `schedule()` 메서드를 호출하면 된다.
+- 고정된 주기로 태스크를 실행하려면 `scheduleAtFixedRate()` 메서드를 호출하면 된다.
+	- 이 때 할단된 태스크의 실행 시간이 주기보다 길면, 현재 태스크가 완료될 때 까지 다음 태스크는 기다린다.
+- 앞 태스크가 끝난 시점과 지정한 태스크의 시작 시점 사이에 딜레이를 주고 싶다면 `scheduleWIthFixedDelay()` 메서드를 호출하면 된다.
 
 ## 참고 자료
 
@@ -56,3 +110,4 @@ class DirectExecutor implements Executor {
 - https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Executor.html
 - https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/Future.html
 - https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ExecutorService.html
+- https://www.baeldung.com/java-executor-service-tutorial
