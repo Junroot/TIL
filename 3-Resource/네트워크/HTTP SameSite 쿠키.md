@@ -18,7 +18,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; SameSite=Strict
 ## SameSite 정책
 
 - Strict: 크로스 사이트 요청에 항상 전송하지 않는다. 퍼스트 파티 쿠키만 전송된다.
-- Lax: 이미지나 frame 에서는 크로스 사이트에 전송하지 않지만, 해당 사이트로 이동할 때 쿠키가 전송된다. 아래의 경우 등에서 쿠키를 전송한다.
+- Lax: 이미지나 iframe 에서는 크로스 사이트에 전송하지 않지만, 해당 사이트로 이동할 때 쿠키가 전송된다. 아래의 경우 등에서 쿠키를 전송한다.
 	- `<a>` 링크를 클릭으로 이동
 	- `window.location.replace` 등으로 인한 이동
 	- `302` 리다이렉트를 통한 이동
