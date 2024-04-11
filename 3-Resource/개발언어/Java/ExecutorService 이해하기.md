@@ -42,6 +42,8 @@ class DirectExecutor implements Executor {
 
 ## ExecutorService
 
+![](assets/Pasted%20image%2020240411180119.png)
+
 - `Executor` 를 확장한 인터페이스다.
 - 비동기 작업의 종료를 관리하는 메서드를 제공한다.
 
