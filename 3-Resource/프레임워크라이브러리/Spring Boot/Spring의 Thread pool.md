@@ -37,7 +37,6 @@
 	- 이후에는 NIO(non-blocking I/O) 방식으로 thread 개수보다 connection의 개수가 많아질 수 있다.
 	- Java NIO의 간단한 설명: buffer를 만들어두고 읽을 수 있는 데이터가 있을 때 thread를 할당해 처리하는 방식
 
-
 ## 참고 자료
 
 - https://tomcat.apache.org/tomcat-9.0-doc/config/executor.html
