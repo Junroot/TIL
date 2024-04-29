@@ -51,7 +51,7 @@
 - 엔트리는 DN이라는 고유 이름으로 참조된다.
 - RDN(Relative Distinguished Name): entry 자신의 이름
 	- 위 그림에서 가장 아래에 있는 entry의 RDN은 `uid=babs`
-- DN는 RDS를 계층적으로 이어서 표현한다.
+- DN는 RDN을 계층적으로 이어서 표현한다.
 	- 위 그림에서 가장 아래에 있는 entry의 DN은 `uid=babs,ou=People,dc=example,dc=com`
 - `dc=example,dc=com`의 서브트리에서 cn이 "Barbara Jensen"인 엔트리를 검색할 수도 있다.
 
