@@ -42,7 +42,6 @@
 #### LDAP이 정보를 저장하는 방식
 
 - 엔트리의 계층적인 트리 구조로 저장한다.
-- 아래는 DNS를 LDAP에 저장한 예시다.
 	- 각 원이 entry이다.
 	- ![](assets/Pasted%20image%2020240423202611.png)
 - 추가적으로 objectClass라는 특별한 attribute를 통해 entry에 허용하는 attribute와 필수 attribute를 설정할 수 있다.
