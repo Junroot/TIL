@@ -20,7 +20,7 @@ docker run -p 1389:1389 --name openldap bitnami/openldap:latest
 - Apache Directory Studio: https://directory.apache.org/studio/downloads.html
 - ![](assets/Pasted%20image%2020240426153027.png)
 - ![](assets/Pasted%20image%2020240426181747.png)
-	- 따로 설정하지 않고 컨테이너를 실행했다면, 기본 설정값은 admin/admin이다.
+	- 따로 설정하지 않고 컨테이너를 실행했다면, 기본 설정값은 admin/adminpassword이다.
 		- 참고: https://hub.docker.com/r/bitnami/openldap/
 - 컨테이너를 실행하면, 자동으로 엔트리도 몇 개 추가된 것을 확인할 수 있다.
 	- ![](assets/Pasted%20image%2020240426181838.png)
