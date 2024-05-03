@@ -103,7 +103,7 @@ callableTasks.add(callableTask);
 	- `ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor()`
 - 고정된 지연후에 실행하려면 `schedule()` 메서드를 호출하면 된다.
 - 고정된 주기로 태스크를 실행하려면 `scheduleAtFixedRate()` 메서드를 호출하면 된다.
-	- 이 때 할단된 태스크의 실행 시간이 주기보다 길면, 현재 태스크가 완료될 때 까지 다음 태스크는 기다린다.
+	- 이 때 할당된 태스크의 실행 시간이 주기보다 길면, 현재 태스크가 완료될 때 까지 다음 태스크는 기다린다.
 - 앞 태스크가 끝난 시점과 지정한 태스크의 시작 시점 사이에 딜레이를 주고 싶다면 `scheduleWIthFixedDelay()` 메서드를 호출하면 된다.
 
 ## 참고 자료
