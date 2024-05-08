@@ -28,12 +28,9 @@
 
 ![](assets/Pasted%20image%2020240503181146.png)
 
-## Active Directory 도메인 서비스 구현
-
-![](assets/Pasted%20image%2020240503182549.png)
 
 
-https://www.youtube.com/watch?v=Crms6s8hwoo
+
 ## 참고 자료 
 
 - https://www.youtube.com/watch?v=6tc-WOZTmpU
