@@ -1,4 +1,4 @@
-# Active Directory의 개념과 설치 
+# Active Directory의 기본 개념
 
 ## Active Directory 란
 
@@ -27,9 +27,6 @@
 - 글로벌 카탈로그(Global Catalog, GC): 트러스트 내의 도메인들에 포함된 개체에 대한 정보를 수집하여 저장되는 저장소
 
 ![](assets/Pasted%20image%2020240503181146.png)
-
-
-
 
 ## 참고 자료 
 
