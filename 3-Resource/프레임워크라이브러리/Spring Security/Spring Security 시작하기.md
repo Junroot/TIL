@@ -54,7 +54,7 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
 
 - `SecurityContextHolder`는 `SecurityContext`를 포함하고 있다.
 	- 기본적으로 `SecurityContextHolder`는 `ThreadLocal` 을 사용해서 저장한다.
-	- `ThreadLocal` 을 사용하고 싶지 않으면 `SecurityContetxtHolder`에 다른 전략을 사용해야된다.
+	- `ThreadLocal` 을 사용하고 싶지 않으면 `SecurityContextHolder`에 다른 전략을 사용해야된다.
 - `Authentication` 인터페이스는 2가지 목적으로 사용된다.
 	- 사용자가 인증을 위해 `AuthenticationManager`에 `credentials`를 제공한다. `credentials`는 주로 비밀번호다. 이때 `isAuthenticated()`는 `false`를 반환한다.
 	- 현재 인증된 유저를 나타낸다. 인증되어 있으면 `SecurityContext`에 `Authentication`이 존재한다.
