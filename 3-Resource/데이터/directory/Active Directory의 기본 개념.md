@@ -37,7 +37,7 @@
 	- NETBIOS를 이용한 로그온 이름: HANBIT\\brainUser
 	- UPN(User Principal Name): brainUser@hanbit.com
 	- DN(Distinguished name): CN=brainUser, OU=조직구성단위이름, DC=hanbit, DC=com
-	- Relative Distunguished name: CN=brainUser
+	- Relative Distunguished Name: CN=brainUser
 
 ### 조직 구성 단위
 
@@ -68,8 +68,8 @@
 
 - 모든 도메인에 위치한 자원(공유 폴더, 프린터 등)에 권한을 할당할 수 있는 그룹
 - 포함 가능 구성원
-		- 글로벌 그룹과 같은 도메인에 있는 사용자 계정 또는 컴퓨터 계정
-		- 글로벌 그룹과 같은 도메인의 다른 글로벌 그룹
+	- 글로벌 그룹과 같은 도메인의 다른 글로벌 그룹
+	- 글로벌 그룹과 같은 도메인에 있는 사용자 계정 또는 컴퓨터 계정
 - ![](assets/Pasted%20image%2020240522114127.png)
 
 ### 도메인 로컬 그룹
@@ -148,6 +148,7 @@
 - GPO 우선 순위: 로컬 GPO < 사이트 GPO < 도메인 GPO < OU GPO
 
 ### 그룹 정책의 상속
+
 - 일반적으로 부모 컨테이너(도메인, OU 등)에서 자식 컨테이너로 상속이 된다.
 - 필요한 경우 상속을 재정의하거나 상속을 차단할 수 있음
 	- 예: 도메인에 적용된 그룹 정책을 OU에는 적용되지 않도록 상속을 차단
@@ -155,6 +156,7 @@
 	- 예: 도메인의 정책을 OU가 거부하지 못하도록 설정
 
 ### 그룹 정책의 가능한 작업
+
 - 보안 설정
 	- 보안 강화를 위한 사용자의 암호 및 계정 잠금 방식 등에 대해서 도메인의 모든 사용자에게 강제로 적용할 수 있음
 - 스트립트 지정
