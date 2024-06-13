@@ -77,7 +77,7 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
 - `AuthenticationEntryPoint`를 사용해서 credentials를 요청할 수 있다.
 - 인증 과정
 	1. credentials를 제출하면, `AbstractAuthenticationProcessingFilter`는 `HttpServletRequest`로 부터 `Authentication`를 만든다.
-		- 예시: 서브 클래스인 `UsernamePasswrodAuthenticationFilter`의 경우는 username과 password로 `UsernamePasswordAuthenticationToken`를 만든다.
+		- 예시: 서브 클래스인 `UsernamePasswordAuthenticationFilter`의 경우는 username과 password로 `UsernamePasswordAuthenticationToken`를 만든다.
 	2. `AuthenticationManager`에 `AuthenticationManager`가 전달된다.
 	3. 인증에 실패한 경우
 		1. `SecurityContextHolder`가 clear 된다.
