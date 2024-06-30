@@ -117,7 +117,6 @@
 
 - https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/test-coverage-parameters/
 - https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/java-test-coverage/
-- https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/test-coverage-parameters/
 - https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/test-execution-parameters/
 - https://www.eclemma.org/jacoco/trunk/doc/report-aggregate-mojo.html
 - https://www.baeldung.com/maven-jacoco-multi-module-project
