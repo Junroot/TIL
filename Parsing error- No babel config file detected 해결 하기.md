@@ -2,7 +2,7 @@
 tags:
   - npm
 ---
-# "Parsing error- No babel config file detected" 해결 하기
+# 'Parsing errorNo babel config file detected' 해결 하기
 
 ## 배경
 
