@@ -1,3 +1,7 @@
+---
+tags:
+  - Kotlin
+---
 # Enum class의 entries 프로퍼티
 
 ## 목표

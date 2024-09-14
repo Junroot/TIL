@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # HttpServletResopnse에 string 출력하기
 
 ```java

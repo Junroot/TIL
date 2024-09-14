@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-REST-Docs
+---
 # RestAssured로 Rest docs 사용하기
 
 MockMvc로 사용중인 Spring rest docs를 RestAssured로 바꿔보자.

@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # Pagination 쿼리 최적화
 
 ## 목표

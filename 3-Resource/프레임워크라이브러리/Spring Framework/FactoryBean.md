@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # Factory Bean
 
 ## 상황

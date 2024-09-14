@@ -1,3 +1,7 @@
+---
+tags:
+  - React
+---
 # useEffect 사용법
 
 ## 목표

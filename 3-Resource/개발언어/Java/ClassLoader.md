@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # ClassLoader
 
 - Java에서 ClassLoader는 자바 클래스를 JVM으로 동적으로 로드하기 위한 객체다.

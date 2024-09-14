@@ -1,3 +1,7 @@
+---
+tags:
+  - JavaScript
+---
 # JavaScript로 POST 요청 보내기
 
 `fetch` 함수를 사용한다.

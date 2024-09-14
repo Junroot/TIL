@@ -1,3 +1,7 @@
+---
+tags:
+  - nginx
+---
 # DNS 지정하기
 
 ## resolver

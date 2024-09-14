@@ -1,3 +1,7 @@
+---
+tags:
+  - Kafka
+---
 # KafkaProducer 기본 구성 요소
 
 ## 목표

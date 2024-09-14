@@ -1,3 +1,7 @@
+---
+tags:
+  - svelte
+---
 # Routing
 
 ## 목표

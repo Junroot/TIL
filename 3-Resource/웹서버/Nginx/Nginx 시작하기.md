@@ -1,3 +1,7 @@
+---
+tags:
+  - nginx
+---
 # Nginx 시작하기
 
 ## **Nginx 설치**

@@ -1,3 +1,7 @@
+---
+tags:
+  - MyBatis
+---
 # DynamicSQL 작성법
 
 ## 목표

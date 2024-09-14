@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # Char Array를 String으로 변환하기
 
 `String.valueOf()` 를 사용가능 하다.

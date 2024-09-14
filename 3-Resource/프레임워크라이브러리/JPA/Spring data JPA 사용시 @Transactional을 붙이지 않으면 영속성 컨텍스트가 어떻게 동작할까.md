@@ -1,3 +1,7 @@
+---
+tags:
+  - JPA
+---
 # Spring data JPA 사용시 @Transactional을 붙이지 않으면 영속성 컨텍스트가  어떻게 동작할까?
 
 동작방식을 이해하기 위해서 `JpaRepository`의 기본 구현체를 확인해볼 필요가 있었다.

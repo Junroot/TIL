@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-REST-Docs
+---
 # Spring Rest Docs 시작
 
 - 의존성 추가

@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # MMM(Multi-Master Replication Manager)
 
 ## 목표

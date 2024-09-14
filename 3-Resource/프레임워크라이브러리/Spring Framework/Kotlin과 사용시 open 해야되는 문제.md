@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # Kotlin과 사용시 open 해야되는 문제
 
 ## 배경

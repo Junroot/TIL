@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # ThreadLocal
 
 ## 배경

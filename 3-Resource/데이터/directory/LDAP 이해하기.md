@@ -1,3 +1,7 @@
+---
+tags:
+  - directory
+---
 # LDAP 이해하기
 
 ## 목표

@@ -1,3 +1,7 @@
+---
+tags:
+  - Elasticsearch
+---
 # Elasticsearch 시작하기
 
 - Elasticsearch 내부 동작을 이해한다.

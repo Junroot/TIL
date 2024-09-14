@@ -1,3 +1,7 @@
+---
+tags:
+  - Elasticsearch
+---
 # properties vs fields
 
 ## 목표

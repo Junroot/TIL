@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # 빈 등록시 @Component가 아닌 @Configuration을 사용하는 이유
 
 - `@Configuration` 안에 `@Component`가 있다. 즉 둘 다 클래스 자체가 빈으로 등록된다.

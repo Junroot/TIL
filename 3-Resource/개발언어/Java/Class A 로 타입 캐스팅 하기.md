@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # Class<A>로 타입 캐스팅 하기
 
 ```java

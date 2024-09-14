@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # String을 뒤집는 방법
 
 `StringBuilder`에 reverse 기능이 존재한다.

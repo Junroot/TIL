@@ -1,3 +1,7 @@
+---
+tags:
+  - Python
+---
 # 이터레이터, 제너레이터, yield
 
 ## 이터레이터(iterator)

@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Boot
+---
 # proejct property 설정하여 Spring boot profile 설정하기
 
 ![Untitled](assets/Untitled.png)

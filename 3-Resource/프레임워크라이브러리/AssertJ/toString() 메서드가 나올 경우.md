@@ -1,3 +1,7 @@
+---
+tags:
+  - AssertJ
+---
 # toString() 메서드가 나올 경우
 
 ```java

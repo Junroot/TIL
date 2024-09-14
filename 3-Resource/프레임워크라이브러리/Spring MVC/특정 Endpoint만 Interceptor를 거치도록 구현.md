@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 # 특정 Endpoint만 Interceptor를 거치도록 구현
 
 아래와 같이 인터셉터를 추가할 때 `addPathPatterns` 를 통해 일부 경로에 대해서만 인터셉터를 처리할 수 있다.

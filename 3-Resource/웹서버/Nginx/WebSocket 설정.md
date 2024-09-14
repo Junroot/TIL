@@ -1,3 +1,7 @@
+---
+tags:
+  - nginx
+---
 # WebSocket 설정
 
 ```json

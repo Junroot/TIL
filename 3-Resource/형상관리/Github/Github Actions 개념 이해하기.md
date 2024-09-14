@@ -1,3 +1,7 @@
+---
+tags:
+  - Github
+---
 # Github Actions 개념 이해하기
 
 ## 목표

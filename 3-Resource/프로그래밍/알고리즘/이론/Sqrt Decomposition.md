@@ -1,3 +1,7 @@
+---
+tags:
+  - 알고리즘
+---
 # Sqrt Decomposition
 
 ## 문제 상황

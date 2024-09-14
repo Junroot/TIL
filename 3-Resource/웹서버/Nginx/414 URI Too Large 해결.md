@@ -1,3 +1,7 @@
+---
+tags:
+  - nginx
+---
 # 414 URI Too Large 해결
 
 ## 문제 상황

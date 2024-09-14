@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-REST-Docs
+---
 # Mockmvc에서 body 내용 수정하기
 
 multipart 를 통해 파일을 body로 보내는데, 이미지라서 바이트 데이터로 보내게된다. 

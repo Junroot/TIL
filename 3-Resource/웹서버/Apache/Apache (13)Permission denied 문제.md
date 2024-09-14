@@ -1,3 +1,7 @@
+---
+tags:
+  - Apache
+---
 # Apache (13)Permission denied 문제
 
 ## 문제 상황

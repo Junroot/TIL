@@ -1,3 +1,7 @@
+---
+tags:
+  - Nodejs
+---
 # express에서 request body 가져오는 법
 
 express에서 POST 요청의 request body를 가져오지 못하는 문제가 있었다.

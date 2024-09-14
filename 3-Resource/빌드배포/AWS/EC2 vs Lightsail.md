@@ -1,3 +1,7 @@
+---
+tags:
+  - AWS
+---
 # EC2 vs Lightsail
 
 ## Lightsail

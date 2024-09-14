@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Integration
+---
 # Redis Lock 사용하기
 
 ## 목표

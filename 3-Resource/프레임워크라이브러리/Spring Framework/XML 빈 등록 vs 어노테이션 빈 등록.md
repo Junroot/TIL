@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # XML 빈 등록 vs 어노테이션 빈 등록
 
 - XML

@@ -1,3 +1,7 @@
+---
+tags:
+  - Kotlin
+---
 # Deque 사용하기
 
 ## 목표

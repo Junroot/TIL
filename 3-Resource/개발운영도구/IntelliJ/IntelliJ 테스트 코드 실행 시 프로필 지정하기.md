@@ -1,3 +1,7 @@
+---
+tags:
+  - IntelliJ
+---
 # IntelliJ 테스트 코드 실행 시 프로필 지정하기
 
 ![Untitled](assets/Untitled-4545772.png)

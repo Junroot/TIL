@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # JSP에서 SpEL 사용 시 null 인 경우 예외 발생
 
 ## 배경

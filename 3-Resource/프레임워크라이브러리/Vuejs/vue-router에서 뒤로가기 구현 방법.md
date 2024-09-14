@@ -1,3 +1,7 @@
+---
+tags:
+  - Vuejs
+---
 # vue-router에서 뒤로가기 구현 방법
 
 ## 목표

@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # Record Lock
 
 ## 목표

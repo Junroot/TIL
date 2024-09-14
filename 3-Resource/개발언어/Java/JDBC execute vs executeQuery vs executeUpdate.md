@@ -1,3 +1,8 @@
+---
+tags:
+  - Java
+  - JDBC
+---
 # JDBC execute vs executeQuery vs executeUpdate
 
 - execute: 일반적인 sql 실행. 리턴 타입이 `ResultSet`이면 TRUE, 아니면 false다.

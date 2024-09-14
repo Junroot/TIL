@@ -1,3 +1,7 @@
+---
+tags:
+  - nginx
+---
 # NGINX docker container 생성하기
 
 크게 2가지 파일을 만들어줘야된다.

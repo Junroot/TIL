@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # 컬럼명 수정 SQL
 
 ```sql

@@ -1,3 +1,7 @@
+---
+tags:
+  - Kotlin
+---
 # Property vs Function
 
 ## 배경

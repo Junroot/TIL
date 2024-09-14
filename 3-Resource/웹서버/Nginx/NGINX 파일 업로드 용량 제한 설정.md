@@ -1,3 +1,7 @@
+---
+tags:
+  - nginx
+---
 # NGINX 파일 업로드 용량 제한 설정
 
 HTTP multipart를 이용한 파일 업로드 API를 구현했는데 NGINX에서 거부를 하는 문제가 발생했다. 기본적으로 NGINX의 최대 HTTP body 크기는 1MB다.

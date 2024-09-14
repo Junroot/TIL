@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 # Spring MVC로 RSS 피드 API 만들기
 
 ## 의존 추가

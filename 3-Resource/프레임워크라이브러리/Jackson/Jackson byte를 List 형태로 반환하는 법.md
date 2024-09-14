@@ -1,3 +1,7 @@
+---
+tags:
+  - Jackson
+---
 # Jackson byte를 List 형태로 반환하는 법
 
 ```java

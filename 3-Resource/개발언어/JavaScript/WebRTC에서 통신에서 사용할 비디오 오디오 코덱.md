@@ -1,3 +1,8 @@
+---
+tags:
+  - JavaScript
+  - WebRTC
+---
 # WebRTC에서 통신에서 사용할 비디오/오디오 코덱 변경하기 - RTCRtpTransceiver
 
 WebRTC를 이용해 코덱 별 성능 테스트를 위해서, 사용할 코덱의 종류를 바꿨어야했다. `RTCRtpTransceiver`를 통해 사용할 코덱을 수정할 수 있다.

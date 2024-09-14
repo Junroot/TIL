@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 티
 # Spring Validation과 lombok 예외 처리
 

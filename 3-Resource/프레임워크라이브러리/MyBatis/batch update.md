@@ -1,3 +1,7 @@
+---
+tags:
+  - MyBatis
+---
 # batch update
 
 ## 목표

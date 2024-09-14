@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # `@Async` 사용하기
 
 ## 목표

@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Cloud
+---
 # Spring with AWS S3
 
 다른 크루들의 이야기를 들어보니 Spring과 S3 연결이 access key 가 없어도 된다고해서 시도해보고 있다. Spring 애플리케이션이 AWS의 EC2에 부여한 IAM 권한을 이용해서 S3와 연결이 가능하다고 한다.

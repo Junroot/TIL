@@ -1,3 +1,7 @@
+---
+tags:
+  - Gradle
+---
 # Java 버전 명시
 
 `sourceCompatibility` 와 `targetCompatibility` 를 사용하면된다.

@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # Thread pool 생성
 
 ## 배경

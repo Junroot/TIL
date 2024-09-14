@@ -1,3 +1,7 @@
+---
+tags:
+  - React
+---
 # state, props
 
 - state와 props 둘 다 react의 구성요소인 컴포넌트를 렌더링하기 위한 정보를 담고 있다.

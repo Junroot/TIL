@@ -1,3 +1,7 @@
+---
+tags:
+  - ArgoCD
+---
 # Argo CD 알아보기
 
 ## 목표

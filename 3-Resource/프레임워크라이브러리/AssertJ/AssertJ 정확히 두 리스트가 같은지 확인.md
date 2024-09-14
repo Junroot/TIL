@@ -1,3 +1,7 @@
+---
+tags:
+  - AssertJ
+---
 # AssertJ 정확히 두 리스트가 같은지 확인
 
 ```java

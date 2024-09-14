@@ -1,4 +1,9 @@
-# Java와 혼용시 Checked Exception 알려주기
+---
+tags:
+  - Kotlin
+  - Java
+---
+# Kotlin과 Java 혼용시 Checked Exception 알려주기
 
 ## 상황
 

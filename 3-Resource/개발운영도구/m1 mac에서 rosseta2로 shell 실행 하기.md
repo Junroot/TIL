@@ -1,3 +1,8 @@
+---
+tags:
+  - 개발운영도구
+  - macOS
+---
 # M1 mac에서 rosseta2로 shell 실행 하기
 
 ## 배경

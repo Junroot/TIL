@@ -1,3 +1,7 @@
+---
+tags:
+  - Mockito
+---
 # given vs when
 
 ## 목표

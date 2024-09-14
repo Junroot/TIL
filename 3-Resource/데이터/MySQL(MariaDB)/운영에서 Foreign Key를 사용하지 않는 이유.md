@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # 운영에서 Foreign Key를 사용하지 않는 이유
 
 ## 배경

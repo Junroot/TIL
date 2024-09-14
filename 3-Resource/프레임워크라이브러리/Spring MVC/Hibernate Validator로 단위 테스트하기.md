@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 # Hibernate Validator로 단위 테스트하기
 
 ## 목표

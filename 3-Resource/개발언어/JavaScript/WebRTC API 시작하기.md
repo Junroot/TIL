@@ -1,3 +1,8 @@
+---
+tags:
+  - JavaScript
+  - WebRTC
+---
 # WebRTC API 시작하기
 
 WebRTC를 사용하기 위해서 JavaScript로 제공하고 있는 API들을 알아본다. 크게 두 기지 기능으로 나눌 수 있다.

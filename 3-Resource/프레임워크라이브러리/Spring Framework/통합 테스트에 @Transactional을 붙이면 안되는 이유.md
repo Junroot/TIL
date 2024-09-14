@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # 통합테스트에 @Transactional을 붙이면 안되는 이유
 
 ## 배경

@@ -1,3 +1,7 @@
+---
+tags:
+  - H2
+---
 # JdbcPreparedStatement의 setObject
 
 `PreparedStatement`의 `setObject`메소드로 파라미터 매핑을 했을 때 어떻게 자동으로 타입을 찾는지 궁금해서 조금 찾아봤다.

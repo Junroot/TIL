@@ -1,3 +1,7 @@
+---
+tags:
+  - Docker
+---
 # Dockerfile multi-stage
 
 ## 목표

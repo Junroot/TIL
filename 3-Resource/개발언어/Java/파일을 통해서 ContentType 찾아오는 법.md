@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # 파일을 통해서 ContentType 찾아오는 법
 
 Java 표준 중에 `Files.probeContentType()` 메소드를 사용하면 쉽게 확인할 수 있다.

@@ -1,3 +1,7 @@
+---
+tags:
+  - Vuejs
+---
 # vue-router 파라미터 가져오기
 
 ## 방법

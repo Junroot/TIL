@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 # WebMvcConfigurer
 
 - `WebMvcConfigurer` 를 구현하면, WebMvc의 설정을 할 수 있다.

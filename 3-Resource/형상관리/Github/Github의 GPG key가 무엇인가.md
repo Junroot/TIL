@@ -1,3 +1,7 @@
+---
+tags:
+  - Github
+---
 # Github의 GPG key가 무엇인가?
 
 ## 목표

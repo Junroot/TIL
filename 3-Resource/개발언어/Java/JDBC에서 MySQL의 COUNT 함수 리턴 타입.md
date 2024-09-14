@@ -1,3 +1,8 @@
+---
+tags:
+  - Java
+  - JDBC
+---
 # JDBC에서 MySQL의 COUNT 함수 리턴 타입
 
 ## 배경

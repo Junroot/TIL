@@ -1,3 +1,7 @@
+---
+tags:
+  - Mockito
+---
 # verify
 
 ## 목표

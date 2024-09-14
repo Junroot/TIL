@@ -1,3 +1,7 @@
+---
+tags:
+  - Shell-Script
+---
 # logrotate
 
 ## 목적

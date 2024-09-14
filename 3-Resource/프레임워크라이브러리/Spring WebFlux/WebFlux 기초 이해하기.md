@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-WebFlux
+---
 # WebFlux 기초 이해하기
 
 ## 목표

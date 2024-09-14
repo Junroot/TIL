@@ -1,3 +1,8 @@
+---
+tags:
+  - 네트워크
+  - HTTP
+---
 # HTTP/3와 QUIC
 
 이번에는 현재 IETF의 인터넷 초안 상태인 HTTP/3에 대해서 알아본다. HTTP/3는 기존의 HTTP 버전들과 다르게 TCP를 사용하지 않는다. Transport layer에서 TCP가 아닌 QUIC을 사용한다. QUIC은 Quick UDP Internet Connection의 약자로 구글에서 개발한 UDP기반의 프로토콜이다. 이 QUIC에서 제공하는 기능에는 어떤 것이 있을까.

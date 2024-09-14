@@ -1,3 +1,7 @@
+---
+tags:
+  - 테스트
+---
 # Sociable Unit Test vs Integration Test
 
 - 테스트하고자 하는 객체가 다른 객체에 의존하고 있으면 그것은 단위 테스트가 아닌가?

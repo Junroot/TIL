@@ -1,3 +1,7 @@
+---
+tags:
+  - JPA
+---
 # Enum을 JPA로 저장 하기
 
 ## `@Enumerated`

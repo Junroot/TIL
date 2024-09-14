@@ -1,3 +1,7 @@
+---
+tags:
+  - JPA
+---
 # Spring JPA로 논리적 삭제 사용하기
 
 이전에 사용했던 `@Where` 어노테이션과 `@SQLDelete` 어노테이션을 사용하면 된다.

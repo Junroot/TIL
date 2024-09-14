@@ -1,3 +1,7 @@
+---
+tags:
+  - directory
+---
 # LDAP 기본 개념
 
 ## Directory service

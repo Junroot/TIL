@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Boot
+---
 # Spring Boot Web Starter에서 Validation 애노테이션 없어짐
 
 ## 배경

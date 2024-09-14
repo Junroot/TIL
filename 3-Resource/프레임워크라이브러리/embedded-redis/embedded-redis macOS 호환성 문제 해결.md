@@ -1,3 +1,7 @@
+---
+tags:
+  - embedded-redis
+---
 # embedded-redis macOS 호환성 문제 해결
 
 ## 배경

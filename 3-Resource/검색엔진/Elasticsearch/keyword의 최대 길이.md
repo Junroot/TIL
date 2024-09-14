@@ -1,3 +1,7 @@
+---
+tags:
+  - Elasticsearch
+---
 # keyword의 최대 길이
 
 ## 배경

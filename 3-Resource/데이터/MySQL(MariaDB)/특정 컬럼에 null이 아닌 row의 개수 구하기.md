@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # 특정 컬럼에 null이 아닌 row의 개수 구하기
 
 ```sql

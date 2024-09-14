@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # PriorityQueue에 이미 추가된 객체의 값을 수정하면?
 
 ## 결론부터

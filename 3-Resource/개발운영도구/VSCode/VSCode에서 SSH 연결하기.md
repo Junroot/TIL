@@ -1,3 +1,7 @@
+---
+tags:
+  - VSCode
+---
 # VSCode에서 SSH 연결하기
 
 VSCode로 SSH 환경에서 작업을 해야되는 상황이었다.

@@ -1,3 +1,7 @@
+---
+tags:
+  - JavaScript
+---
 # MetaStream
 
 JavaScript에서 비디오 스트림을 캡쳐하여 분석 ,가공 저장 등을 가능하게 해준다. 예제를 기반으로 사용법을 익혀본다.

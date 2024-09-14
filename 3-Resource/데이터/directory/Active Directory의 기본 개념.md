@@ -1,3 +1,7 @@
+---
+tags:
+  - directory
+---
 # Active Directory의 기본 개념
 
 ## Active Directory 란

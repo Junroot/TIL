@@ -1,3 +1,7 @@
+---
+tags:
+  - Shell-Script
+---
 # logrotate의 config 파일이 root 소유자가 아니면 실패하는 이슈
 
 ## 발생한 문제

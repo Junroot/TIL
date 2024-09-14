@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # Class<A>가 Class<B>의 자식인지 확인하는 방법
 
 ```java

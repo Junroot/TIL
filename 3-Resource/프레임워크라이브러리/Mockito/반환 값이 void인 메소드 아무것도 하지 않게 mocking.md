@@ -1,3 +1,7 @@
+---
+tags:
+  - Mockito
+---
 # 반환 값이 void인 메소드 아무것도 하지 않게 mocking
 
 ```java

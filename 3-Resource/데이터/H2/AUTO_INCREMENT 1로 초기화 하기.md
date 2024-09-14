@@ -1,3 +1,7 @@
+---
+tags:
+  - H2
+---
 # AUTO_INCREMENT 1로 초기화 하기
 
 ```java

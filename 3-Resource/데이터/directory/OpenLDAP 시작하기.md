@@ -1,3 +1,7 @@
+---
+tags:
+  - directory
+---
 # OpenLDAP 시작하기
 
 ## 목표

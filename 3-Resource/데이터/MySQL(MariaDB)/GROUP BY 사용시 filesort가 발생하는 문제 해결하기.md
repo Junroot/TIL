@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # GROUP BY 사용시 filesort가 발생하는 문제 해결
 
 MySQL은 GROUP BY 사용시 자동으로 GROUP BY 열에 맞춰 정렬이 발생한다.

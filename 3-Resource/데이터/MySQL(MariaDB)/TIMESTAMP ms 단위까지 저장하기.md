@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # TIMESTAMP ms 단위까지 저장하기
 
 `TIMESTAMP(3)` 이라고 타입을 지정하면 ms단위까지 저장한다.

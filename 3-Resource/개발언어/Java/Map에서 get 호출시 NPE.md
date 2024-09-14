@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # Map에서 get 호출 시 NPE
 
 ## 배경

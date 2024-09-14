@@ -1,3 +1,8 @@
+---
+tags:
+  - Java
+  - Log4j
+---
 # log4j vs logback vs log4j2
 
 Java 진영의 대표적인 로깅 프레임워크 log4j, logback, log4j2를 비교해보고자 한다.

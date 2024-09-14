@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 ## 목표
 
 - 사용자가 request body로 string 값을 보냈을 때, enum으로 자동으로 매핑시켜서 컨트롤러 파라미터로 넘어오기를 원한다.

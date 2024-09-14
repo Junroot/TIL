@@ -1,3 +1,7 @@
+---
+tags:
+  - Shell-Script
+---
 # cron
 
 ## cron 목적

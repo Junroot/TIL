@@ -1,4 +1,8 @@
-# takeIf
+---
+tags:
+  - Kotlin
+---
+# Kotlin takeIf
 
 ## 목표
 

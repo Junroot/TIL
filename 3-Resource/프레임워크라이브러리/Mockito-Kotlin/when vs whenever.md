@@ -1,3 +1,7 @@
+---
+tags:
+  - Mockito-Kotlin
+---
 # when vs whenever
 
 ## 배경

@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # Lombok
 
 롬복을 통해 쉽게 생성자, getter, setter, 빌드 패턴이 구현된다.

@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Data-Redis
+---
 # Spring redis로 pub/sub 구현하기
 
 ## Redis 의존 추가

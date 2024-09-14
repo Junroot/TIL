@@ -1,3 +1,7 @@
+---
+tags:
+  - Github
+---
 # Squash Merge 문제점
 
 - git squash는 conflict가 발생할 확률이 높다.

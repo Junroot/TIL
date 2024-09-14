@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 # Locale 처리 방식
 
 ## 목표

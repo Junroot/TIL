@@ -1,3 +1,7 @@
+---
+tags:
+  - JavaScript
+---
 # LocalStorage에 데이터 저장, 조회하기
 
 ## 데이터 저장

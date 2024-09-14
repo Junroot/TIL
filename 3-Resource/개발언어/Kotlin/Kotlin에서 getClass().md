@@ -1,3 +1,7 @@
+---
+tags:
+  - Kotlin
+---
 # Kotlin에서 getClass()
 
 ## 배경

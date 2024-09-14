@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Framework
+---
 # properties에 비밀 번호 남는 문제 해결
 
 - 현재는 일단 properties에 비밀번호를 입력하지 않고 실행시 아래와 같이 실행하도록 구현해뒀다

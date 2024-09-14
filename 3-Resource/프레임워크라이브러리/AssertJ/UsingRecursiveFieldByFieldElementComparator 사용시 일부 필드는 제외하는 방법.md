@@ -1,3 +1,7 @@
+---
+tags:
+  - AssertJ
+---
 # UsingRecursiveFieldByFieldElementComparator 사용시 일부 필드는 제외하는 방법
 
 ```java

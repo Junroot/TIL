@@ -1,3 +1,7 @@
+---
+tags:
+  - Kotlin
+---
 # Kotlin Contracts
 
 ## 목표

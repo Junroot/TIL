@@ -1,3 +1,7 @@
+---
+tags:
+  - Java
+---
 # Inner class와 Static inner class의 차이
 
 ```java

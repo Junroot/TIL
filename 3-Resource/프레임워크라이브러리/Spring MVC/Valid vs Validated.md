@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-MVC
+---
 # @Valid vs @Validated
 
 ## 목표

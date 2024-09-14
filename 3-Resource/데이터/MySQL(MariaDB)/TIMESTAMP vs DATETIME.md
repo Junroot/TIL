@@ -1,3 +1,7 @@
+---
+tags:
+  - MySQL
+---
 # TIMESTAMP vs DATETIME
 
 ## 목표

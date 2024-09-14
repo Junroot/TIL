@@ -1,3 +1,7 @@
+---
+tags:
+  - 네트워크
+---
 # 호스트 네임 vs 도메인 네임
 
 ![Untitled](assets/Untitled-4550487.png)

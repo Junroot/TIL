@@ -1,3 +1,7 @@
+---
+tags:
+  - Shell-Script
+---
 # pem 키가 필요한 인스턴스에 scp 명령어로 파일 전송하기
 
 ```bash

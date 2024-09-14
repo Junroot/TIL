@@ -1,3 +1,7 @@
+---
+tags:
+  - Mockito
+---
 # Mutable 한 객체 테스트 시 주의점
 
 ## 배경

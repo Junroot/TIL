@@ -1,3 +1,7 @@
+---
+tags:
+  - 테스트
+---
 # BDD (Behavior Driven Development)
 
 ## 목표

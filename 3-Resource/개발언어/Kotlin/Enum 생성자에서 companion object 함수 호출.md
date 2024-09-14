@@ -1,3 +1,7 @@
+---
+tags:
+  - Kotlin
+---
 # Enum 생성자에서 companion object 함수 호출
 
 ## 배경 

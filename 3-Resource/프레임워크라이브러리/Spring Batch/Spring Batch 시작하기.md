@@ -1,3 +1,7 @@
+---
+tags:
+  - Spring-Batch
+---
 # Spring Batch 시작하기
 
 ## 목표
