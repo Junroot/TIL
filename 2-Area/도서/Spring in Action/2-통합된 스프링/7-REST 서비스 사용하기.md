@@ -1,3 +1,8 @@
+---
+tags:
+  - 도서/Spring-in-Action
+---
+
 # REST 서비스 사용하기
 
 - 스프링 애플리케이션이 REST API를 사용하는 방법들

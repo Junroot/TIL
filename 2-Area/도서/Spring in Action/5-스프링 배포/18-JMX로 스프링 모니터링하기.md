@@ -1,3 +1,8 @@
+---
+tags:
+  - 도서/Spring-in-Action
+---
+
 # JMX로 스프링 모니터링하기
 
 - JMX(Java Management Extensions): 자바 애플리케이션을 모니터링하고 관리하는 표준 방법

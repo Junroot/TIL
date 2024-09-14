@@ -1,3 +1,8 @@
+---
+tags:
+  - 도서/Spring-in-Action
+---
+
 # REST 서비스 생성하기
 
 ## REST 컨트롤러 작성하기
