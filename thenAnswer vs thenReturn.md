@@ -2,6 +2,8 @@
 tags:
   - Mockito
 ---
+# thenAnswer vs thenReturn
+
 ## 목표
 
 - `thenAnswer`와 `thenReturn`의 차이를 알아본다.
