@@ -1,11 +1,11 @@
 ## 로드 맵
 
-
 ![img](assets/roadmap.png)
 
 ## 도서
 
 '교보문고 > 컴퓨터/IT 베스트 셀러' 중 백엔드 개발자와 관련된 도서(2024.08.13 기준 출판한지 6개월 이상된 책만 필터링)
+
 이미 읽은 책은 제외
 
 - 가상 면접 사례로 배우는 대규모 시스템 설계 기초: https://product.kyobobook.co.kr/detail/S000001033116
@@ -28,4 +28,3 @@
 - 구글 엔지니어는 이렇게 일한다: https://product.kyobobook.co.kr/detail/S000061352347
 - 육각형 개발자: https://product.kyobobook.co.kr/detail/S000203107475
 - 개발자 원칙: https://product.kyobobook.co.kr/detail/S000200381165
-
