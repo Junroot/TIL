@@ -116,8 +116,6 @@ tags:
     * merge의 결과를 별도의 commit object로 저장
     * 코드가 반영된 branch가 바라보는 commit을 새로 만들어진 commit으로 변경
     * 이때 만들어진 commit을 merge commit 이라고 함.
-
-    !\[Untitled]\(assets/Untitled 1.png)
 *   git rebase
 
     * 지정한 base를 기준으로 현재 branch의 base commit을 변경

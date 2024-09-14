@@ -645,7 +645,7 @@ False
 
 문자열, 리스트, 튜플, 딕셔너리 등은 값이 비어있으면 거짓이된다.
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_20.png)
 
 따라서 다음과 같이 while문을 사용할 수 있다.
 
@@ -692,11 +692,11 @@ False
 
 ## 논리 연산
 
-![Untitled](assets/Untitled 1.png)
+![Untitled](assets/Untitled%201_12.png)
 
 ### 리스트, 튜플, 문자열 포함 확인
 
-![Untitled](assets/Untitled 2.png)
+![Untitled](assets/Untitled%202_7.png)
 
 ## 조건문과 루프문
 

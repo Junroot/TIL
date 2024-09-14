@@ -10,7 +10,7 @@ tags:
 
 위 코드 한 줄은 아마 개발을 해본 대부분은 시도 해본 디버깅 방법일 것이다. 필자도 한 때 많이 이용한 방법이다. 특별한 기술이 없어도 내가 작성한 코드가 어떻게 흘러가는지, 어디까지 동작하는지 확인할 수 있다. 점차 IDE 사용법에 익숙해지면 알게 되는 좀 더 쉬운 디버깅 방법으로는 디버거가 있다. 디버거를 사용하면 특정 코드 라인에 도달했을 때, 각 변수의 주소, 값 등을 확인할 수 있어 디버깅할 때 용이하다.
 
-![Logging%2036da24dad1b54f698a243e9bbb99379e/Untitled.png](assets/Untitled.png)
+![Logging%2036da24dad1b54f698a243e9bbb99379e/Untitled.png](assets/Untitled_16.png)
 
 하지만 이런 방법들은 한계가 있다. "내 컴퓨터에서는 잘 동작하는데 배포만 하면 동작을 안해요.", "분명 버그가 있었는데 재연을 못 하겠어요." 많이 들어본 대사일 것이다. 배포 환경과 내 컴퓨터가 항상 동일한 환경이라는 보장도 없고, 내가 직접 모든 버그를 다 찾아낼 수 있다는 보장도 없다. 우리는 언제 어디서 터질지 모르는 이런 버그들을 잘 기록해뒀다가 디버깅에 사용할 필요가 있다. 그래서 사용하게 된 방법이 _**로깅**_이다. 로깅을 사용하면 단순 출력과는 다르게 로깅 레벨, 포맷 등을 커스터마이징 할 수 있어 더 편리하다.
 
@@ -41,7 +41,7 @@ Spring Boot는 여러 가지 프레임워크를 사용할 수 있지만 기본�
 
 현재 Logback은 logback-core, logback-classic, logback-access 3가지 모듈로 나뉜다. core는 classic과 access 모듈의 기초가 된는 범용 모듈이다. classic 모듈은 SLF4J API의 구현에 집중되어있다. access 모듈은 HTTP 액세스 로그 기능을 제공하기 위해 서블릿 컨테이너와 통합된다. 또한 Logger 클래스는 classic 모듈의 일부이고 Appender와 Layout 인터페이스는 core 모듈의 일부이다.
 
-![Untitled](<assets/Untitled 1.png>)
+![Untitled](<assets/Untitled 1_9.png>)
 
 ### Logback 구성
 
@@ -80,7 +80,7 @@ Logback의 Logger는 5가지의 로그 레벨을 가질 수 있다.
 
 *   `OutputStreamAppender`: 이벤트를 `java.io.OutputStream`에 추가한다. 다른 Appender의 기초가되는 서비스를 제공한다. `OutputStream`에 문자열을 쉽게 매핑할 수 없기 때문에 일반적으로 직접 사용하지는 않는다.
 
-    ![Untitled](<assets/Untitled 2.png>)
+    ![Untitled](<assets/Untitled 2_6.png>)
 *   `ConsoleAppender`: 콘솔에 이벤트를 추가한다. 아래와 같이 class에 `ch.qos.logback.core.ConsoleAppender`로 xml 파일에 추가할 수 있다.
 
     ```xml

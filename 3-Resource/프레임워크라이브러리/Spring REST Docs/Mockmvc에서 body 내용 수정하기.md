@@ -6,7 +6,7 @@ tags:
 
 multipart 를 통해 파일을 body로 보내는데, 이미지라서 바이트 데이터로 보내게된다. 
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_13.png)
 
 rest-docs에서는 이를 굳이 보여줄 필요가 없기 때문에, body내용을 바꾸는 기능이 필요했다. 이를 위해서는 `preprocessRequest` 라는 것을 사용하면 된다.
 
@@ -61,7 +61,7 @@ public class ImageBodyPreprocessor implements OperationPreprocessor {
 
 위 코드와 같이 file이라는 part의 내용을 수정해야됐다.
 
-![Untitled](assets/Untitled%201.png)
+![Untitled](assets/Untitled%201_7.png)
 
 위 결과와 같이 바이트 데이터대신 '<<binary data>>'라는 문자가 보이도록 수정했다.
 

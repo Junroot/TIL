@@ -4,7 +4,7 @@ tags:
 ---
 # proejct property 설정하여 Spring boot profile 설정하기
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_12.png)
 
 위의 방법으로 gradle을 실행시킬 때 project property를 설정할 수 있다.
 

@@ -19,9 +19,9 @@ public class WebConfig implements WebMvcConfigurer {
 
 하지만 WAS가 HTTP를 받았을 때 항상 IP가 웹 서버(NGINX)의 IP로 인식되는 문제가 있었다.
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_14.png)
 
-![Untitled](<assets/Untitled 1.png>)
+![Untitled](<assets/Untitled 1_8.png>)
 
 ## 문제 해결
 
@@ -67,10 +67,6 @@ private String getClientIpFrom(final HttpServletRequest request) {
 ```
 
 위 내용은 코드로 설명히 충분하여, 굳이 설명하지 않겠다.
-
-## 재확인
-
-![Untitled](<../../형상관리/Git/assets/Untitled 2.png>)
 
 ## 참고 자료
 

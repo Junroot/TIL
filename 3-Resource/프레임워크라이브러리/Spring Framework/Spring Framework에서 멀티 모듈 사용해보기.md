@@ -12,7 +12,7 @@ tags:
 
 ![Untitled](assets/Untitled-4552347.png)
 
-![Untitled](assets/Untitled%201.png)
+![Untitled](assets/Untitled%201_11.png)
 
 아래는 main 메서드가 있는 클래스의 코드다.
 

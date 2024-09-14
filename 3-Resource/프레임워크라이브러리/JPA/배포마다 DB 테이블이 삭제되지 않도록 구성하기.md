@@ -1,6 +1,7 @@
 ---
 tags:
   - JPA
+  - Flyway
 ---
 # 배포마다 DB 테이블이 삭제되지 않도록 구성하기
 
@@ -48,7 +49,7 @@ implementation 'org.flywaydb:flyway-core:7.12.0'
 
 ### 2. sql 추가
 
-![Untitled.png](assets/Untitled.png)
+![Untitled.png](assets/Untitled_15.png)
 
 ```sql
 create table game

@@ -21,7 +21,7 @@ Gatling의 시작 방법은 단순하다. [링크](https://gatling.io/get-starte
 
 `./recorder.sh` 명령어로 Recorder를 실행해서 Recorder mode를 HAR Converter로 선택하면 된다. package는 `user-files/simulations` 내부에 저장할 디렉토리의 이름이 된다.
 
-![Untitled](assets/Untitled 1-4551841.png)
+![Untitled](assets/Untitled%201-4551841.png)
 
 나는 다음과 같은 시나리오를 만들었다.
 
@@ -194,7 +194,7 @@ VUser = (목표 rps * T) / R
 setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 ```
 
-![Untitled](assets/Untitled%202.png)
+![Untitled](assets/Untitled%202_1.png)
 
 보이는 결과와 같이 get games와 get tags의 latency가 엄청나게 큰것을 확인할 수 있다. 이전에 game과 tag의 검색 로직을 프론트엔드에서 작업하기 위해서 이렇게 구현했는데, 백엔드에서 검색이 가능하도록 수정해야 될 것으로 보인다.
 
@@ -205,14 +205,6 @@ setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 ```scala
 setUp(scn.inject(atOnceUsers(13))).protocols(httpProtocol)
 ```
-
-![Untitled](assets/Untitled 3.png)
-
-위 그림에서 보듯이 원하는 만큼의 RPS를 내지 못하는 것을 볼 수 있다.(Global Cnt/s) 또한 get games와 같은 일부 요청에서는 에러를 발생하기도 했다.
-
-![Untitled](assets/Untitled 4.png)
-
-아무래도 어서 모든 게임을 반환하는 API를 어서 수정해야될 것으로 보인다.
 
 ## 참고 자료
 

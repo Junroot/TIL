@@ -118,7 +118,7 @@ public class CartDao {
 
 저장할 자료구조에 따라 `opsForValue()` 뿐만아니라 다양한 메서드를 제공하고 있다.
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_18.png)
 
 ## 참고 자료
 

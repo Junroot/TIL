@@ -83,7 +83,7 @@ tags:
 - 이를 해결하기 위해 다중 큐를 사용한다.
     - 우선순위에 따라 여러 개의 큐를 만든다.
     
-    ![Untitled](assets/Untitled 2-4551136.png)
+    ![Untitled](assets/Untitled%202-4551136.png)
     
 - 프로세스 우선 순위 배정 방식 2가지
     - 고정 우선순위 방식: 운영체제가 프로세스에 우선순위를 부여하면 프로세스가 끝날 때까지 바뀌지 않는다.
@@ -103,7 +103,7 @@ tags:
     - 대기 큐에 있는 프로세스 제어 블록은 큐에 삽입된 순서대로 처리되지만, 일부는 나중에 들어온 것이 먼저 준비 상태로 옮겨 가기도 한다.
         - 입출력 장치가 CPU나 메모리보다 느려서 작업 속도를 높이기 위해 작업 순서를 뒤바꾸는 경우가 잇다.
 
-![Untitled](assets/Untitled 3-4551141.png)
+![Untitled](assets/Untitled%203-4551141.png)
 
 ## 스케줄링 알고리즘
 
@@ -121,11 +121,11 @@ tags:
 - 응답 시간: 프로세스 시작 후 첫 번째 출력 또는 반응이 아놀 떄 까지 걸리는 시간. 대화형 시스템에서 중요하다.
 - 반환 시간: 프로세스가  생성된 후 종료되어 사용하던 자원을 모두 반환하는 데 까지 걸리는 시간.
 
-![Untitled](assets/Untitled 4-4551145.png)
+![Untitled](assets/Untitled%204-4551145.png)
 
 ### FCFS 스케줄링
 
-![Untitled](assets/Untitled 5-4551149.png)
+![Untitled](assets/Untitled%205-4551149.png)
 
 - First Come First Served. FIFO라고도 부른다.
 - 준비 큐에 도착한 순서대로 CPU를 할당하는 비선점형 방식

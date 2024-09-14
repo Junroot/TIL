@@ -14,7 +14,7 @@ while (bufferedReader.ready()) {
 
 이렇게 구현하니 클라이언트가 데이터를 보내기전에 여기에오면 그냥 통과해버리는 문제가 있었다. 
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_21.png)
 
 ## 현재 코드
 

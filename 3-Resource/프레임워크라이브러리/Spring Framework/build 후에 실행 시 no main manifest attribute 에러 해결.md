@@ -8,7 +8,7 @@ tags:
 
 SpringBoot 플러그인에는 Spring Boot 애플리케이션을 jar 파일로 패키징을 도와주기 위한 플러그인이므로 필요하다.
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_19.png)
 
 ## 참고 자료
 

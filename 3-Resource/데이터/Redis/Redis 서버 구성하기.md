@@ -51,7 +51,7 @@ $ sudo systemctl restart redis
 
 ## 확인
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_10.png)
 
 ## 참고 자료
 

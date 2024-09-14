@@ -20,7 +20,7 @@ tags:
 
 intelliJ를 사용해서 서브모듈을 만든다. 그리고 기존에 구현해놓은 코드들을 각 모듈에 맞게 분리해서 옮겨담았다.
 
-![Untitled](assets/Untitled.png)
+![Untitled](assets/Untitled_23.png)
 
 ### 2. settings.gradle 파일 수정
 
