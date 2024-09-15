@@ -1,10 +1,8 @@
 ---
+title: 1-Vuejs에 대한 소개
 tags:
   - 도서/한-권으로-배우는-Vuejs-3
-title: 1-Vuejs에 대한 소개
 ---
-
-
 ## Vue.js에 대한 소개
 
 - MVVM(Model-View-VIewModel) 패턴을 표방하고 있다.
