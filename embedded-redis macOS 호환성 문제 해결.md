@@ -1,8 +1,9 @@
 ---
 tags:
   - embedded-redis
+title: embedded-redis macOS 호환성 문제 해결
 ---
-# embedded-redis macOS 호환성 문제 해결
+
 
 ## 배경
 

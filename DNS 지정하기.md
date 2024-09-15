@@ -1,8 +1,9 @@
 ---
 tags:
   - nginx
+title: DNS 지정하기
 ---
-# DNS 지정하기
+
 
 ## resolver
 

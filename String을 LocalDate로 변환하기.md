@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: String을 LocalDate로 변환하기
 ---
-# String을 LocalDate로 변환하기
 
 `DateTimeFormatter` 로 문자열의 날짜 형식을 지정하고 파싱하면된다.
 

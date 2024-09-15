@@ -1,8 +1,8 @@
 ---
 tags:
   - MySQL
+title: 컬럼명 수정 SQL
 ---
-# 컬럼명 수정 SQL
 
 ```sql
 ALTER TABLE user CHANGE name nickname VARCHAR(30) NULL;

@@ -1,8 +1,9 @@
 ---
 tags:
   - ArgoCD
+title: Argo CD 알아보기
 ---
-# Argo CD 알아보기
+
 
 ## 목표
 
@@ -24,7 +25,7 @@ tags:
 
 ## Argo CD 시작하기
 
-###  1. Argo CD 설치
+### 1. Argo CD 설치
 
 - `argocd`라는 namespace를 만들고
 - Argo CD 서비스와 애플리케이션 리소스를 생성한다.

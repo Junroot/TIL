@@ -1,27 +1,28 @@
 ---
 tags:
   - nginx
+title: Nginx 시작하기
 ---
-# Nginx 시작하기
+
 
 ## **Nginx 설치**
 
 1. 소스 다운로드
-   
+
     ```
     wget http://nginx.org/download/nginx-1.12.2.tar.gz
     tar xvzf nginx-1.12.2.tar.gz
     ```
-    
+
 2. 빌드
-   
+
     ```
     cd nginx-1.12.2
     ./configure  --prefix=/home/{user}/apps/nginx-1.12.2 --user={user} --group={user} --error-log-path=/home/{user}/logs/nginx/error.log --http-log-path=/home/{user}/logs/nginx/access.log --without-http_rewrite_module  --without-http_scgi_module --without-http_uwsgi_module --without-http_fastcgi_module
     make
     make install
     ```
-    
+
     - 옵션 설명
         - OS 사용자
             - `-user` : OS 사용자 계정. irteam을 권장한다.
@@ -39,59 +40,63 @@ tags:
             - `-with-http_v2_module` : HTTP/2로 서비스하기 위한 모듈 추가
         - 그 외 다양한 옵션
           
+
             [https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/](https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/)
+
             
 - 트러블슈팅
     - 빌드 시에 c 컴파일러가 필요하다. ubuntu에서 아래 명령어를 통해 gcc 컴파일러를 설치할 수 있다.
-      
+
         ```
         sudo apt install build-essential
         ```
-        
+
     - 아래와 같은 오류로 zlib 라이브러리를 설치하라고 요구한다.
-      
+
         ```
         ./configure: error: the HTTP gzip module requires the zlib library.
         You can either disable the module by using --without-http_gzip_module
         option, or install the zlib library into the system, or build the zlib library
         statically from the source with nginx by using --with-zlib= option.
         ```
-        
+
         - 아래 방법으로 해결할 수 있다.
-          
+
             ```
             sudo apt-get install zlib1g-dev
             ```
-            
+
 1. 실행
-   
+
     ```
     cd apps/nginx/sbin
     ./nginx # 시작
     ./nginx -s reload ## 설정 리로드
     ./nginx -s stop ## 종료
     ```
-    
+
     - 실행 결과 확인
       
+
         ![image-20221114112634912.png](assets/image-20221114112634912.png)
+
     
 2. HTTP/2 관련 모듈 설치
-   
+
     ```
     cd /home/{user}/download
     wget https://www.openssl.org/source/openssl-1.0.2m.tar.gz
     tar xvzf openssl-1.0.2m.tar.gz
     ```
-    
+
     ```
     ./configure --with-http_ssl_module --with-http_v2_module  --with-openssl=/home/{user}/download/openssl-1.0.2m  --prefix=/home/{user}/apps/nginx-1.12.2 --user={user} --group={user}  --without-http_scgi_module --without-http_uwsgi_module --without-http_fastcgi_module
     ```
-    
+
 3. Log 삭제 스크립트 지정
     - 주기적으로 로그 파일을 삭제해야된다.
     - shell 스크립트 형태로 실행
-      
+
         ```
         #!/bin/bash
         
@@ -114,13 +119,12 @@ tags:
         ### Main ###
         rotate_nginx_log
         ```
-        
+
     - `crontab -e` 명령어를 통해 스크립트를 매일 실행
-      
+
         ```
         0 0 * * * /home/{user}/scripts/rotatelog_nginx.sh
         ```
-        
 
 ## **어플리케이션 서버 연동**
 
@@ -128,7 +132,7 @@ tags:
 
 - Nginx가 Proxy 서버 역할로 사용자의 요청을 뒷단의 서버로 넘긴다. proxy에 대한 선언이 반복될수도 있으므로 `proxy.conf` 와 같은 별도의 파일로 빼는 것이 좋다.
 - /nginx/conf/nginx.conf
-  
+
     ```
     http {
         # upstream으로 서버의 그룹을 지정할수 있다.
@@ -154,9 +158,9 @@ tags:
             }
     }
     ```
-    
+
 - /nginx/conf/proxy.conf
-  
+
     ```
     proxy_set_header   Host $host;
     proxy_set_header   Connection ""; # keep-alive를 활용하기 위한 헤더 설정
@@ -173,7 +177,7 @@ tags:
     proxy_buffering off;
     proxy_ignore_client_abort on;
     ```
-    
+
     - `proxy_http_version` : HTTP 프로토콜의 버전이다. 디폴트는 1.0 이다. keep-alive을 활용하기 위해서는 1.1로 명시해서 지정한다.
     - `proxy_buffering` : upstream 서버로 부터 받은 응답을 버퍼링할지의 여부이다. 디폴트는 `on` 이다. `off` 로 설정하면 Nginx는 뒷단의 서버로부터 받은 응답을 버퍼에 저장하지 않고 즉시 클라이언트에서 전송한다.
     - `proxy_max_temp_file_size` : 응답이 버퍼 크기를 넘어 갔을 때 사용할 임시파일의 최대 크기다. `proxy_buffering` 를 `on` 으로 지정했을 때만 이 속성이 의미가 있다. 디폴트는 값은 1024m이다. 0으로 설정하면 임시 파일을 사용하지 않는다.
@@ -184,7 +188,7 @@ tags:
 ### **AJP 연동**
 
 - /nginx/conf/nginx.conf
-  
+
     ```
     # ajp read timeout
     ajp_read_timeout 600;
@@ -200,12 +204,11 @@ tags:
         }
     }
     ```
-    
 
 ## **HTTPS 설정**
 
 - /nginx/conf/nginx.conf
-  
+
     ```
     server {
         listen 80;
@@ -232,7 +235,7 @@ tags:
         ....
     }
     ```
-    
+
     - ssl_protocols : 사용할 프로토콜을 지정한다.
     - ssl_prefer_server_ciphers : SSLv3와 TLS 프로토콜을 사용할 때 서버에서 지정한 cipher의 cipher가 클라이언트의 cipher보다 우선시 될지의 여부이다. 디폴트는 `off` 이다.
     - ssl_ciphers : 제공할 Cipher를 우선 순위에 따라 적는다.

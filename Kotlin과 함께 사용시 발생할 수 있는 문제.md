@@ -1,8 +1,9 @@
 ---
 tags:
   - Lombok
+title: Kotlin과 함께 사용시 발생할 수 있는 문제
 ---
-# Kotlin과 함께 사용시 발생할 수 있는 문제
+
 
 ## 배경
 

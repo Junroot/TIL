@@ -1,8 +1,8 @@
 ---
 tags:
   - JavaScript
+title: DOM Element 제거하기
 ---
-# DOM Element 제거하기
 
 `remove()` 메서드를 통해 쉽게 제거가 가능하다.
 

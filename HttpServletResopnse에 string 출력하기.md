@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: HttpServletResopnse에 string 출력하기
 ---
-# HttpServletResopnse에 string 출력하기
 
 ```java
 response.setContentType("text/html; charset=UTF-8");

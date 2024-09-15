@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: Java의 Comparator와 Comparable
 ---
-# Java의 Comparator와 Comparable
 
 Java에서 커스텀 클래스를 PriorityQueue에 담기 위해서, 정렬 기준을 구현할 필요가 있다. Java에서 정렬을 구현하는 방법에는 두 가지가 있다. 
 

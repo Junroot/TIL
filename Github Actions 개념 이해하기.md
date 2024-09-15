@@ -1,8 +1,9 @@
 ---
 tags:
   - Github
+title: Github Actions 개념 이해하기
 ---
-# Github Actions 개념 이해하기
+
 
 ## 목표
 
@@ -26,7 +27,7 @@ tags:
 ### Job
 
 - 같은 runner에서 실행되는 step의 집합
-- job들 간에는 기본적으로  의존성이 없고 병렬로 실행된다.
+- job들 간에는 기본적으로 의존성이 없고 병렬로 실행된다.
 - 만약 job이 다른 job에 의존성을 설정하면, 의존하는 job이 완료될 때 까지 실행을 기다린다.
 
 ### Step

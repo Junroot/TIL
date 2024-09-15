@@ -1,8 +1,9 @@
 ---
 tags:
   - Elasticsearch
+title: properties vs fields
 ---
-# properties vs fields
+
 
 ## 목표
 

@@ -1,8 +1,9 @@
 ---
 tags:
   - MyBatis
+title: DynamicSQL
 ---
-# DynamicSQL 작성법
+
 
 ## 목표
 
@@ -48,7 +49,6 @@ tags:
 
 ## trim, where, set
 
-
 ```sql
 <select id="findActiveBlogLike"
      resultType="Blog">
@@ -67,12 +67,14 @@ tags:
 ```
 
 - 위 예시의 경우 모든 if문이 다 false면 sql 문법 에러가 발생한다.
+
 ```sql
 SELECT * FROM BLOG
 WHERE
 ```
 
 - 또한, 첫 번째 조건문이 false인 경우에도 sql 문법 에러가 발생한다.
+
 ```sql
 SELECT * FROM BLOG
 WHERE
@@ -81,6 +83,7 @@ AND title like ‘someTitle’
 
 - `<where>` 태그를 사용하면 WHERE 아래에 값이 일을 때만 WHERE 이 추가된다.
 	- 또한 WHERE 뒤 값이 AND나 OR로 시작하면 이를 제거해준다.
+
 ```sql
 <select id="findActiveBlogLike"
      resultType="Blog">
@@ -103,6 +106,7 @@ AND title like ‘someTitle’
 	- `prefix` 뒤에 값이 없으면 `prefix`도 추가되지 않음
 	- `prefix` 뒤에 `prefixOverrides`로 시작하는 경우 해당 글자 제거
 		- `|` 기호로 여러개 지정 가능 
+
 ```sql
 <trim prefix="WHERE" prefixOverrides="AND |OR ">
   ...
@@ -110,6 +114,7 @@ AND title like ‘someTitle’
 ```
 
 - update 문에서도 `<where>`와 비슷한 `<set>` 태그가 있다.
+
 ```sql
 <update id="updateAuthorIfNecessary">
   update Author
@@ -124,6 +129,7 @@ AND title like ‘someTitle’
 ```
 
 - `<set>` 태그를 `<trim>`으로 표현하면 다음과 같다.
+
 ```sql
 <trim prefix="SET" suffixOverrides=",">
   ...
@@ -134,6 +140,7 @@ AND title like ‘someTitle’
 
 - 이터레이터 클래스에서 각 요소를 참조해야될 때 사용한다.
 	- `Map` 객체에서 사용할 때는 키가 `index`에, 값이 `item`에 매핑된다.
+
 ```sql
 <select id="selectPostIn" resultType="domain.blog.Post">
   SELECT *
@@ -150,6 +157,7 @@ AND title like ‘someTitle’
 ## script
 
 - Java mapper 클래스에서 사용할 때는 `<script>` 태그를 붙여야된다.
+
 ```sql
 @Update({"<script>",
   "update Author",

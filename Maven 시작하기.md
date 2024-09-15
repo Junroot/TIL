@@ -1,8 +1,9 @@
 ---
 tags:
   - Maven
+title: Maven 시작하기
 ---
-# Maven 시작하기
+
 
 ## **소개**
 
@@ -150,11 +151,11 @@ tags:
         - 런타임
         - 테스트
 - dependency tree 보기
-  
+
     ```
     mvn dependency:tree
     ```
-    
+
 - maven의 dependency 관리를 해주지 않으면?
     - 사용하는 모든 라이브러리도 직접 확인
     - 직접 다운로드
@@ -170,7 +171,9 @@ tags:
     - 의존성 스코프 관리
         - provided: 컴파일 시점에 필요하지만, provided로 설정한 의존성에 대해서는 runtime 시점에 JDK 또는 컨테이너가 제공한다.
     
+
     ![image-20221111180403350.png](assets/image-20221111180403350.png)
+
     
     - 실제 서비스에서
         - runtime: JDBC 드라이버
@@ -181,7 +184,9 @@ tags:
     - maven이 어떤 기능을 수행할 때, 각각의 기능은 plugin 형태로 제공된다.
     - 플러그인의 종류
       
+
         ![image-20221111182148293.png](assets/image-20221111182148293.png)
+
     
 - profile
     - 각각의 다른 환경에 맞는 각 빌드를 커스터마이징 할 수 있는 기능을 제공한다.

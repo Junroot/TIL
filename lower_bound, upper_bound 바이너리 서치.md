@@ -1,8 +1,8 @@
 ---
 tags:
   - Python
+title: lower_bound, upper_bound 바이너리 서치
 ---
-# lower_bound, upper_bound 바이너리 서치
 
 python에서 자체적으로 함수로 제공하고 있다.
 

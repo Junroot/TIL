@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Framework
+title: PropertySourcesPlaceholderConfigurer
 ---
-# PropertySourcesPlaceholderConfigurer
+
 
 ## 배경
 

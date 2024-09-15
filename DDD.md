@@ -1,8 +1,9 @@
 ---
 tags:
   - 설계
+title: DDD
 ---
-# DDD(Domain-Driven Design)
+
 
 ## 배경
 

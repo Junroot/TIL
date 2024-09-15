@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-MVC
+title: request body로 enum 값 받기
 ---
-# request body로 enum 값 받기
+
 
 ## 목표
 

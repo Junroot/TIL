@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: String으로 원하는 Enum 찾기
 ---
-# String으로 원하는 Enum 찾기
 
 Enum에 `valueOf()` 메서드를 이용하면 된다.
 

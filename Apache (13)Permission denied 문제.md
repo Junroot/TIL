@@ -1,8 +1,9 @@
 ---
 tags:
   - Apache
+title: Apache (13)Permission denied 문제
 ---
-# Apache (13)Permission denied 문제
+
 
 ## 문제 상황
 

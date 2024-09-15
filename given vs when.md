@@ -1,8 +1,9 @@
 ---
 tags:
   - Mockito
+title: given vs when
 ---
-# given vs when
+
 
 ## 목표
 

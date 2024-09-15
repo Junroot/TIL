@@ -1,9 +1,10 @@
 ---
 tags:
   - 도서/Spring-in-Action
+title: 18-JMX로 스프링 모니터링하기
 ---
 
-# JMX로 스프링 모니터링하기
+
 
 - JMX(Java Management Extensions): 자바 애플리케이션을 모니터링하고 관리하는 표준 방법
 	- JMX는 MBeans(managed beans) 컴포넌트를 노출함으로써 외부의 JMX 클라이언트는 오퍼레이션 호출, 속성 검사, MBeans의 이베트 모니터링을 통해 애플리케이션을 관리할 수 있다.

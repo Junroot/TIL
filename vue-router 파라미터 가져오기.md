@@ -1,8 +1,9 @@
 ---
 tags:
   - Vuejs
+title: vue-router 파라미터 가져오기
 ---
-# vue-router 파라미터 가져오기
+
 
 ## 방법
 

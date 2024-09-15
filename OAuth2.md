@@ -1,8 +1,9 @@
 ---
 tags:
   - 네트워크
+title: OAuth2
 ---
-# OAuth2.0
+
 
 ## 목표
 
@@ -46,7 +47,7 @@ tags:
 	2. 승인은 Authorization Code, Client Credentials, Device Code 3가지 방식이 있는데 Authorization Code가 가장 널리 사용되는 방법이다. Authorization Code의 경우 access token을 받을 수 있는 일시적으로 사용가능한 code를 받는다.
 3. client는 authorization server에 Authorization Code와 자신의 client id, client secret을 보내면서 access token을 요청한다.
 4. authorization server는 client에 access token을 제공한다.
-5. client는 access token를 제시하면서  resource server에 리소스을 요청한다.
+5. client는 access token를 제시하면서 resource server에 리소스을 요청한다.
 6. resource server는 token이 유효하면 resource를 제공한다.
 
 ## Refresh token

@@ -1,8 +1,9 @@
 ---
 tags:
   - MySQL
+title: Pagination 쿼리 최적화
 ---
-# Pagination 쿼리 최적화
+
 
 ## 목표
 
@@ -78,4 +79,3 @@ create index .. on news(date, id);
 - https://www.cybertec-postgresql.com/en/pagination-problem-total-result-count/
 - https://use-the-index-luke.com/no-offset
 - https://tecoble.techcourse.co.kr/post/2021-10-12-covering-index/
-

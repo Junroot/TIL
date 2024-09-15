@@ -1,8 +1,8 @@
 ---
 tags:
   - JPA
+title: Repository를 사용하여 데이터 개수 제한하기
 ---
-# Repository를 사용하여 데이터 개수 제한하기
 
 top이나 first를 사용하면된다. 따로 개수를 표기하지 않으면 1개의 데이터만 가져온다.
 

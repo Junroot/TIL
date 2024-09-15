@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-MVC
+title: Interceptor
 ---
-# Interceptor
+
 
 ## 특정 IP만 접근 허용하기
 

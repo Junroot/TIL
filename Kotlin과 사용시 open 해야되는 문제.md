@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Framework
+title: Kotlin과 사용시 open 해야되는 문제
 ---
-# Kotlin과 사용시 open 해야되는 문제
+
 
 ## 배경
 
@@ -37,4 +38,3 @@ tags:
 
 - https://kotlinlang.org/docs/all-open-plugin.html#spring-support
 - https://spring.io/guides/tutorials/spring-boot-kotlin/
-

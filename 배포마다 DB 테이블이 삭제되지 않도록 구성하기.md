@@ -2,8 +2,8 @@
 tags:
   - JPA
   - Flyway
+title: 배포마다 DB 테이블이 삭제되지 않도록 구성하기
 ---
-# 배포마다 DB 테이블이 삭제되지 않도록 구성하기
 
 `properties` 파일에 아래의 설정을 추가하여 해결했다.
 
@@ -13,7 +13,7 @@ spring.jpa.hibernate.ddl-auto=validate
 
 ## 문제점: 새로운 not null 컬럼이 추가되었을 때 기존 row들은 어떻게 처리하는 것이 좋을까?
 
-예를들어, 서비스가 확장되면서 `User`에 `Age`컬럼이  추가되었을 때, `Age`가 not null 이라면 기존의 사용자 데이터는 어떻게 처리하는 것이 좋을까?
+예를들어, 서비스가 확장되면서 `User`에 `Age`컬럼이 추가되었을 때, `Age`가 not null 이라면 기존의 사용자 데이터는 어떻게 처리하는 것이 좋을까?
 
 → 구글링 결과, 방법은 1. not null을 포기하거나 2. default value를 설정하거나 두 가지 방법 밖에없다. 상태로 컬럼을 추가하는 수밖에 없다. (어떻게 보면 당연하다 우리가 사용자의 나이를 추측할 순 없으니까)
 
@@ -127,9 +127,13 @@ constraint 네이밍은 아래의 컨벤션을 사용했다.
 1. 컬럼 추가해보기: Game 엔티티에 `specialName` 컬럼을 추가해봤다.
 
 ![](assets/Pasted%20image%2020231123132350.png)
+
 ![](assets/Pasted%20image%2020231123132407.png)
+
 ![](assets/Pasted%20image%2020231123132428.png)
+
 ![](assets/Pasted%20image%2020231123132443.png)
+
 `special_name`컬럼이 추가된 것을 확인할 수 있다! 
 
 ### 출처

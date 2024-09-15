@@ -1,10 +1,10 @@
 ---
 tags:
   - JavaScript
+title: BroadcastChannel
 ---
-# BroadcastChannel
 
-같은 origin의 서로 다른 window, tab, frame, iframe 간에 통신을 할 때 사용하는 Web API다. WebRTC로 두 탭 사이에 연견을 맺기 위해서 BroadcastChannel을 사용했다. 간단한  사용법만 정리해본다.
+같은 origin의 서로 다른 window, tab, frame, iframe 간에 통신을 할 때 사용하는 Web API다. WebRTC로 두 탭 사이에 연견을 맺기 위해서 BroadcastChannel을 사용했다. 간단한 사용법만 정리해본다.
 
 ## 채널 생성
 
@@ -37,4 +37,5 @@ signaling.postMessage({type: 'hello'});
 ## 참고 자료
 
 [https://developer.mozilla.org/ko/docs/Web/API/BroadcastChannel](https://developer.mozilla.org/ko/docs/Web/API/BroadcastChannel)
+
 [https://webrtc.github.io/samples/src/content/peerconnection/channel/](https://webrtc.github.io/samples/src/content/peerconnection/channel/)[https://developer-alle.tistory.com/m/433](https://developer-alle.tistory.com/m/433)

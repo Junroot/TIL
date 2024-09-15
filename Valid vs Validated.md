@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-MVC
+title: Valid vs Validated
 ---
-# @Valid vs @Validated
+
 
 ## 목표
 

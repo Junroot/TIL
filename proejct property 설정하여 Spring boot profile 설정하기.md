@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Boot
+title: proejct property 설정하여 Spring boot profile 설정하기
 ---
-# proejct property 설정하여 Spring boot profile 설정하기
 
 ![Untitled](assets/Untitled_12.png)
 

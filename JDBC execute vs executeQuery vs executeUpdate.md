@@ -2,8 +2,9 @@
 tags:
   - Java
   - JDBC
+title: JDBC execute vs executeQuery vs executeUpdate
 ---
-# JDBC execute vs executeQuery vs executeUpdate
+
 
 - execute: 일반적인 sql 실행. 리턴 타입이 `ResultSet`이면 TRUE, 아니면 false다.
 - executeQuery: 특정 데이터를 탐색할 때 사용하는 메소드. 리턴타입이 `ResultSet`이다.

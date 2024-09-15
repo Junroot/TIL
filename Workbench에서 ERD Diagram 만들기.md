@@ -1,8 +1,9 @@
 ---
 tags:
   - MySQL
+title: Workbench에서 ERD Diagram 만들기
 ---
-# Workbench에서 ERD Diagram 만들기
+
 
 ## 기존에 존재하던 데이터베이스의 ERD Diagram 자동 생성하기
 

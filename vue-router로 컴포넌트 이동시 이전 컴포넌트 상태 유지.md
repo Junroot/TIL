@@ -1,8 +1,9 @@
 ---
 tags:
   - Vuejs
+title: vue-router로 컴포넌트 이동시 이전 컴포넌트 상태 유지
 ---
-# vue-router로 컴포넌트 이동시 이전 컴포넌트 상태 유지
+
 
 ## 방법
 

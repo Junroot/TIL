@@ -2,8 +2,8 @@
 tags:
   - JavaScript
   - WebRTC
+title: WebRTC에서현재 전송받고 있는 트랙의 코덱 정보 받아오기
 ---
-# WebRTC에서현재 전송받고 있는 트랙의 코덱 정보 받아오기
 
 `RTCPeerConnection.getStats()` 메서드를 호출하면, 현재 커넥션의 통계 데이터와 트랙의 정보들을 받을 수 있다. 출력을 해보면 stream이나 codec, trasnport 등 다양항 type의 정보를 오는 것을 확인할 수 있다. 각 type의 의미들은 [https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type](https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type)에서 확인이 가능하다.
 

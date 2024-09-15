@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: Kotlin Contracts
 ---
-# Kotlin Contracts
+
 
 ## 목표
 

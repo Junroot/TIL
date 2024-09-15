@@ -1,8 +1,9 @@
 ---
 tags:
   - MySQL
+title: 하나의 쿼리에 여러 record 업데이트
 ---
-# 하나의 쿼리에 여러 record 업데이트
+
 
 ## 목표
 

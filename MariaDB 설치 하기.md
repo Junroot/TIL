@@ -1,8 +1,8 @@
 ---
 tags:
   - MariaDB
+title: MariaDB 설치 하기
 ---
-# MariaDB 설치 하기
 
 먼저 자신이 필요한 버전을 찾는다. 아래 링크에서 찾을 수 있다.
 

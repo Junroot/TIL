@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: Kotlin takeIf
 ---
-# Kotlin takeIf
+
 
 ## 목표
 

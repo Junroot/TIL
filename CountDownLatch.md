@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: CountDownLatch
 ---
-# CountDownLatch
+
 
 ## 목표
 

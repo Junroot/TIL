@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Framework
+title: EJB, Java Bean, POJO, Spring Bean
 ---
-# EJB, Java Bean, POJO, Spring Bean
+
 
 - EJB(Enterprise JavaBeans): J2EE(Java EE)가 자바 웹 애플리케이션 시장을 차지하고 있을 때, 사용되었던 애플리케이션측의 컴포넌트 모델. 여기에는 Session Bean, Entity Bean, Message-driven Bean 등이 있다. 하지만 이는 객체지향적이지 못하고 특정 환경/기술에 종속적이라는 단점이 있다.
 - Java Bean: J2EE(Java EE)에서는 데이터를 표현하기 위해서 어떤 규약을 지켜야했다. 이 규약을 Java Bean이라고 부른다.

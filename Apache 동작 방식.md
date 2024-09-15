@@ -1,8 +1,9 @@
 ---
 tags:
   - Apache
+title: Apache 동작 방식
 ---
-# Apache 동작 방식
+
 
 ## 배경
 
@@ -83,4 +84,3 @@ tags:
 - https://linuxhint.com/apache-httpd-configuration/
 - https://tomcat.apache.org/connectors-doc/ajp/ajpv13a.html
 - https://docs.oracle.com/cd/A97336_01/ias.102/a83709/jweb.htm
-

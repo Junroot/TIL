@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Batch
+title: JobParameters
 ---
-# JobParameters
+
 
 ## 목표
 

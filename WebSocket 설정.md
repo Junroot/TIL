@@ -1,8 +1,8 @@
 ---
 tags:
   - nginx
+title: WebSocket 설정
 ---
-# WebSocket 설정
 
 ```json
 http {

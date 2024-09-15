@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: Map에서 get 호출시 NPE
 ---
-# Map에서 get 호출 시 NPE
+
 
 ## 배경
 

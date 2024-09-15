@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Data-Redis
+title: Redis Transaction
 ---
-# Redis Transaction
+
 
 ## 목표
 

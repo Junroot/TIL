@@ -1,8 +1,8 @@
 ---
 tags:
   - Mockito
+title: Mockito 테스트 작성하기
 ---
-# Mockito 테스트 작성하기
 
 ```java
 @ExtendWith(MockitoExtension.class)

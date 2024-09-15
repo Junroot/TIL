@@ -1,8 +1,9 @@
 ---
 tags:
   - React
+title: useEffect 사용법
 ---
-# useEffect 사용법
+
 
 ## 목표
 
@@ -25,7 +26,6 @@ function MyComponent() {
 	return <div />;  
 }
 ```
-
 
 ## Effect의 의존성 명시하기
 

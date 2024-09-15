@@ -1,9 +1,10 @@
 ---
 tags:
   - 도서/SQL-첫걸음
+title: SQL 첫걸음
 ---
 
-# SQL 첫걸음
+
 
 ## 데이터베이스와 SQL
 
@@ -14,7 +15,7 @@ tags:
 - 데이터베이스를 효율적으로 관리하는 소프트웨어를 데이터베이스 관리 시스템, 약자로 DBMS라 부른다. DBMS의 사용 목적은 다음과 같다.
     - 생산성: 시스템을 구축할 때 검색, 추가, 삭제, 갱신과 같은 기본 기능부터 구현할 필요가 없어진다.
     - 기능성: DBMS는 데이터베이스를 다루는 기능을 많이 제공한다. 복수 유저의 요청에 대응하거나, 대용량의 데이터를 저장하고 고속으로 검색하는 기능을 제공하기도 한다.
-    - 신뢰성: 실제 DBMS는 컴퓨터 여러 대를 두고, 소프트웨어를 통해 확장성과 부하 분산을 구현한다. 이를 보통 클러스터 구성, 스케일 아웃이라고부른다.  또한 데이터베이스의 데이터를 다른 저장장치로 내보내거나 집어넣는 등의 기능을 갖출 수 있다.
+    - 신뢰성: 실제 DBMS는 컴퓨터 여러 대를 두고, 소프트웨어를 통해 확장성과 부하 분산을 구현한다. 이를 보통 클러스터 구성, 스케일 아웃이라고부른다. 또한 데이터베이스의 데이터를 다른 저장장치로 내보내거나 집어넣는 등의 기능을 갖출 수 있다.
 - SQL명령의 종류
     - DML(Data Manipulation Language): 데이터베이스에 새롭게 데이터를 추가하거나 삭제하거나 내용을 갱신하는 등, 데이터를 조작할 때 사용합니다.
     - DDL(Data Definition Language): 데이터를 정의하는 명령어. 데이터베이스는 '데이터 베이스 객체'라는 데이터 그릇을 이용하여 데이터를 관리하는데, 이 같은 객체를 만들거나 삭제하는 명령어다.
@@ -184,17 +185,17 @@ INSERT INTO 테이블명 (열1, 열2, ...) VALUES (값1, 값2, ...)
 - 위의 방법으로 값을 저장한 열을 지정할 수 있다.
 - DEFAULT: 명시적으로 값을 지정하지 않을 경우 초기값을 의미한다. 디폴트값을 데이터로 사용하는 방법에는 명시적으로 저장하는 방법과 암묵적으로 디폴트 저장하는 방법이 있다.
     - 명시적
-    
+
     ```sql
     INSERT INTO sample411 (no, d) VALUES (2, DEFAULT)
     ```
-    
+
     - 암묵적
-    
+
     ```sql
     INSERT INTO sample411 (no) VALUES (3)
     ```
-    
+
 - NOT NULL 제약이 걸려있는 열은 NULL 값을 허용하지 않고, DEFAULT 값으로 NULL을 사용할 수 없다.
 
 ### 삭제하기 - DELETE
@@ -234,12 +235,12 @@ COUNT(집합) FROM 테이블명 WHERE 조건문;
     - ALL로 지정하면 모든 행이 반환된다. 아무 것도 입력하지않으면 ALL로 간주된다.
     - 집계함수에서도 DISTINCT를 사용할 수 있다.
     
+
     예)
-    
+
     ```sql
     SELECT COUNT(DISTINCT name) FROM sample51;
     ```
-    
 
 ### COUNT 이외의 집계함수
 
@@ -270,66 +271,65 @@ WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
 
 - 서브쿼리를 사용할 때 하나의 값만 반환하는 것을 '스칼라 값을 반환한다'고 한다.
 - DELETE의 WHERE 구에서 서브 쿼리 사용 예시
-    
+
     ```sql
     DELETE FROM sample54 WHERE a = (SELECT MIN(a) FROM sample54);
     ```
-    
+
 - = 연산자를 사용하여 비교할 경우에는 스칼라 값끼리 비교할 수 있다.
 - SELECT 구에서 서브쿼리 사용하기(항상 스칼라 서브쿼리어야한다)
-    
+
     ```sql
     SELECT
     	(SELECT COUNT(*) FROM sample51) AS sq1,
     	(SELECT COUNT(*) FROM sample54) AS sq2;
     ```
-    
+
 - SET 구에서 서브쿼리 사용하기(항상 스칼라 서브쿼리어야한다)
-    
+
     ```sql
     UPDATE sample54 SET a = (SELECT MAX(a) FROM sample54);
     ```
-    
+
 - FROM 구에서 서브쿼리 사용하기(항상 스칼라일 필요 없다)
-    
+
     ```sql
     SELECT * FROM (SELECT * FROM sample54) AS sq;
     ```
-    
+
 - INSERT에서 서브쿼리 두 가지 방법
-    
+
     ```sql
     INSERT INTO sample541 VALUES (
     	(SELECT COUNT(*) FROM sample51),
     	(SELECT COUNT(*) FROM sample54)
     );
     ```
-    
+
     ```sql
     // 테이블 복사
     INSERT INTO sample 541 SELECT * FROM sample543;
     ```
-    
 
 ### 상관 서브쿼리
 
 - EXISTS
     - 데이터가 존재하는지 아닌지 판별하기 위해 조건을 지정할 수 있다.
     - EXISTS 술어에 서브쿼리를 지정하면 서브쿼리가 행을 반환할 경우에 참을 돌려준다. 한 줄이상이라도 참이 된다.
-    
+
     ```sql
     UPDATE sample551 SET a = '있음' WHERE EXISTS ...
     ```
-    
+
 - NOT EXISTS
 - 상관 서브쿼리에서는 부모 명령과 연관되어 처리되기 때문에 서브쿼리 부분만을 따로 떼어내서 실행시킬 수 없다.
 - IN
     - 집합 안의 값이 존재하는지 조사할 수 있다.
-    
+
     ```sql
     SELECT * FROM sample551 WHERE no IN (SELECT no2 FROM sample552);
     ```
-    
+
 - 집계함수에서는 집합 안의 NULL 값을 무리하고 처리했다. 하지만 IN 에서는 집합 안에 NULL 값이 있어도 무시하지 않는다.
 
 ## 데이터베이스 객체 작성과 삭제
@@ -344,7 +344,7 @@ WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
 ### 테이블 작성,삭제,변경
 
 - 테이블 작성
-    
+
     ```sql
     CREATE TABLE 테이블명 (
     	열명 자료형 [DEFAULT 기본값] [NULL|NOT NULL],
@@ -352,44 +352,45 @@ WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
     	...
     )
     ```
-    
+
 - 테이블 삭제
-    
+
     ```sql
     DROP TABLE 테이블명
     ```
-    
+
     - 데이터 행 전체를 삭제할 때 DELETE 명령을 사용하면 행단위로 처리되기 때문에 처리속도가 느리다. GRUNCATE TABLE 을 사용하면 테이블 내의 모든 행을 삭제할 수 있다.
 - 테이블 변경
     - 테이블의 모든 변경의 ALTER TABLE 명령을 통해 이루어진다.
     - 열 추가
-        
+
         ```sql
         ALTER TABLE 테이블명 ADD 열 정의
         ```
-        
+
         시스템의 기능 확장등의 이유로 열 추가를 한다. 하지만 테이블 정의가 바뀌면 기존의 모든 INSERT 명령을 확인해야된다.
+
         
     - 열 속성 변경
-        
+
         ```sql
         ALTER TABLE 테이블명 MODIFY 열 정의
         ```
-        
+
         데이터 최대길이 연장할 때 사용되기도 한다.
+
         
     - 열 이름 변경
-        
+
         ```sql
         ALTER TABLE 테이블명 CHANGE [기존 열 이름] [신규 열 정의]
         ```
-        
+
     - 열 삭제
-        
+
         ```sql
         ALTER TABLE 테이블명 DROP 열명ABLE 테이블명 DROP 열명
         ```
-        
 
 ## 제약
 
@@ -398,38 +399,38 @@ WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
     - 열 제약: 열 하나에 정의되는 제약
     - 테이블 제약: 복수개의 열에 정의하는 제약
 - 제약에 이름을 붙이면 나중에 관리하기 쉬워진다.
-    
+
     ```sql
     CONSTRAINT pkey_sample PRIMARY KEY (no, sub_no)
     ```
-    
+
 - 제약 추가: 제약을 추가할 때는 기존 데이터에 제약을 위반하는 것이 있는지 검사한다.
     - 열 제약 추가
-    
+
     ```sql
     ALTER TABLE sample631 MODIFY c VARCHAR(30) NOT NULL
     ```
-    
+
     - 테이블 제약 추가
-    
+
     ```sql
     ALTER TABLE sample631 ADD CONSTRAINT pkey_sample631 PRIMARY KEY(a)
     ```
-    
+
 - 제약 삭제
     - 열 제약 삭제는 열 제약 추가와 같은 방법이다.
     - 테이블 제약 삭제
-    
+
     ```sql
     ALTER TABLE sample631 DROP CONSTRAINT pkey_smap631
     ```
-    
+
     - PRIMARY KEY 제약은 테이블 당 하나만 설정할 수 있기 때문에 이름이 없어도 삭제가 가능하다.
-    
+
     ```sql
     ALTER TABLE sample631 DROP PRIMARY KEY;
     ```
-    
+
 - 기본키: 기본키는 테이블의 행 한 개를 특정할 수 있는 검색키다. 또한 기본키는 복수의 열로도 구성이 가능하다.
 
 ### 인덱스 구조

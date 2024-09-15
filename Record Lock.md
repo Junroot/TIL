@@ -1,8 +1,9 @@
 ---
 tags:
   - MySQL
+title: Record Lock
 ---
-# Record Lock
+
 
 ## 목표
 

@@ -1,8 +1,9 @@
 ---
 tags:
   - 테스트
+title: Gatling을 이용한 성능 측정기
 ---
-# Gatling을 이용한 성능 측정기
+
 
 ## 시작 하기
 
@@ -172,11 +173,12 @@ class RecordedSimulation extends Simulation {
 
 > T = (R * http_req_duration) (+ 1s) ; 내부망에서 테스트할 경우 예상 latency를 추가한다
 VUser = (목표 rps * T) / R
+
 - Request Rate: measured by the number of requests per second (RPS)
 - VU: the number of virtual users
 - R: the number of requests per VU iteration
 - T: a value larger than the time needed to complete a VU iteration
-> 
+
 
 ### Latency
 

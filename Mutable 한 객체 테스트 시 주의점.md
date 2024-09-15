@@ -1,8 +1,9 @@
 ---
 tags:
   - Mockito
+title: Mutable 한 객체 테스트 시 주의점
 ---
-# Mutable 한 객체 테스트 시 주의점
+
 
 ## 배경
 

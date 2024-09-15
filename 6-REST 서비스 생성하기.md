@@ -1,9 +1,10 @@
 ---
 tags:
   - 도서/Spring-in-Action
+title: 6-REST 서비스 생성하기
 ---
 
-# REST 서비스 생성하기
+
 
 ## REST 컨트롤러 작성하기
 
@@ -29,7 +30,7 @@ class DesignTacoController(
 	- `@ResponseBody`: 리턴 값을 HTTP 응답 바디에 직접 쓰는 값으로 사용한다.
 	- 응답 바디를 직접 작성하는 방법으로는 이외에도, `ResopnsEntity` 객체를 반환하는 방법이 있다.
 - `@RequestMapping`
-	- `produces`: HTTP의 `Accept` 헤더에 사용되고  HTTP의 Content Negotiation에 사용된다.
+	- `produces`: HTTP의 `Accept` 헤더에 사용되고 HTTP의 Content Negotiation에 사용된다.
 	- `consumes`: HTTP의 `Content-Type` 헤더에 사용된다. 요청을 보낼 때 보내느 헤더가 일치해야된다.
 - `@CrossOrigin`: CORS 적용.
 
@@ -81,6 +82,7 @@ fun postTaco(@RequestBody taco: Taco): Taco {
 	- `self`에 리소스 자신을 참조하는 링크를 가진다.
 	- ![](assets/Pasted%20image%2020230703210131.png)![](assets/Pasted%20image%2020230703210142.png)
 - 의존성 추가
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -157,6 +159,7 @@ fun recentTacos(): CollectionModel<Taco> {
 		- ![](assets/Pasted%20image%2020230703232516.png)
 - 결과: 각 ingredient 별로 url이 생성된것을 확인할 수 있다.
 	- `_embedded`아래의 `tacoModelList`는 `TacoModel` 클래스명을 따라간.
+
 ```json
 {
     "_embedded": {
@@ -228,16 +231,20 @@ class TacoModel private constructor(
 	- https://docs.spring.io/spring-data/rest/docs/current/reference/html/
 - 스프링 데이터 REST: 스프링 데이터가 생성하는 레포지토리의 REST API를 자동 생성한다.
 - 의존성 추가
+
 ```xml
 <dependency>  
    <groupId>org.springframework.boot</groupId>  
    <artifactId>spring-boot-starter-data-rest</artifactId>  
 </dependency>
 ```
+
 - 기존에 있던 레포지토리
+
 ```kotlin
 interface IngredientRepository : CrudRepository<Ingredient, String>
 ```
+
 - 자동으로 REST API가 만들어진 것을 확인할 수 있다.
 	- HATEOAS도 적용된 모습을 볼 수 있다.
 	- ![](assets/Pasted%20image%2020230705233859.png)
@@ -245,21 +252,25 @@ interface IngredientRepository : CrudRepository<Ingredient, String>
 - GET 뿐만아니라 POST, PUT, DELETE 메서드도 지원한다.
 - Spring data rest가 생성한 API의 기본 경로를 설정할 수도 있다.
 	- 위 사진은 경로가 `http://localhost:8080/api/ingredients`로 변경될 것이다.
+
 ```properties
 spring.data.rest.basePath=/api
 ```
+
 - 홈 경로로 GET 요청을 하면, 스프링 데이터 REST를 통해 노출한 모든 엔드포인트를 확인할 수 있다.
 	- ![](assets/Pasted%20image%2020230705235132.png)
 
 ### 리소스 경로와 관계 이름 조정하기
 
 - 엔티티에 `@RestResource` 애노테이션을 지정하면, 관계 이름과 경로를 커스텀 할 수 있다.
+
 ```kotlin
 @RestResource(rel="tacos", path="tacos")  
 @Entity  
 class Taco(
 // ...
 ```
+
 - 결과
 	- ![](assets/Pasted%20image%2020230705235256.png)
 ### 페이징과 정렬

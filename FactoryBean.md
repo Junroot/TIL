@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Framework
+title: FactoryBean
 ---
-# Factory Bean
+
 
 ## 상황
 

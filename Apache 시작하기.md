@@ -1,32 +1,35 @@
 ---
 tags:
   - Apache
+title: Apache 시작하기
 ---
-# Apache 시작하기
+
 
 ## **설치**
 
 설치 과정은 따로 사내 문서에 없어서 공식 문서를 보면서 진행했다.
 
 1. 소스 코드 다운로드 및 압축 해제
-   
+
     ```
     wget https://dlcdn.apache.org/httpd/httpd-2.4.54.tar.gz
     gzip -d httpd-2.4.54.tar.gz
     tar xvf httpd-2.4.54.tar
     ```
-    
+
     - 다운로드 파일 경로는 아래 링크에서 확인이 가능하다.
       
+
         [https://httpd.apache.org/download.cgi](https://httpd.apache.org/download.cgi)
+
     
 2. 빌드
-   
+
     ```
     cd httpd-2.4.54.tar
     ./configure
     ```
-    
+
     - 만약 설치 경로를 변겅하고 싶다면, `-prefix` 옵션으로 변경이 가능하다. (기본값 '/usr/local/apache2')
         - [https://httpd.apache.org/docs/trunk/programs/configure.html](https://httpd.apache.org/docs/trunk/programs/configure.html)
     - 트러블슈팅
@@ -35,42 +38,44 @@ tags:
             - APR과 APR-util 다운로드 링크는 아래를 참고한다.
                 - [https://apr.apache.org/download.cgi](https://apr.apache.org/download.cgi)
         - APR-util 빌드 시 "Fatal error: expat.h: No such file or directory" 에러가 발생하는데, libexpat1-dev 패키지를 설치하면 해결된다.
-          
+
             ```
             sudo apt-get install libexpat1-dev
             ```
-            
+
             - [https://github.com/scottcorgan/bucket-list/issues/2](https://github.com/scottcorgan/bucket-list/issues/2)
 3. 설정
-   
+
     ```
     vi PREFIX/conf/httpd.conf
     ```
-    
+
 4. 시작 및 종료
-   
+
     ```
     PREFIX/bin/apachectl start
     PREFIX/bin/apachectl stop
     ```
-    
+
     - 실행 결과 확인
       
+
         ![image-20221114161947626.png](assets/image-20221114161947626-4551633-4551634-4551639.png)
+
         
 
 ## **로깅**
 
 - 로그와 관련된 설정도 'PREFIX/conf/httpd.conf'에서 이루어진다.
 - 아래와 같은 방법으로 LogFormat을 지정할 수 있다. 아래 예는 http access log를 남기는 설정이다.
-  
+
     ```
     LogFormat "%h %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %D" combined
     
     SetEnvIfNoCase Request_URI "\.(ico|gif|jpg|swf|png|css|js)$" nolog-request
     CustomLog "| /home1/irteam/apps/apache/bin/rotatelogs -l /home1/irteam/logs/accesslog.%Y%m%d 86400" combined env=!nolog-request
     ```
-    
+
     - `%h` : 원격 호스트
     - `%u` : 네이버 인증 모듈 사용시 로그인한 네이버 ID
     - `%t` : common log format 시간 형식(표준 영어 형식)의 시간
@@ -97,7 +102,7 @@ tags:
 mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈이다. 정확한 명칭은 Apache Tomcat Connector이다. Apache httpd가 Load Balance 역할을 하지 않는 경우만 다룬다.
 
 1. mod_jk 모듈 선언(/conf/httpd.conf)
-   
+
     ```
     LoadModule jk_module modules/mod_jk.so
     
@@ -109,9 +114,9 @@ mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈�
         JkRequestLogFormat     "%w %V %T"
     </IfModule>
     ```
-    
+
 2. 'wokers.conf'설정 파일 include(/conf/httpd.conf)
-   
+
     ```
     <VirtualHost * >
         ServerName {domain.name}
@@ -119,9 +124,9 @@ mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈�
         Include conf/workers.conf
     </VirtualHost>
     ```
-    
+
 3. 정적 파일 연동 제외(workers.conf)
-   
+
     ```
     JkMount /* tomcat
     ...
@@ -131,10 +136,10 @@ mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈�
     SetEnvIf Request_URI "/images/*" no-jk
     SetEnvIf Request_URI "/favicon.ico" no-jk
     ```
-    
+
     - virtual host 영역에 설정 내용 반영
         - 방법1
-          
+
             ```
             JkMount /*  tomcat
             <VirtualHost *>
@@ -143,9 +148,9 @@ mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈�
                 JkMountCopy On
             </VirtualHost>
             ```
-            
+
         - 방법2
-          
+
             ```
             JkMount /* tomcat
             JkMountCopy All
@@ -155,9 +160,9 @@ mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈�
                 ..
             </VirtualHost>
             ```
-            
+
 - tomcat worker 설정(worker.properties)
-  
+
     ```
     worker.list=tomcat
     
@@ -169,7 +174,7 @@ mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈�
     worker.tomcat.reply_timeout=1000
     worker.tomcat.retries=1
     ```
-    
+
     - `worker.list` : worker의 이름을 지정한다. 여기서는 `tomcat`이라는 이름으로 worker를 하나만 지정했다.
     - `worker.tomcat.type` : Apache httpd 서버와 Tomcat 서버가 통신하는 프로토콜을 지정한다. `ajp 13` 으로 지정한다.
     - `worker.tomcat.port` : Tomcat에서 ajp 통신을 위해 열려있는 포트를 지정한다. `ajp13` 일 때의 디폴트 값은 8009이다.
@@ -179,14 +184,14 @@ mod_jk는 Apache Httpd와 Apache Tomcat사이의 통신을 연결하는 모듈�
 LoadBalance 역할을 하지 않는 경우의 설정이다.
 
 1. 모듈 선언(conf/httpd.conf)
-   
+
     ```
     LoadModule proxy_module modules/mod_proxy.so
     LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
     ```
-    
+
 2. proxy지시자를 이용해 연결할 서버를 지정한다.
-   
+
     ```
     <VirtualHost * >
     ServerName {domain.name}
@@ -197,28 +202,27 @@ LoadBalance 역할을 하지 않는 경우의 설정이다.
     ...
     </VirtualHost>
     ```
-    
+
 3. proxy 지시자
     - ProxyPass: URL 바인딩
-      
+
         ```
         ProxyPass  /admin/   http://localhost:9000/
         ProxyPass  /assets/    http://localhost:9010/
         ```
-        
+
     - ProxyPassMatch: 정규식을 통한 URL 매칭
-      
+
         ```
         ProxyPassMatch   ^/.*\.(js|css)$     http://localhost:9000/
         ```
-        
+
     - ProxyPassReverse: ProxyPass를 쓰면 뒷단에 연결되는 서버의 주소가 노출된다. ProxyPassReverse를 통해 이를 숨길 수 있다.
-      
+
         ```
         ProxyPass /nexus http://internal.navecorp.com:8080/nexus
         ProxyPassReverse /nexus http://internal.navecorp.com:8080/nexus
         ```
-        
 
 ## **참고 자료**
 

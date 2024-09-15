@@ -1,8 +1,9 @@
 ---
 tags:
   - JPA
+title: Enum을 JPA로 저장 하기
 ---
-# Enum을 JPA로 저장 하기
+
 
 ## `@Enumerated`
 

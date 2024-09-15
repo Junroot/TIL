@@ -1,8 +1,8 @@
 ---
 tags:
   - SonarQube
+title: Jacoco와 소나큐브 연결
 ---
-# Jacoco와 소나큐브 연결
 
 build.gradle에 다음을 추가하면 소나큐브의 테스트 커버리지가 0%인 문제가 해결된다.
 

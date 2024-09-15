@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: ThreadLocal
 ---
-# ThreadLocal
+
 
 ## 배경
 
@@ -38,4 +39,3 @@ public class ThreadId {
 ## 참고 자료
 
 - https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html
-

@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: List에서 element 개수 Map으로 만들기
 ---
-# List에서 element 개수 Map으로 만들기
+
 
 ## 목표
 

@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: Java 스레드
 ---
-# Java 스레드
+
 
 ## 기본 소개
 

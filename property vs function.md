@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: property vs function
 ---
-# Property vs Function
+
 
 ## 배경
 

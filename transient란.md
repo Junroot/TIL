@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: transient란
 ---
-# transient란
 
 `Serializable` 을 구현한 클래스에서 필드 중에 직렬화를 원치 않는 필드에 붙이면 된다.
 

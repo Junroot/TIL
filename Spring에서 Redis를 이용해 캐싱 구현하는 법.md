@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Data-Redis
+title: Spring에서 Redis를 이용해 캐싱 구현하는 법
 ---
-# Spring에서 Redis를 이용해 캐싱 구현하는 법
 
 Spring에서 Redis 서버로 캐싱하는 방법은 2가지 방법이 있다. 기본적인 동작 확인만 목표로 하기 때문에 자세한 설정 방법은 생략한다.
 

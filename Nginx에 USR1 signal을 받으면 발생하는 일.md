@@ -1,8 +1,9 @@
 ---
 tags:
   - nginx
+title: Nginx에 USR1 signal을 받으면 발생하는 일
 ---
-# Nginx에서 URS1 signal을 받으면 발생하는 일
+
 
 ## 배경
 

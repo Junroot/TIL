@@ -1,8 +1,8 @@
 ---
 tags:
   - Python
+title: Python 기초 문법
 ---
-# Python 기초 문법
 
 참고자료: 
 
@@ -57,14 +57,14 @@ a ** b
 
 ```python
 7 / 4
-# 1.75가 온다
+
 ```
 
 ### 나눗셈 몫
 
 ```python
 7 // 4
-# 1이 나온다.
+
 ```
 
 ## 문자열
@@ -256,7 +256,7 @@ a ** b
 14
 >>> a.find('k')
 -1
-# 존재하지 않으면 -1이 반환된다.
+
 ```
 
 ```python
@@ -267,7 +267,7 @@ a ** b
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 ValueError: substring not found
-# index 함수는 존재하지 않으면 에러가 발생한다.
+
 ```
 
 ### 문자열 사이에 삽입하기
@@ -429,7 +429,7 @@ ValueError: substring not found
 2
 >>> a.index(1)
 0
-# 존재하지 않으면 에러가 발생한다.
+
 ```
 
 ### 리스트의 특정 위치에 삽입
@@ -833,7 +833,7 @@ def say_myself(name, old, man=True):
 ### return 사용하기
 
 ```python
-# vartest_return.py
+
 a = 1 
 def vartest(a): 
     a = a +1 
@@ -848,7 +848,7 @@ print(a)
 하지만 외부 변수에 종속적인 함수는 좋은 방법이 아니다.
 
 ```python
-# vartest_global.py
+
 a = 1 
 def vartest(): 
     global a 
@@ -932,7 +932,7 @@ f.close()
 `readline()` 를 사용하면 파일을 한줄 씩 읽을 수 있다.
 
 ```python
-# readline_all.py
+
 f = open("C:/doit/새파일.txt", 'r')
 while True:
     line = f.readline()
@@ -1032,7 +1032,7 @@ import mod1
 자신이 직접 실행되었을 때만 처리하고 싶은 코드의 경우 사용할 수 있다. 만약 아래의 파일 `[mod1.py](http://mod1.py)` 가 있다고 가정해본다. `python mod1.py` 를 실행하면 `mod1`의 `__name__` 변수는 `__main__` 이 되지만, import로 불어와졌을 경우에는 `mod1`이 된다.
 
 ```python
-# mod1.py 
+
 def add(a, b): 
     return a+b
 
@@ -1080,33 +1080,32 @@ game/
 ### 패키지 안에 있는 함수 실행하는 방법 3가지
 
 1. 모듈을 직접 import
-   
+
     ```python
     >>> import game.sound.echo
     >>> game.sound.echo.echo_test()
     ```
-    
+
 2. 모듈이 있는 디렉토리까지를 from ... import
-   
+
     ```python
     >>> from game.sound import echo
     >>> echo.echo_test()
     ```
-    
+
 3. 모듈의 함수를 직접 import
-   
+
     ```python
     >>> from game.sound.echo import echo_test
     >>> echo_test()
     ```
-    
 
 ### __init__.py의 용도
 
 해당 디렉토리가 패키지의 일부임을 알려주는 역할을 한다. 'sound' 패키지에 있는 모듈들을 불러올 때, 'echo' 모듈도 불러오고 싶다면 다음과 같이 정의해야된다.
 
 ```python
-# C:/doit/game/sound/__init__.py
+
 __all__ = ['echo']
 ```
 
@@ -1115,7 +1114,7 @@ __all__ = ['echo']
 패키지를 불러올 때, 상대경로로도 가능하다.
 
 ```python
-# render.py
+
 from ..sound.echo import echo_test
 
 def render_test():
@@ -1204,7 +1203,7 @@ False
 
 ### any
 
-iteratble 자료형의 요소가 하나라도 참이면 True, 모두 거짓이면 False 반환.  빈 값인 경우 False
+iteratble 자료형의 요소가 하나라도 참이면 True, 모두 거짓이면 False 반환. 빈 값인 경우 False
 
 ```python
 >>> any([1, 2, 3, 0])
@@ -1752,7 +1751,7 @@ number = random.choice(data)
 - t.join: 해당 스레드가 종료될 때 까지 기다리게 한다.
 
 ```python
-# thread_test.py
+
 import time
 import threading
 
@@ -1870,7 +1869,7 @@ python three"""
 
 print(p.findall(data))
 
-# ['python one']
+
 ```
 
 ```python
@@ -1884,7 +1883,7 @@ you need python
 python three"""
 
 print(p.findall(data))
-#  ['python one', 'python two', 'python three']
+
 ```
 
 - VERBOSE: verbose 모드를 사용할 수 있도록한다.(정규식을 보기편하게 만들 수 있고 주석등을 사용할 수 있게된다.)
@@ -1985,7 +1984,7 @@ http
 
 ```python
 .*[.](?!bat$|exe$).*$
-# 확장자가 bat과 exe가 아닌 파일 이름
+
 ```
 
 ### 문자열 바꾸기

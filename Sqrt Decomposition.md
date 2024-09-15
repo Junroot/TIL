@@ -1,8 +1,9 @@
 ---
 tags:
   - 알고리즘
+title: Sqrt Decomposition
 ---
-# Sqrt Decomposition
+
 
 ## 문제 상황
 

@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Framework
+title: ConditionalOnProperty
 ---
-# @ConditionalOnProperty
+
 
 ## 배경
 
@@ -24,4 +25,3 @@ tags:
 ## 참고 자료
 
 - https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/condition/ConditionalOnProperty.html
-

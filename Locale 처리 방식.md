@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-MVC
+title: Locale 처리 방식
 ---
-# Locale 처리 방식
+
 
 ## 목표
 

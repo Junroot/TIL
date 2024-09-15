@@ -1,12 +1,13 @@
 ---
 tags:
   - 도서/Spring-in-Action
+title: 7-REST 서비스 사용하기
 ---
 
-# REST 서비스 사용하기
+
 
 - 스프링 애플리케이션이 REST API를 사용하는 방법들
-	-  `RestTemplate`: 스프링 프레임워크에서 제공하는 간단하고 동기화된 REST 클라이언트
+	- `RestTemplate`: 스프링 프레임워크에서 제공하는 간단하고 동기화된 REST 클라이언트
 	- `Traverson`: 스프링 HATEOAS에서 제공하는 하이퍼링크를 인식하는 동기화 REST 클라이언트로 같은 이름의 자바스크립트 라이브러리로부터 비롯된 것이다.
 	- `WebClient`: 스프링 5에서 소개된 반응형 비동기 REST 클라이언트
 
@@ -21,6 +22,7 @@ tags:
 	- `Map<String, String>`에 지정된 URL 매개변수에 URL 문자열을 인자로 받는다.
 	- `URI`를 URL에 대한 인자로 받으며, 매개변수화된 URL은 지원하지 않는다.
 - `RestTemplate`를 사용하러면 우리가 필요한 시점에 인스턴스를 생성하거나, 빈으로 선언하고 필요할 때 주입한다.
+
 ```kotlin
 val restTemplate: RestTemplate = RestTemplate()
 

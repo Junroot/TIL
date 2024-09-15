@@ -1,8 +1,9 @@
 ---
 tags:
   - 도서/한-권으로-배우는-Vuejs-3
+title: 3-Vue 3 기초
 ---
-# Vue 3 기초
+
 
 ## Vue 3 기초
 
@@ -48,8 +49,8 @@ tags:
 
 ### Vite 기본 프로젝트 구성
 
--  `index.html`: body에 루트 엘리먼트인 div가 하나 존재한다. div에는 id값이 존재하는데, 이 id는 Vue 컴포넌트들이 어느 곳에 포함이 되어야 하는지 알 수 있게 하는 매우 중요한 단서다.
-- `main.js`; 루트 엘리먼트가 생성되고 나면 실행되는 자바스크립트 파일.  루트 컴포넌트를 구성할 `App.vue` 파일과 vue 모듈로 부터 `createApp`함수를 가져와서 애플리케이션 인스턴스를 생성하고 id 값을 확인해서 마운트 시킨다.
+- `index.html`: body에 루트 엘리먼트인 div가 하나 존재한다. div에는 id값이 존재하는데, 이 id는 Vue 컴포넌트들이 어느 곳에 포함이 되어야 하는지 알 수 있게 하는 매우 중요한 단서다.
+- `main.js`; 루트 엘리먼트가 생성되고 나면 실행되는 자바스크립트 파일. 루트 컴포넌트를 구성할 `App.vue` 파일과 vue 모듈로 부터 `createApp`함수를 가져와서 애플리케이션 인스턴스를 생성하고 id 값을 확인해서 마운트 시킨다.
 - `App.vue`: 컴포넌트에 대한 다양한 정보를 하나의 파일에 담고있는 SFCSingle-File-Components 다.
   - HTML DOM 구조를 나타내는 template 영역
     - script 항목에서 선언된 변수를 이용해 선언적 렌더링을 구현할 수 있다.
@@ -82,7 +83,6 @@ tags:
     plugins: [vue()]
   })
   ```
-
 
 ## Vue 3 핵심 문법
 
@@ -177,7 +177,6 @@ update() {
   ``` vue
   <div v-pre>{{ msg }} </div>
   ```
-
 
 ### 데이터 결합을 통한 사용자 입력 처리
 
@@ -556,4 +555,3 @@ new Vue({
 - https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram
 - https://v1.vuejs.org/guide/components.html
 - https://velog.io/@ks1ksi/Vue-Provide-Inject-vs-Props
-

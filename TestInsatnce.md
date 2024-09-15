@@ -1,8 +1,9 @@
 ---
 tags:
   - Junit
+title: TestInsatnce
 ---
-# TestInstance
+
 
 ## 목표
 
@@ -40,7 +41,7 @@ class AdditionTest {
 
 ### 가능한 구현 방법 2가지
 
--  공유가 필요한 상태를 static으로 선언
+- 공유가 필요한 상태를 static으로 선언
 
 ```java
 private static String largeContent;

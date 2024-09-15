@@ -1,8 +1,9 @@
 ---
 tags:
   - Docker
+title: Dockerfile multi-stage
 ---
-# Dockerfile multi-stage
+
 
 ## 목표
 
@@ -14,7 +15,7 @@ tags:
 - Dockerfile에서 여러 개의 `FROM` 절을 사용하면 multi-stage가 된다.
 
 ```dockerfile
-# syntax=docker/dockerfile:1
+
 FROM golang:1.21
 WORKDIR /src
 COPY <<EOF ./main.go

@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: Duque 사용하기
 ---
-# Deque 사용하기
+
 
 ## 목표
 
@@ -30,6 +31,7 @@ deque.addLast(5) // 뒤
 
 - 제거
 	- `removeFirst`, `removeLast`의 경우 요소가 존재하지 않으면 `NoSuchElementException` 예외가 발생한다.
+
 ```kotlin
 deque.removeFirst()
 deque.removeLast()

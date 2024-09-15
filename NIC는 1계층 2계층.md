@@ -1,8 +1,8 @@
 ---
 tags:
   - 네트워크
+title: NIC는 1계층 2계층
 ---
-# NIC는 1계층? 2계층?
 
 아티클 마다 NIC(Network Interface Card)를 설명하는 계층이 달라서 혼란스러웠다. NIC가 어떤 레이어인지 정리해보자.
 

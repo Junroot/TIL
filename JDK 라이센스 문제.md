@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: JDK 라이센스 문제
 ---
-# JDK 라이센스 문제
+
 
 * Java 애플리케이션을 컴파일하기 위한 JDK는 크게 Oracle JDK와 OpenJDK로 나뉜다. Oracle JDK의 경우 일반적인 목적(General Purpose Computing)이 아닌 경우 라이센스 비를 지불해야된다. 따라서, 여러 회사에서는 이 애매한 표현 때문에 대부분 오픈소스인 OpenJDK를 사용한다.
 * Java SE7부터 모든 JDK는 OpenJDK 레퍼런스 코드를 기반으로 제작된다. Oracle JDK 또한 마찬가지다. OpenJDK 운영 주체 또한 Oracle이다.

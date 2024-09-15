@@ -2,8 +2,9 @@
 tags:
   - 네트워크
   - HTTP
+title: HTTP SameSite 쿠키
 ---
-# SameSite 쿠키
+
 
 ## 목표
 

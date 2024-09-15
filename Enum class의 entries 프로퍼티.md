@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: Enum class의 entries 프로퍼티
 ---
-# Enum class의 entries 프로퍼티
+
 
 ## 목표
 

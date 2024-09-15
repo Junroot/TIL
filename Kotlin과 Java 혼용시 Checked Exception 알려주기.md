@@ -2,8 +2,9 @@
 tags:
   - Kotlin
   - Java
+title: Kotlin과 Java 혼용시 Checked Exception 알려주기
 ---
-# Kotlin과 Java 혼용시 Checked Exception 알려주기
+
 
 ## 상황
 

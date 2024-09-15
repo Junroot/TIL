@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Integration
+title: Redis Lock 사용하기
 ---
-# Redis Lock 사용하기
+
 
 ## 목표
 

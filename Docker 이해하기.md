@@ -1,8 +1,8 @@
 ---
 tags:
   - Docker
+title: Docker 이해하기
 ---
-# Docker 이해하기
 
 지금까지 도커를 사용하여 배포 환경을 구축해왔지만 사실 도커에대한 이해가 있는 것은 아니다. 최근에 도커를 건드릴 일이 많아졌기 때문에 이 기회에 도커에대해서 학습해보고자 한다.
 
@@ -87,7 +87,7 @@ sudo docker run -d -v /home/ubuntu/was/was-logs:/was-logs -p 8080:8080 --name wa
 Dockerfile은 이미지를 만들기 쉽게 해주는 텍스트 파일이다. 기존에는 이미지를 만들기위해 수작업으로 컨테이너를 실행한 다음, 필요한 패키지를 설치하고, 커밋하여 이미지를 생성해야됐다. Dockerfile은 이미지를 만들기위해 자주 처리하는 작업들을 명령어로 제공하고 있다. 
 
 ```bash
-# Dockerfile
+
 FROM ubuntu:18.04
 COPY . /app
 RUN make /app

@@ -1,12 +1,13 @@
 ---
 tags:
   - Spring-MVC
+title: WebMvcConfigurer
 ---
-# WebMvcConfigurer
+
 
 - `WebMvcConfigurer` 를 구현하면, WebMvc의 설정을 할 수 있다.
 - `addViewControllers` 를 통해 정적인 웹을 url에 매핑 시킬 수 있다.
-    
+
     ```java
     @Configuration
     @EnableWebMvc
@@ -18,9 +19,9 @@ tags:
         }
     }
     ```
-    
+
 - `addInterceptors` 를 통해 오는 요청에 인터셉트를 할 수 있다.
-    
+
     ```java
     @Configuration
     @EnableWebMvc
@@ -34,10 +35,9 @@ tags:
         }
     }
     ```
-    
 
 - `addArgumentResolvers`를 통해 커스텀 어노테이션을 인자로 매핑시킬 수 있다.
-    
+
     ```java
     public class HeaderVersionArgumentResolver
       implements HandlerMethodArgumentResolver {

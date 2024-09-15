@@ -1,8 +1,9 @@
 ---
 tags:
   - MySQL
+title: MySQL 스키마 복제하기
 ---
-# MySQL 스키마 복제하기
+
 
 ## 목표
 
@@ -25,4 +26,3 @@ mysqldump --user=<username> --host=<hostname> --password --no-data <original db>
 - https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
 - https://dev.mysql.com/doc/refman/8.0/en/mysql-batch-commands.html
 - https://www.prisma.io/dataguide/mysql/short-guides/exporting-schemas
-

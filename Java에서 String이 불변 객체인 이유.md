@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: Java에서 String이 불변 객체인 이유
 ---
-# Java에서 String이 불변 객체인 이유
 
 Java에서 String a, b 를 더했을 때 나오는 결과는 새로운 주소값을 가지는 것을 확인할 수 있다. 이렇게 Java에서는 왜 String을 불변 객체로 관리가 되는지 정리해본다.
 

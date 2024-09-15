@@ -2,8 +2,9 @@
 tags:
   - 개발운영도구
   - macOS
+title: m1 mac에서 rosseta2로 shell 실행 하기
 ---
-# M1 mac에서 rosseta2로 shell 실행 하기
+
 
 ## 배경
 
@@ -32,6 +33,8 @@ tags:
 
   ```she
   arch -x86_64 zsh
+
+
 
 ## 참고 자료
 

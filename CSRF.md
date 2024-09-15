@@ -1,8 +1,9 @@
 ---
 tags:
   - 보안
+title: CSRF
 ---
-# CSRF(Cross-Site Request Forgery)
+
 
 ## 목표
 

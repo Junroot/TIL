@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Framework
+title: TransactionTemplate 이용한 트랜잭션 관리
 ---
-# TransactionTemplate 이용한 트랜잭션 관리
 
 `@Transactional` 어노테이션을 사용하지 않고, 트랜잭션을 직접 관리하고 싶은 경우가 있었다. 이때 `TransactionTemplate`를 사용하면 된다.
 

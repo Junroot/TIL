@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Framework
+title: Spring 이벤트 처리
 ---
-# Spring 이벤트 처리
 
 도메인 간의 복잡한 의존성을 제거하기 위해서 Spring의 이벤트를 이용할 수 있다. 이벤트를 사용하기 위해서는 3가지를 사용해야된다. 참고로, Spring Framework 4.2부터 지원하는 어노테이션 방법을 다룬다.
 

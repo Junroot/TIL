@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: Inner class와 Static inner class의 차이
 ---
-# Inner class와 Static inner class의 차이
 
 ```java
 public class Test {

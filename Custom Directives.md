@@ -1,8 +1,9 @@
 ---
 tags:
   - Vuejs
+title: Custom Directives
 ---
-# Custom Directives
+
 
 ## 목표
 

@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-MVC
+title: Hibernate Validator로 단위 테스트하기
 ---
-# Hibernate Validator로 단위 테스트하기
+
 
 ## 목표
 
@@ -18,7 +19,6 @@ tags:
 val validatorFactory = Validation.buildDefaultValidatorFactory()  
 val validator = validatorFactory.validator
 ```
-
 
 - 아래와 같은 `User` 클래스가 있다면, `validator`를 통해서 검증을 통과했는지 테스트 해볼 수 있다.
 

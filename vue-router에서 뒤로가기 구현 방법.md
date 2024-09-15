@@ -1,8 +1,9 @@
 ---
 tags:
   - Vuejs
+title: vue-router에서 뒤로가기 구현 방법
 ---
-# vue-router에서 뒤로가기 구현 방법
+
 
 ## 목표
 
@@ -43,4 +44,3 @@ router.go(100)
 ## 참고 자료
 
 - https://router.vuejs.org/guide/essentials/navigation.html#traverse-history
-

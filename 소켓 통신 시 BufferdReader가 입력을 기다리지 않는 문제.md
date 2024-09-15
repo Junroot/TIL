@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: 소켓 통신 시 BufferdReader가 입력을 기다리지 않는 문제
 ---
-# 소켓 통신 시 BufferdReader가 입력을 기다리지 않는 문제
+
 
 ## 기존 코드
 

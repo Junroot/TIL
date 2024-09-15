@@ -1,8 +1,8 @@
 ---
 tags:
   - Shell-Script
+title: 윈도우에서 작성한 Shell script를 실행하면
 ---
-# 윈도우에서 작성한 Shell script를 실행하면 생기는 문제
 
 윈도우 환경에서는 파일 마지막 줄에 `^M` 가 추가되어서 UNIX 환경과 달라 에러가 발생할 수 있다.
 

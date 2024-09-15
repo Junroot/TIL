@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Framework
+title: Spring log4j2 적용기
 ---
-# Spring log4j2 적용기
 
 [log4j vs logback vs log4j2](../../../3.Resource/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/Java%202aba8d7bf7a9430b9a385fe9ca1a4cb3/log4j%20vs%20logback%20vs%20log4j2%20a1c266d438b04521972f03ca86d9abcf.md) 를 비교 해보고 log4j2를 사용해보기로 결정했다. Spring Framwork에 log4j2를 적용한 과정을 정리해본다.
 

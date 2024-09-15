@@ -1,8 +1,8 @@
 ---
 tags:
   - MySQL
+title: SQL에서 JOIN ~ ON과 WHERE 의 실행 순서
 ---
-# SQL에서 JOIN ~ ON과 WHERE 의 실행 순서
 
 SQL문을 실행하면 일반적으로 아래와 같은 순서로 진행된다고 일고 있을 것이다.
 

@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Batch
+title: Spring Batch 시작하기
 ---
-# Spring Batch 시작하기
+
 
 ## 목표
 
@@ -66,7 +67,7 @@ public JdbcBatchItemWriter<Person> writer(DataSource dataSource) {
 ```
 
 - 위 예에서는 `FlatFileItemReader`를 `ItemReader`로, `JdbcBatchItemWriter`를 `ItemWriter`로, `PersonItemProcessor`를 `ItemProcessor`로 사용하고 있다.
-- `FlatFileItemReader`:  파일을 라인 단위로 읽는 `ItemReader`
+- `FlatFileItemReader`: 파일을 라인 단위로 읽는 `ItemReader`
 - `JdbcBatchItemWriter`: `NamedParameterJdbcTemplate`를 통해 모든 아이템을 쓰는 `ItemWiter`
 - `PersonItemProcessor`: 사용자가 정의한 `ItemProcessor`의 구현체
 	- `ItemProcessor`의 첫 번째 타입 파라미터가 input, 두 번째 타입 파라미터가 output이 된다.

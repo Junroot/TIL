@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: Kotlin에서 getClass()
 ---
-# Kotlin에서 getClass()
+
 
 ## 배경
 

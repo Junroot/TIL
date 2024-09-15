@@ -1,8 +1,9 @@
 ---
 tags:
   - Kotlin
+title: data class 프로퍼티로 Array가 있는 경우 equals를 오버라이드 하는 이유
 ---
-# data class 프로퍼티로 Array가 있는 경우 equals를 오버라이드 하는 이유
+
 
 ## 상황
 

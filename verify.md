@@ -1,8 +1,9 @@
 ---
 tags:
   - Mockito
+title: verify
 ---
-# verify
+
 
 ## 목표
 
@@ -30,6 +31,7 @@ verify(mockedList, never()).clear();
 - 인자로 `ArgumentMatcher`라는 함수형 인터페이스를 받고 있어서 람다로 구체적인 조건을 명시할 수 있다.
 
 ![](assets/Pasted%20image%2020230213185852.png)
+
 ![](assets/Pasted%20image%2020230213185929.png)
 
 ## 참고 자료

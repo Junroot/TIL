@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Framework
+title: Spring Framework에서 멀티 모듈 사용해보기
 ---
-# Spring Framework에서 멀티 모듈 사용해보기
 
 이 글은 Spring Framework에서 멀티 모듈을 적용하면서 겪은 트러블 슈팅들을 정리한 글이다.
 

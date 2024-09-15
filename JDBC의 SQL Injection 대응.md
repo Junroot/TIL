@@ -2,8 +2,8 @@
 tags:
   - Java
   - JDBC
+title: JDBC의 SQL Injection 대응
 ---
-# JDBC의 SQL Injection 대응
 
 정확히는 JDBC 내부적으로 SQL Injection에 대응하고 있다. `PreparedStatement` 클래스를 예로 들면 `setString()` 메서드에 내부적으로 SQL Injection에 대응하고 있기 때문에 안전하게 사용할 수 있다.
 

@@ -1,8 +1,9 @@
 ---
 tags:
   - Maven
+title: Maven dependency tree 그리기
 ---
-# Maven dependency tree 그리기
+
 
 ## 배경
 
@@ -20,6 +21,8 @@ mvn dependency:tree -Dincludes=[groupId]:[artifactId]:[type]:[version]
 
   - ```bash
     org.apache.*:::	
+
+
 
 ## 참고 자료
 

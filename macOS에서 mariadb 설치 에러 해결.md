@@ -1,8 +1,8 @@
 ---
 tags:
   - MySQL
+title: macOS에서 mariadb 설치 에러 해결
 ---
-# macOS에서 mariadb 설치 에러 해결
 
 [https://mariadb.com/resources/blog/installing-mariadb-10-1-16-on-mac-os-x-with-homebrew/](https://mariadb.com/resources/blog/installing-mariadb-10-1-16-on-mac-os-x-with-homebrew/)
 

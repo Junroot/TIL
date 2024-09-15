@@ -1,8 +1,9 @@
 ---
 tags:
   - 테스트
+title: BDD
 ---
-# BDD (Behavior Driven Development)
+
 
 ## 목표
 
@@ -97,6 +98,3 @@ then(phoneBookRepository)
 - https://stackoverflow.com/questions/4395469/tdd-and-bdd-differences
 - https://www.agilealliance.org/glossary/bdd/
 - https://www.baeldung.com/bdd-mockito
-
-
-

@@ -1,8 +1,8 @@
 ---
 tags:
   - Shell-Script
+title: SSH 접근을 위한 public private key 생성하기
 ---
-# SSH 접근을 위한 public/private key 생성하기
 
 `ssh-keygen` 이라는 명령어를 통해서 생성할 수 있다.
 

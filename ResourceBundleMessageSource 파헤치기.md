@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Boot
+title: ResourceBundleMessageSource 파헤치기
 ---
-# ResourceBundleMessageSource 파헤치기
+
 
 ## 목표
 

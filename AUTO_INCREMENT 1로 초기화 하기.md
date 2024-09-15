@@ -1,8 +1,8 @@
 ---
 tags:
   - H2
+title: AUTO_INCREMENT 1로 초기화 하기
 ---
-# AUTO_INCREMENT 1로 초기화 하기
 
 ```java
 ALTER TABLE tablename AUTO_INCREMENT = 1

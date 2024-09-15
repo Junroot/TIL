@@ -2,8 +2,9 @@
 tags:
   - 네트워크
   - WebRTC
+title: WebRTC 알아보기
 ---
-# WebRTC 알아보기
+
 
 ## 목표
 
@@ -22,7 +23,7 @@ tags:
 
 ## Signaling
 
-- 피어끼리 커넥션을 만들기 위해서는 서로의 IP를 알아야된다.  이렇게 연결을 맫을 두 피어간의 IP를 교환하는 과정을 Signaling이라고 한다.
+- 피어끼리 커넥션을 만들기 위해서는 서로의 IP를 알아야된다. 이렇게 연결을 맫을 두 피어간의 IP를 교환하는 과정을 Signaling이라고 한다.
 - Signaling은 WebRTC에 정해져 있는 명세가 없다.
 - 만약, Signaling을 하기 위한, 서버를 따로 만든다면 이를 Singaling server라고 부른다.
 - 주로, WebSocket을 사용해서 구현한다.
@@ -47,7 +48,6 @@ tags:
 
 > NAT 이란?
 라우터에서 사용되는 기술. IP를 절약하기 위해서 라우터에 속해있는 기기들에 private IP를 할당하고, 포트에 매핑을 시켜준다.
-> 
 
 ## 참고 자료
 

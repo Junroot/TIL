@@ -1,8 +1,9 @@
 ---
 tags:
   - MySQL
+title: TIMESTAMP vs DATETIME
 ---
-# TIMESTAMP vs DATETIME
+
 
 ## 목표
 

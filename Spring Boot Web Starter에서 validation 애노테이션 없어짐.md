@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Boot
+title: Spring Boot Web Starter에서 validation 애노테이션 없어짐
 ---
-# Spring Boot Web Starter에서 Validation 애노테이션 없어짐
+
 
 ## 배경
 

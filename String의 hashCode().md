@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: String의 hashCode()
 ---
-# String의 hashCode()
 
 Java의 String의 hashCode() 메소드는 같은 문자열이면 같은 값이 나온다.
 

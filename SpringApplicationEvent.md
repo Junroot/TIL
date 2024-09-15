@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-Boot
+title: SpringApplicationEvent
 ---
-# SpringApplicationEvent
+
 
 ## 목표
 

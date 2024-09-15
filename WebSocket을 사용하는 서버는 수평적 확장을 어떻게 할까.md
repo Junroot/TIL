@@ -2,8 +2,9 @@
 tags:
   - 네트워크
   - WebSocket
+title: WebSocket을 사용하는 서버는 수평적 확장을 어떻게 할까
 ---
-# WebSocket을 사용하는 서버는 수평적 확장을 어떻게 할까
+
 
 ## 문제가 되는 이유
 

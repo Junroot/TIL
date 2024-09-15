@@ -1,8 +1,8 @@
 ---
 tags:
   - Logback
+title: Logging
 ---
-# Logging
 
 ```java
 	System.out.println("*********제발 나와라*********");
@@ -78,10 +78,11 @@ Logback의 Logger는 5가지의 로그 레벨을 가질 수 있다.
 
 ### Appender
 
-*   `OutputStreamAppender`: 이벤트를 `java.io.OutputStream`에 추가한다. 다른 Appender의 기초가되는 서비스를 제공한다. `OutputStream`에 문자열을 쉽게 매핑할 수 없기 때문에 일반적으로 직접 사용하지는 않는다.
+* `OutputStreamAppender`: 이벤트를 `java.io.OutputStream`에 추가한다. 다른 Appender의 기초가되는 서비스를 제공한다. `OutputStream`에 문자열을 쉽게 매핑할 수 없기 때문에 일반적으로 직접 사용하지는 않는다.
 
     ![Untitled](<assets/Untitled 2_6.png>)
-*   `ConsoleAppender`: 콘솔에 이벤트를 추가한다. 아래와 같이 class에 `ch.qos.logback.core.ConsoleAppender`로 xml 파일에 추가할 수 있다.
+
+* `ConsoleAppender`: 콘솔에 이벤트를 추가한다. 아래와 같이 class에 `ch.qos.logback.core.ConsoleAppender`로 xml 파일에 추가할 수 있다.
 
     ```xml
     <configuration>
@@ -97,7 +98,8 @@ Logback의 Logger는 5가지의 로그 레벨을 가질 수 있다.
       </root>
     </configuration>
     ```
-*   `FileAppender`: 파일에 이벤트를 추가한다. 애플리케이션 실행시 로그파일이 이미 있다면, 설정에 따라 기존 로그 파일을 완전히 지우거나 이어서 쓸 수 있다. 아래의 `append` 속성을 참고하면된다.
+
+* `FileAppender`: 파일에 이벤트를 추가한다. 애플리케이션 실행시 로그파일이 이미 있다면, 설정에 따라 기존 로그 파일을 완전히 지우거나 이어서 쓸 수 있다. 아래의 `append` 속성을 참고하면된다.
 
     ```xml
     <configuration>
@@ -138,7 +140,8 @@ Logback의 Logger는 5가지의 로그 레벨을 가질 수 있다.
       </root>
     </configuration>
     ```
-*   `RollingFileAppender`: `FileAppender`를 상속받은 것이다. 파일을 어떤 규칙에 따라 분리해서 관리 할 수 있다. 이 `RollingFileAppender`에는 `RollingPolicy`와 `TriggerPolicy` 두 가지 요소가 필요하다. `RollingPolicy`는 파일 이름 변경, 파일 이동과 같은 파일 분리 과정을 담당하고 `TriggerPolicy`는 이 파일 분리가 시작될 시기를 담당한다. 아래는 각 요소에 대표적인게 어떤 것들이 있는지 간단하게 나열했다.
+
+* `RollingFileAppender`: `FileAppender`를 상속받은 것이다. 파일을 어떤 규칙에 따라 분리해서 관리 할 수 있다. 이 `RollingFileAppender`에는 `RollingPolicy`와 `TriggerPolicy` 두 가지 요소가 필요하다. `RollingPolicy`는 파일 이름 변경, 파일 이동과 같은 파일 분리 과정을 담당하고 `TriggerPolicy`는 이 파일 분리가 시작될 시기를 담당한다. 아래는 각 요소에 대표적인게 어떤 것들이 있는지 간단하게 나열했다.
 
     **FileAppender**
 
@@ -178,7 +181,7 @@ Logback의 Logger는 5가지의 로그 레벨을 가질 수 있다.
 Encoder는 이벤트를 바이트 배열로 변환하고 해당 바이트 배열을 OutputStream으로 쓰는 역할을 한다. 이전의 Logback은 Appender가 Layout에 의존하여 이벤트를 String으로 변환하고 이를 Writer에 쓰도록 했지만 최근에는 Layout을 쓰지않고 Encoder를 사용한다. Layout은 String으로 밖에 변환하지 못하고 이벤트를 기록하는 시기를 조정할 수 없기 때문에 사용되지 않는다고 한다.
 
 * `LayoutWrappingEncoder`: 이전에 쓰던 Layout들을 계속 사용하기 위해 Encoder과 Layout과 상호작용할 수 있는 방법이 필요해 만들어졌다.
-*   `PatternLayoutEncoder`: Layout 중에 가장 흔하게 사용하는 `PatternLayout`을 사용하기 위해 만들어진 Encoder로 `LayoutWrappingEncoder`를 상속받았다. 아래예오 같이 패턴을 지정할 수 있다.
+* `PatternLayoutEncoder`: Layout 중에 가장 흔하게 사용하는 `PatternLayout`을 사용하기 위해 만들어진 Encoder로 `LayoutWrappingEncoder`를 상속받았다. 아래예오 같이 패턴을 지정할 수 있다.
 
     ```xml
     <appender name="FILE" class="ch.qos.logback.core.FileAppender"> 

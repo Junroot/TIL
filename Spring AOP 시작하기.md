@@ -1,8 +1,9 @@
 ---
 tags:
   - Spring-AOP
+title: Spring AOP 시작하기
 ---
-# Spring AOP 시작하기
+
 
 ## 목표
 
@@ -93,7 +94,7 @@ class GetAspect {
 	- post-compile weaving: aspect 코드를 먼저 컴파일하여, 클래스 파일이나 jar 파일을 사용해 weaving한다. binary weaving이라고도 불린다.
 	- load-time weaving: binary weaving 방식과 동일하지만, 클래스 로더가 클래스 파일을 JVM에 로드할 때까지 위빙이 연기된다.
 	- runtime weaving: 애플리케이션이 실행되고 있는 중에 weaving이 일어난다.
-- AspectJ는  compile-time, load-time weaving을 사용하고, Spring AOP는 runtime weaving을 사용한다.
+- AspectJ는 compile-time, load-time weaving을 사용하고, Spring AOP는 runtime weaving을 사용한다.
 
 ### Spring AOP의 runtime weaving
 

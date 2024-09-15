@@ -1,8 +1,9 @@
 ---
 tags:
   - 테스트
+title: Sociable Unit Test vs Integration Test
 ---
-# Sociable Unit Test vs Integration Test
+
 
 - 테스트하고자 하는 객체가 다른 객체에 의존하고 있으면 그것은 단위 테스트가 아닌가?
 - Sociable Unit Test와 Integeration Test는 궁극적으로 테스트의 목표가 다르다.

@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: File 경로 찾기
 ---
-# File 경로 찾기
 
 ```java
 String resourceName = "example_resource.txt";

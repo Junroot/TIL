@@ -1,8 +1,9 @@
 ---
 tags:
   - Mockito
+title: thenAnswer vs thenReturn
 ---
-# thenAnswer vs thenReturn
+
 
 ## 목표
 
@@ -21,7 +22,6 @@ tags:
 ![](assets/Pasted%20image%2020230210204936.png)
 
 - 아래 사진처럼 `Answer`의 메서드의 인자인 `InvocationOnMock`은 호출한 메소드의 인자를 반환하거나, 해당 메소드를 반환, mocking한 대상 객체를 반환도 할 수 있어서 유연하게 사용할 수 있다.
-
 
 ![](assets/Pasted%20image%2020230210205208.png)
 

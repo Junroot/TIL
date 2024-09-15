@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: toString() 메서드가 나올 경우
 ---
-# toString() 메서드가 나올 경우
 
 ```java
 assertThat(obejct.toString()).isEqualTo("\"value\"");

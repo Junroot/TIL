@@ -1,8 +1,9 @@
 ---
 tags:
   - Mockito-Kotlin
+title: mocking
 ---
-# mocking
+
 
 - 아래와 같이 람다 형식으로 특정 모드를 mocking 할 수 있다.
 

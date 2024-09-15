@@ -1,8 +1,8 @@
 ---
 tags:
   - JPA
+title: QueryDSL 시작하기
 ---
-# QueryDSL 시작하기
 
 상황에 따라 쿼리문이 동적으로 변하는 기능이 필요했다. 이 기회에 QueryDSL을 사용해서 이를 구현해보고자 한다.
 
@@ -104,7 +104,7 @@ public class PostCustomRepositoryImpl implements PostCustomRepository {
 }
 ```
 
-만약 다른 이름의 구현 클래스를 만들고 싶다면 아래와 같이 어노테이션을 통해  postfix의 설정을 바꿀 수 있다.
+만약 다른 이름의 구현 클래스를 만들고 싶다면 아래와 같이 어노테이션을 통해 postfix의 설정을 바꿀 수 있다.
 
 ```java
 @EnableJpaRepositories(

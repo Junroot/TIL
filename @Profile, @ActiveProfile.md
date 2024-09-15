@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Framework
+title: "@Profile, @ActiveProfile"
 ---
-# @Profile, @ActiveProfile
 
 profile 설정에 따라 다른 Bean을 사용하고 싶다면 `@Profile`을 사용할 수 있다.
 

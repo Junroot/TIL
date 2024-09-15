@@ -2,8 +2,9 @@
 tags:
   - 개발운영도구
   - macOS
+title: m1 mac에서 homebrew 사용시 경로
 ---
-# M1 mac에서 homebrew 사용시 경로
+
 
 ## 배경
 - homebrew를 사용해서 Apache를 설치했는데 예상한 위치에 설치되지 않았다.

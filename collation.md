@@ -1,8 +1,8 @@
 ---
 tags:
   - MySQL
+title: collation
 ---
-# collation
 
 문자열을 비교할 때 어떤 규칙으로 비교하는지는 collation 설정에 따라 달렸다. mysql 기준으로 자주 사용하는 collation은 다음이 있다.
 

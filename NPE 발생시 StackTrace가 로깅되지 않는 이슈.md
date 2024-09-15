@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: NPE 발생시 StackTrace가 로깅되지 않는 이슈
 ---
-# NPE 발생시 StackTrace가 로깅되지 않는 이슈
+
 
 ## 배경
 

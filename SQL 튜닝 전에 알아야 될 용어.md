@@ -1,8 +1,9 @@
 ---
 tags:
   - MySQL
+title: SQL 튜닝 전에 알아야 될 용어
 ---
-# SQL 튜닝 전에 알아야 될 용어
+
 
 ## MySQL 구조
 

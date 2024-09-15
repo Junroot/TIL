@@ -1,8 +1,8 @@
 ---
 tags:
   - Spring-Framework
+title: build 후에 실행 시 no main manifest attribute 에러 해결
 ---
-# build 후에 실행 시 no main manifest attribute 에러 해결
 
 대부분 SpringBoot 플러그인을 추가해주지 않아서 발생하는 문제다.
 

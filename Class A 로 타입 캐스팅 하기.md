@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: Class A 로 타입 캐스팅 하기
 ---
-# Class<A>로 타입 캐스팅 하기
 
 ```java
 Class<A> clazzA = ...;

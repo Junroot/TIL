@@ -1,8 +1,8 @@
 ---
 tags:
   - MySQL
+title: GROUP BY, ORDER BY 사용시 인덱스
 ---
-# GROUP BY, ORDER BY 사용시 인덱스
 
 인덱스는 정의되어 있는 순서가 중요하다.
 

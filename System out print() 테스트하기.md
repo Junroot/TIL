@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: System out print() 테스트하기
 ---
-# System.out.print() 테스트하기
 
 `System.setOut()` 메소드를 통해서 시스템의 기본 출력을 설정할 수 있다.
 

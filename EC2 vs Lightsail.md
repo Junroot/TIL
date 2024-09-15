@@ -1,8 +1,9 @@
 ---
 tags:
   - AWS
+title: EC2 vs Lightsail
 ---
-# EC2 vs Lightsail
+
 
 ## Lightsail
 

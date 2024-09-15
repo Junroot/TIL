@@ -1,8 +1,8 @@
 ---
 tags:
   - Java
+title: Stream을 collection으로 만든 후 추가 적인 작업이 필요한 경우
 ---
-# Stream을 collection으로 만든 후 추가 적인 작업이 필요한 경우
 
 ```java
 passengers.stream()

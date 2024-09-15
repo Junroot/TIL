@@ -1,8 +1,9 @@
 ---
 tags:
   - Java
+title: EnumSet
 ---
-# EnumSet
+
 
 ## 목표
 
