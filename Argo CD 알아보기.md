@@ -51,7 +51,7 @@ brew install argocd
 - 필자는 Load Balancer 를 사용했고, 아래의 명령어를 사용하면 된다.
 
 ```sh
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}' 
 ```
 
 ### 4. CLI를 사용해서 로그인
