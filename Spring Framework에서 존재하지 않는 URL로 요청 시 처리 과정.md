@@ -30,7 +30,7 @@ tags:
 - 아래는 `ResourceHttpRequestHandler` 클래스 내부 코드이다.
 	- ![](assets/Pasted%20image%2020241014201512.png)
 
-## `ResourceHttpRequestHandler`를 사용하는 경우 처리 과정
+## `ResourceHttpRequestHandler`를 사용하지 않는 경우 처리 과정
 
 ### Spring Framework 6.1 이전
 
