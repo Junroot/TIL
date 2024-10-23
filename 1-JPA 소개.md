@@ -1,5 +1,5 @@
 ---
-title: JPA 소개
+title: 1-JPA 소개
 tags:
   - 도서/자바-ORM-표준-JPA-프로그래밍
 ---
