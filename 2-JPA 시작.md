@@ -98,7 +98,7 @@ emf.close(); // 엔티티 매니저 팩토리 종료
 	- 파라미터로 영속성 유닛 이름을 넘겨준다.
 	- `EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook")`
 - 엔티티 매니저 팩토리는 애플리케이션 전체에서 딱 한 번만 생성하고 공유해서 사용해야 한다.
-	- persikstcne.xml 파일을 읽어 JPA를 동작시키기 위한 기반 객체를 만들고, JPA 구현체에 따라서는 데이터베이스 커넥션 풀도 생성하기 때문에 생성 비용이 아주 크다.
+	- persistence.xml 파일을 읽어 JPA를 동작시키기 위한 기반 객체를 만들고, JPA 구현체에 따라서는 데이터베이스 커넥션 풀도 생성하기 때문에 생성 비용이 아주 크다.
 
 > spring-boot-starter-data-jpa 을 사용 중일 때는 "default" 라는 이름으로 영속성 유닛 이름을 사용하는 것을 확인할 수 있었다.
 > ![](assets/Pasted%20image%2020241022225530.png)
