@@ -1,7 +1,7 @@
 ---
 tags:
   - RabbitMQ
-title: 튜토리얼
+title: RabbitMQ 튜토리얼
 ---
 
 
