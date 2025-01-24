@@ -1,3 +1,9 @@
+---
+title: SSO 이해하기
+tags:
+  - 네트워크
+  - 보안
+---
 ## 목표
 
 - SSO(Single sign-on)가 무엇인지 이해한다.
