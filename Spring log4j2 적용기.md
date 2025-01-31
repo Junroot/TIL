@@ -4,7 +4,7 @@ tags:
 title: Spring log4j2 적용기
 ---
 
-[log4j vs logback vs log4j2](../../../3.Resource/%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC/Java%202aba8d7bf7a9430b9a385fe9ca1a4cb3/log4j%20vs%20logback%20vs%20log4j2%20a1c266d438b04521972f03ca86d9abcf.md) 를 비교 해보고 log4j2를 사용해보기로 결정했다. Spring Framwork에 log4j2를 적용한 과정을 정리해본다.
+[log4j vs logback vs log4j2](https://junroot.github.io/blog/posts/log4j-vs-logback-vs-log4j2/) 를 비교 해보고 log4j2를 사용해보기로 결정했다. Spring Framwork에 log4j2를 적용한 과정을 정리해본다.
 
 ## 의존 중복
 
@@ -26,7 +26,7 @@ implementation('org.springframework.boot:spring-boot-starter-data-jpa:2.6.2') {
 
 ## 멀티 프로필
 
-Spring Boot에서는 Logback처럼 프로필면 xml 자동 감지가 안된다. properties 파일을 통해서 사용할 로깅 xml파일을 지정해줘야 된다.
+Spring Boot에서는 Logback처럼 프로필 별 xml 자동 감지가 안된다. properties 파일을 통해서 사용할 로깅 xml파일을 지정해줘야 된다.
 
 ```bash
 logging:
