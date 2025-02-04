@@ -59,13 +59,13 @@ title: 멀티 모듈 사용시 JaCoCo 구성
 ```
 
 - SonarQube에게 보고서의 위치를 `sonar.converage.jacoco.xmlReportPaths` 프로퍼티를 통해서 알려줄 수 있다.
-	- `mvn -Dsonar.coverage.jacoco.xmlReportPaths=../app-it/target/site/jacoco-aggregate/jacoco.xml sonar:sonar -Pcoverage`
+	- `mvn -Dsonar.coverage.jacoco.xmlReportPaths=../app-it/target/site/jacoco/jacoco.xml sonar:sonar -Pcoverage`
 	- 또는 아래와 같이 부모의 `pom.xml` 에 설정
 
 ```xml
 <properties>
   <sonar.coverage.jacoco.xmlReportPaths>
-    ../app-it/target/site/jacoco-aggregate/jacoco.xml
+    ../app-it/target/site/jacoco/jacoco.xml
   </sonar.coverage.jacoco.xmlReportPaths>
 </properties>
 ```
