@@ -21,7 +21,7 @@ title: Valid vs Validated
 - `@Validated`는 Spring에서 `@Valid`를 확장하기 위해 만든 어노테이션이다.
 - `@Validated`는 validation group이라는 기능을 제공한다.
 - 컨트롤러에서는 validation group 기능 유무 차이가 존재한다.
-- 컨트롤러에서 검증은 `ArgumentResolver`에서 처리되며, 실패시 `MethodArgumentNotValidException` 예외가 발생한다.
+- 컨트롤러에서 `@ReqeustBody`, `@ModelAttribute`, `@RequestPart`가 붙어있는 파라미터는 `ArgumentResolver`에서 처리되며, `@Valid`나 `@Validated`가 있을 때 검증 실패시 `MethodArgumentNotValidException` 예외가 발생한다.
 - 아래 사진은 `ArgumentResolver`의 구현체들에서 사용하고 있는 `ValidationAnnotationUtils` 코드의 일부다.
 	- ![](assets/Pasted%20image%2020230731225149.png)
 
@@ -120,9 +120,30 @@ public class UserService {
 }
 ```
 
+## Spring Framework 6.1(Spring Boot 3.2)의 변화점 
+
+- 기존에 Controller에서는 ArgumentResolver가 validation을 처리했기 때문에, `@PathVaraible`이나 `@RequestParam`으로 아래와 같은 검증은 불가능했다.
+
+```java
+@RestController
+class UserController {
+
+    @GetMapping("/users")
+    public String hello(@RequestParam @Length(min = 10) String name){
+        return name;
+    }
+}
+```
+
+- Spring Framework 6.1부터 `RequestMappingHandlerAdapter`에 Controller의 파라미터에 대한 validator를 등록할 수 있게 되면서, 위 예시에 대한 validation은 `@Valid`나 `@Validated` 없이도 검증을 수행한다.
+- 이 때 실패한 검증은 `HandlerMethodValidationException` 예외가 발생한다.
+- 아래는 `RequestMappingHandlerAdapter` 내 메소드다.
+	- ![](assets/Pasted%20image%2020250221142546.png)
+
 ## 참고 자료
 
 - https://mangkyu.tistory.com/174
 - https://www.baeldung.com/spring-valid-vs-validated
 - https://www.baeldung.com/spring-boot-bean-validation
 - https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html#validation-beanvalidation-spring-method
+- https://docs.spring.io/spring-framework/reference/6.1/web/webmvc/mvc-controller/ann-validation.html
