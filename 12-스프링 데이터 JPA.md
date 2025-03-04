@@ -154,9 +154,9 @@ tags:
 
 ### 페이징과 정렬 기능
 
-- 스프링 데이터가 제공ㄹ하는 페이징과 정렬 기능을 스프링 MV에서 편리하게 사용할 수 있도록 `HandlerMethodArguementResolver`를 제공한다.
+- 스프링 데이터가 제공ㄹ하는 페이징과 정렬 기능을 스프링 MV에서 편리하게 사용할 수 있도록 `HandlerMethodArgumentResolver`를 제공한다.
 	- 페이징 기능: `PageableHandlerMethodArgumentResolver`
-	- 정렬 기능: `SorthandlerMethodArgumentReesovler`
+	- 정렬 기능: `SortHandlerMethodArgumentReesovler`
 - ![](assets/Pasted%20image%2020250225233231.png)
 - `Pageable`은 `PageRequest`의 인터페이스다.
 	- page: 현재 페이지, 0부터 시작
