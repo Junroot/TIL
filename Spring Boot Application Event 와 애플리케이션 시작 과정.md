@@ -12,7 +12,7 @@ tags:
 
 애플리케이션 실행 시 아래 순서대로 이벤트가 발생한다.
 
-1. `ApplicatoinStartingEvent`: 애플리케이션 실행 이전에 발생
+1. `ApplicatoinStartingEvent`: 애플리케이션 실행 이전에 발생한다.
 	- `ApplicationContextInitializer` 들과 `ApplicationListener` 들의 등록을 제외한 모든 처리 이전에 발생한다.
 	- `ApplicationContextInitializer`: `ApplicationContext`가 초기화되기 전에 실행되어야 하는 로직이 있을 때 정의하는 콜백 인터페이스
 	- `ApplicationListener`: 애플리케이션에서 발생하는 이벤트를 감지하고 처리하는 역할의 인터페이스
