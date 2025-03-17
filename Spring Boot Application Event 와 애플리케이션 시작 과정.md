@@ -20,8 +20,8 @@ tags:
 	- `Environment`: 애플리케이션의 profile과 properties를 관리하는 인터페이스
 	- 일반적으로 `ApplicationContext` 에서 `Environment`를 필드로 가지고 있다.
 3. `ApplicationContextInitializedEvent`: `ApplicationContext` 가 생성되고, `ApplicationContextInitializer` 들이 호출되었지만 bean definition이 로드되기 전에 발생한다.
+	-  bean definition은 bean에 대한 메타 데이터라서, bean이 초기화되는 것은 아니다.
 4. `ApplicationPreparedEvent`: bean definition이 로드되고 `ApplicationContext`가 refresh 되기 전에 발생한다.
-	- bean definition은 bean에 대한 메타 데이터라서, bean이 초기화되는 것은 아니다.
 	- `ApplicationContext`의 refresh 단계에서 bean definition을 기준으로 bean 초기화가 이루어진다.
 	- component scan으로 bean definition을 추가로 로드하고, 초기화하는 과정도 refresh에서 이루어진다.
 	- `ApplicationContext`의 refresh 단계에서 동작 과정은 복잡하니 아래의 글의 참고한다.
