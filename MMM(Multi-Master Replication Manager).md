@@ -67,6 +67,6 @@ title: MMM(Multi-Master Replication Manager)
 
 ## 참고 자료
 
-- https://velog.io/@claraqn/%ED%8C%80%EB%82%B4-DB-%EC%9A%B4%EC%98%81-%EA%B5%AC%EC%84%B1%EB%8F%84-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-funvlz8f#22-mysql-replication-%EC%9D%B4%EC%A4%91%ED%99%94
+- https://velog.io/@claraq₩n/%ED%8C%80%EB%82%B4-DB-%EC%9A%B4%EC%98%81-%EA%B5%AC%EC%84%B1%EB%8F%84-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-funvlz8f#22-mysql-replication-%EC%9D%B4%EC%A4%91%ED%99%94
 - https://bcho.tistory.com/1062
 - https://sungwookkang.com/entry/ProxySQL-%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80
