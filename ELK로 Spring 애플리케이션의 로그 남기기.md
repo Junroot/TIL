@@ -79,7 +79,7 @@ output {
 ```
 
 - Logback 설정 파일 수정
-	- `appender`: TCP 연결로 로그를 정송하기 위해서는 `LogstashTcpSocketAppender` 를 사용해야된다.
+	- `appender`: TCP 연결로 로그를 전송하기 위해서는 `LogstashTcpSocketAppender` 를 사용해야된다.
 	- `destination`: Logstash 경로를 명시하면 된다. Logstash 설정했던대로 50000번 포트를 사용하도록 설정한다.
 	- `customFields`: 로그 데이터에 로그 종류를 구분하기 위해 커스텀 필드도 추가가 가능하다.
 	- `keepAliveDuration`: 5분동안 로그가 발생하지 않으면 TCP 연결을 유지하기 위한 임의의 메시지를 보낸다.
