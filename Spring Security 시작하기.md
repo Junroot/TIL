@@ -64,7 +64,7 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
 	- 사용자가 인증을 위해 `AuthenticationManager`에 `credentials`를 제공한다. `credentials`는 주로 비밀번호다. 이때 `isAuthenticated()`는 `false`를 반환한다.
 	- 현재 인증된 유저를 나타낸다. 인증되어 있으면 `SecurityContext`에 `Authentication`이 존재한다.
 		- `principal`: 식별된 유저. 주로 `UserDetails`의 인스턴스다.
-		- `authirities`: 유저에게 주어진 권한. roles, scopes 등이 있다.
+		- `authorities`: 유저에게 주어진 권한. roles, scopes 등이 있다.
 
 ### AuthenticationManager
 
@@ -83,7 +83,7 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
 - 인증 과정
 	1. credentials를 제출하면, `AbstractAuthenticationProcessingFilter`는 `HttpServletRequest`로 부터 `Authentication`를 만든다.
 		- 예시: 서브 클래스인 `UsernamePasswordAuthenticationFilter`의 경우는 username과 password로 `UsernamePasswordAuthenticationToken`를 만든다.
-	2. `AuthenticationManager`에 `AuthenticationManager`가 전달된다.
+	2. `AuthenticationManager`에 `Authentication`가 전달된다.
 	3. 인증에 실패한 경우
 		1. `SecurityContextHolder`가 clear 된다.
 		2. `RememberMeServices.loginFail`이 호출된다.
