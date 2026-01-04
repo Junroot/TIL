@@ -24,11 +24,9 @@ title: README
 - 오브젝트: https://product.kyobobook.co.kr/detail/S000001766367
 - 리팩터링: https://product.kyobobook.co.kr/detail/S000001810241
 - 도메인 주도 개발 시작하기: DDD 핵심 개념 정리부터 구현까지: https://product.kyobobook.co.kr/detail/S000001810495
-- 시스템 설계 면접 완벽 가이드: https://product.kyobobook.co.kr/detail/S000216400799
 - Elasticsearch in Action: https://product.kyobobook.co.kr/detail/S000215553448
 - 클라우드 네이티브 스프링 인 액션: https://product.kyobobook.co.kr/detail/S000212731527
 - 효율적인 리눅스 명령어 사용의 기술: https://product.kyobobook.co.kr/detail/S000211545480
-- 30가지 패턴으로 배우는 분산 시스템 설계와 구현 기법: https://product.kyobobook.co.kr/detail/S000216211590
 
 ## 개발자 커리어 관련 도서
 
